@@ -1,13 +1,13 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rm_gbjam_story",
+  "%Name":"rm_gbjam12_story",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_40E3F293","path":"rooms/rm_gbjam_story/rm_gbjam_story.yy",},
-    {"name":"inst_AEF49B","path":"rooms/rm_gbjam_story/rm_gbjam_story.yy",},
+    {"name":"inst_40E3F293","path":"rooms/rm_gbjam12_story/rm_gbjam12_story.yy",},
+    {"name":"inst_AEF49B","path":"rooms/rm_gbjam12_story/rm_gbjam12_story.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -17,7 +17,7 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rm_gbjam_story",
+  "name":"rm_gbjam12_story",
   "parent":{
     "name":"gbjam12",
     "path":"folders/Rooms/gbjam12.yy",

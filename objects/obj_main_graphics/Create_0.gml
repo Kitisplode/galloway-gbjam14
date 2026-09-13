@@ -10,8 +10,8 @@ if (instance_number(obj_main_graphics) > 1)
 
 shaders_on = true;
 
-view_width = room_width;
-view_height = room_height;
+view_width = 160;
+view_height = 144;
 view_ratio = 1;
 display_set_gui_size(view_width, view_height);
 
@@ -21,7 +21,8 @@ current_palette = 0;
 palette_lerp = 0;
 palette_lerp_time = 0.5;
 
-//surface_outlines = surface_create(view_width, view_height);
+// GBJAM14 Default palette
+scr_Main_Graphics_add_palette(#DAC888, #957C6C, #4C3E49, #1E1B1D);
 
 // Gray
 // 0 2bit Demichrome = https://lospec.com/palette-list/2bit-demichrome

@@ -11,6 +11,9 @@ invuln_timer = 0;
 
 invincible = false;
 
+fall_through_oneway_timer = 0;
+fall_through_oneway_time = 0.1;
+
 depth = OBJECT_DEPTHS.PLAYER;
 
 // If this is true, begin interactions with other objects (e.g. doors, pipes, talking to someone, etc.)
