@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_vt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_vt",
+  "parent":{
+    "name":"vtuber",
+    "path":"folders/Scripts/vtuber.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

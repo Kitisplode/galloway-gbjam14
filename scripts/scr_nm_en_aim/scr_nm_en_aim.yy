@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_nm_en_aim",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_nm_en_aim",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Scripts/NeoMagiko/Specific/Enemies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_nm_en_gravity",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_nm_en_gravity",
+  "parent":{
+    "name":"Gravity",
+    "path":"folders/Scripts/NeoMagiko/Specific/Enemies/Gravity.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

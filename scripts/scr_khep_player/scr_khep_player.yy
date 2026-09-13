@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_khep_player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_khep_player",
+  "parent":{
+    "name":"Khepri",
+    "path":"folders/Scripts/Khepri.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

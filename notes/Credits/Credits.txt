@@ -1,0 +1,18 @@
+Credits:
++ Adam
++ Clyde
++ Jalopes
++ Kitsu
++ Lexou
++ Picto
++ Prism
++ Soral
+	
+Software used:
++ Game Maker Studio 2
++ Bfxr
++ MSPaint
+
+Game Maker Studio 2 Extensions:
++ GMLinear
++ Input 6

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mus_gbjam12_extra",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":83.35,
+  "exportDir":"",
+  "name":"mus_gbjam12_extra",
+  "parent":{
+    "name":"gbjam12",
+    "path":"folders/Sounds/Music/gbjam12.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_gbjam12_extra.ogg",
+  "volume":1.0,
+}
