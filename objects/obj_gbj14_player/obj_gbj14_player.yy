@@ -10,8 +10,8 @@
   "name":"obj_gbj14_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"gbjam14",
-    "path":"folders/Objects/Game Objects/gbjam14.yy",
+    "name":"player",
+    "path":"folders/Objects/Game Objects/gbjam14/player.yy",
   },
   "parentObjectId":{
     "name":"obj_base_player",
