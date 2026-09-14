@@ -38,6 +38,9 @@
     "name":"spr_gbj14_player_idle",
     "path":"sprites/spr_gbj14_player_idle/spr_gbj14_player_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_gbj14_player_coll",
+    "path":"sprites/spr_gbj14_player_coll/spr_gbj14_player_coll.yy",
+  },
   "visible":true,
 }

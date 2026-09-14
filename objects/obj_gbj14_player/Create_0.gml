@@ -13,7 +13,7 @@ with(id_input)
 	scr_Input_Add_Verb(other.input_jump);
 	scr_Input_Add_Verb(other.input_attack);
 }
-id_input.mouse_available = false;
+id_input.mouse_available = true;
 
 // Behavior vars
 hurt_timer = 0;

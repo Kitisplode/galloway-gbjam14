@@ -61,8 +61,8 @@ else if (!instance_exists(par_transition))
 	{
 		//var _pos = r2(lerp(camera_get_view_x(cam),x,0.2), lerp(camera_get_view_y(cam),y,0.2));
 		camera_set_view_pos(cam, 
-			round(lerp(camera_get_view_x(cam),x,0.1)), 
-			round(lerp(camera_get_view_y(cam),y,0.1)));
+			floor(lerp(camera_get_view_x(cam),x,0.1)), 
+			floor(lerp(camera_get_view_y(cam),y,0.1)));
 	}
 	else
 		camera_set_view_pos(cam, x,y);

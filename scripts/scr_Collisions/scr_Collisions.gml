@@ -18,6 +18,44 @@ function scr_Place_Meeting_3d(_position, _other)
 	return false;
 }
 
+function scr_Place_Meeting_Tilemap(_position, _other)
+{
+	if (!instance_exists(_other) || _other.object_index != obj_block_tileset) return false;
+	if (_other.tilemap <= -1) return false;
+	// Find the overlapped cells.
+	var _left_cell_x = _position[0] + bbox_left - x;
+	var _right_cell_x = _position[0] + bbox_right - x;
+	var _top_cell_y = _position[1] + bbox_top - y;
+	var _bottom_cell_y = _position[1] + bbox_bottom - y;
+	var _left_cell = tilemap_get_cell_x_at_pixel(_other.tilemap, _left_cell_x,_top_cell_y);
+	if (_left_cell < 0) _left_cell = 0;
+	var _right_cell = tilemap_get_cell_x_at_pixel(_other.tilemap, _right_cell_x,_top_cell_y);
+	if (_right_cell < 0) _right_cell = tilemap_get_width(_other.tilemap) - 1;
+	var _top_cell = tilemap_get_cell_y_at_pixel(_other.tilemap, _left_cell_x,_top_cell_y);
+	if (_top_cell < 0) _top_cell = 0;
+	var _bottom_cell = tilemap_get_cell_y_at_pixel(_other.tilemap, _right_cell_x,_bottom_cell_y);
+	if (_bottom_cell < 0) _bottom_cell = tilemap_get_height(_other.tilemap) - 1;
+	// Check each of the overlapped cells to see if they collide with the object.
+	var _result = false;
+	for(var _x = _left_cell; _x <= _right_cell; _x++)
+	{
+		for (var _y = _top_cell; _y <= _bottom_cell; _y++)
+		{
+			if (tilemap_get(_other.tilemap, _x,_y) <= 0) continue;
+			_other.mask_index = spr_block_16;
+			_other.x = _x * 16; _other.y = _y * 16;
+			if (place_meeting(_position[0], _position[1], _other))
+			{
+				_result = true;
+				break;
+			}
+		}
+	}
+	_other.x = _other.xstart;
+	_other.y = _other.ystart;
+	return _result;
+}
+
 // Called to check for more precise collisions between two objects, but only once we've already confirmed
 // less precise collision has occurred.
 function scr_Check_For_Precise_Collision_3d(_position, _other)
@@ -102,6 +140,13 @@ function scr_Get_Collision_Solid_At_Position(_position_to_check, _flag_skip_if_a
 			if (!instance_exists(_temp_id)) continue;
 			if (id == _temp_id) continue;
 			if (object_is_ancestor(object_index, obj_base_player) && _temp_id.object_index == obj_block_enemy_only) continue;
+			
+			// If the other object to collide with is a tilemap, handle that differently.
+			if (_temp_id.object_index == obj_block_tileset)
+			{
+				if (scr_Place_Meeting_Tilemap(_position_to_check, _temp_id)) return _temp_id;
+			}
+			// For individual blocks, continue down here.
 			if (place_meeting(_position_to_check[0], _position_to_check[1], _temp_id))
 			{
 				// Skip the collision if we're already colliding with the other object and we want to skip.
@@ -109,7 +154,7 @@ function scr_Get_Collision_Solid_At_Position(_position_to_check, _flag_skip_if_a
 				{
 					if (scr_Place_Meeting_3d(position, _temp_id))
 					{
-						// TODO: Check for more precise collisions.
+						// Check for more precise collisions.
 						if (scr_Check_For_Precise_Collision_3d(position, _temp_id))
 							continue;
 					}
@@ -117,7 +162,7 @@ function scr_Get_Collision_Solid_At_Position(_position_to_check, _flag_skip_if_a
 				// Otherwise, just check to see if we will be colliding at the given location then.
 				if (scr_Check_For_Z_Collision(_position_to_check[2], _temp_id))
 				{
-					// TODO: Check for more precise collisions here.
+					// Check for more precise collisions here.
 					if (!scr_Check_For_Precise_Collision_3d(_position_to_check, _temp_id))
 						continue;
 					// For solid blocks, return true immediately.
@@ -159,6 +204,16 @@ function scr_Check_For_Solids(_position_to_check, _flag_skip_if_already_collidin
 			if (!instance_exists(_temp_id)) continue;
 			if (id == _temp_id) continue;
 			if (object_is_ancestor(object_index, obj_base_player) && _temp_id.object_index == obj_block_enemy_only) continue;
+			
+			// If the other object to collide with is a tilemap, handle that differently.
+			if (_temp_id.object_index == obj_block_tileset)
+			{
+				if (scr_Place_Meeting_Tilemap(_position_to_check, _temp_id))
+				{
+					_result = true;
+					break;
+				}
+			}
 			if (place_meeting(_position_to_check[0], _position_to_check[1], _temp_id))
 			{
 				// Skip the collision if we're already colliding with the other object and we want to skip.
@@ -166,7 +221,7 @@ function scr_Check_For_Solids(_position_to_check, _flag_skip_if_already_collidin
 				{
 					if (scr_Place_Meeting_3d(position, _temp_id))
 					{
-						// TODO: Check for more precise collisions.
+						// Check for more precise collisions.
 						if (scr_Check_For_Precise_Collision_3d(position, _temp_id))
 							continue;
 					}
@@ -174,7 +229,7 @@ function scr_Check_For_Solids(_position_to_check, _flag_skip_if_already_collidin
 				// Otherwise, just check to see if we will be colliding at the given location then.
 				if (scr_Check_For_Z_Collision(_position_to_check[2], _temp_id))
 				{
-					// TODO: Check for more precise collisions here.
+					// Check for more precise collisions here.
 					if (!scr_Check_For_Precise_Collision_3d(_position_to_check, _temp_id))
 						continue;
 					// For solid blocks, return true immediately.

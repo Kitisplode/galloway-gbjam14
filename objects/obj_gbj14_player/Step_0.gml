@@ -66,7 +66,7 @@ if (!paused)
 		{
 			if (is_on_ground)
 			{
-				play_sound(snd_gbjam12_statue_jump, 1, 0, 0.5, 1.5, 0);
+				play_sound(snd_gbj14_player_jump, 1, 0, 1, 1, 0);
 				velocity[1] = -jump_force * 0.97;
 			}
 		}
@@ -85,6 +85,19 @@ if (!paused)
 	if (can_act)
 	{
 		// TODO: Player non-movement actions (e.g. attacking or whatever) go here.
+		if (instance_exists(obj_block_tileset))
+		{
+			if (input_check_pressed(input_attack))
+			{
+				var _tilemap = obj_block_tileset.tilemap;
+				if (_tilemap > -1)
+				{
+					var _x = id_input.mouse_position[0];
+					var _y = id_input.mouse_position[1];
+					tilemap_set(_tilemap, 0, _x / 16,_y / 16);
+				}
+			}
+		}
 	}
 }
 

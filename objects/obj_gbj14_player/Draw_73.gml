@@ -12,13 +12,23 @@ if (paused) exit;
 	else image_xscale = 1;
 }
 
-if (abs(velocity[0]) > 10)
+if (is_on_ground)
 {
-	scr_change_sprite(spr_gbj14_player_walk);
-	anim_speed = 0.15;
+	if (abs(velocity[0]) > 10)
+	{
+		scr_change_sprite(spr_gbj14_player_walk);
+		anim_speed = 0.15;
+	}
+	else
+	{
+		scr_change_sprite(spr_gbj14_player_idle);
+		anim_speed = 0;
+	}
 }
 else
 {
-	scr_change_sprite(spr_gbj14_player_idle);
+	scr_change_sprite(spr_gbj14_player_jump);
 	anim_speed = 0;
+	if (velocity[1] < 10) anim_frame = 0;
+	else anim_frame = 1;
 }

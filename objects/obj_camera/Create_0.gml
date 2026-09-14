@@ -17,3 +17,5 @@ shake_magnitude = 0;
 follow = obj_base_player;
 offset_x = 0;
 offset_y = 0;
+
+depth = 99999;

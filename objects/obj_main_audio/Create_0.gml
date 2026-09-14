@@ -9,7 +9,7 @@ if (instance_number(obj_main_audio) > 1)
     exit;
 }
 
-global.volume_main = 0.5;
+global.volume_main = 0.75;
 global.volume_music = 0.75;
 global.volume_sounds = 1;
 

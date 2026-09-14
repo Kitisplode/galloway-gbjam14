@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"gbjam14",
-    "path":"folders/Sprites/gbjam14.yy",
+    "name":"player",
+    "path":"folders/Sprites/gbjam14/player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
