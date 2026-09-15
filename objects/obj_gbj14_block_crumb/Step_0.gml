@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-layer_name = "tilemap_level";
-tilemap = -1;
+image_alpha -= 0.05;
+if (image_alpha <= 0.05) instance_destroy();

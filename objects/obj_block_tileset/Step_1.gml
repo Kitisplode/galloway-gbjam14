@@ -4,5 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-layer_name = "tilemap_level";
-tilemap = -1;
+if (tilemap == -1)
+{
+	tilemap = layer_tilemap_get_id(layer_get_id(layer_name));
+}

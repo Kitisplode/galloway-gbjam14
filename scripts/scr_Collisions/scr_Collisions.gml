@@ -42,13 +42,15 @@ function scr_Place_Meeting_Tilemap(_position, _other)
 		for (var _y = _top_cell; _y <= _bottom_cell; _y++)
 		{
 			if (tilemap_get(_other.tilemap, _x,_y) <= 0) continue;
-			_other.mask_index = spr_block_16;
-			_other.x = _x * 16; _other.y = _y * 16;
-			if (place_meeting(_position[0], _position[1], _other))
-			{
-				_result = true;
-				break;
-			}
+			_result = true;
+			break;
+			//_other.mask_index = spr_block_16;
+			//_other.x = _x * 16; _other.y = _y * 16;
+			//if (place_meeting(_position[0], _position[1], _other))
+			//{
+			//	_result = true;
+			//	break;
+			//}
 		}
 	}
 	_other.x = _other.xstart;

@@ -61,5 +61,5 @@ ds_list_add(global.list_pushables, id);
 
 draw_2d_z = false;
 
-outline_thickness = 1;
+outline_thickness = 0;
 outline_color = c_ltgray;
