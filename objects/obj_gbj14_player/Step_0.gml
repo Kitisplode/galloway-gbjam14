@@ -24,6 +24,12 @@ if (!paused)
 			axis_max_speed[0] = run_speed;
 			after_effect_active = false;
 		}
+		// On a ladder
+		if (action == -1)
+		{
+			can_act = false;
+			apply_gravity_force = false;
+		}
 	}
 	
 	// Update the input.

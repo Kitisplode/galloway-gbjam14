@@ -90,29 +90,33 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 		if (_id.layer_name != _layer_name) continue;
 		{
 			var _tilemap = _id.tilemap;
-			if (_tilemap > -1)
+			_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y);
+		}
+	}
+}
+
+function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
+{
+	if (_tilemap <= -1) return false;
+	var _tile = tilemap_get(_tilemap, _x,_y);
+	if (_tile > 0)
+	{
+		var _random = round(random_range(1,5));
+		var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(_random));
+		if (audio_exists(_sound))
+			play_sound(_sound, 1, 0, 2, 1,0.5);
+		tilemap_set(_tilemap, 0, _x,_y);
+		for (var _j = 0; _j < 4; _j++)
+		{
+			var _angle = degtorad(45 + _j * 90);
+			var _pos = r2(_x * 16 + 8 + cos(_angle) * 8, _y * 16 + 8 -sin(_angle) * 8);
+			var _crumb = instance_create_depth(_pos[0],_pos[1], OBJECT_DEPTHS.EFFECT, obj_gbj14_block_crumb);
+			if (instance_exists(_crumb))
 			{
-				var _tile = tilemap_get(_tilemap, _x,_y);
-				if (_tile > 0)
-				{
-					var _random = round(random_range(1,5));
-					var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(_random));
-					if (audio_exists(_sound))
-						play_sound(_sound, 1, 0, 2, 1,0.5);
-					tilemap_set(_tilemap, 0, _x,_y);
-					for (var _j = 0; _j < 4; _j++)
-					{
-						var _angle = degtorad(45 + _j * 90);
-						var _pos = r2(_x * 16 + 8 + cos(_angle) * 8, _y * 16 + 8 -sin(_angle) * 8);
-						var _crumb = instance_create_depth(_pos[0],_pos[1], OBJECT_DEPTHS.EFFECT, obj_gbj14_block_crumb);
-						if (instance_exists(_crumb))
-						{
-							_crumb.velocity[0] = (_pos[0] - _x * 16 - 8) * random_range(1,5) * 10;
-							_crumb.velocity[1] = (_pos[1] - _y * 16 - 8) * random_range(1,5) * 10;
-						}
-					}
-				}
+				_crumb.velocity[0] = (_pos[0] - _x * 16 - 8) * random_range(1,5) * 10;
+				_crumb.velocity[1] = (_pos[1] - _y * 16 - 8) * random_range(1,5) * 10;
 			}
 		}
 	}
+	return true;
 }

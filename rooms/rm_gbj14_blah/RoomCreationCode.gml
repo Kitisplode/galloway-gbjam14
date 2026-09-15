@@ -1,0 +1,1 @@
+play_music(mus_gbj14_jopes_egyptian_adventuring, 0, 1, 1,1,0);

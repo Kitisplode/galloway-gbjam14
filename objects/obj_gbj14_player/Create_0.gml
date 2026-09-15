@@ -18,6 +18,7 @@ with(id_input)
 id_input.mouse_available = false;
 
 // Behavior vars
+hurt_time = 0.3;
 hurt_timer = 0;
 
 direction_facing = 0;
