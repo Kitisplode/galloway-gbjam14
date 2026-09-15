@@ -8,12 +8,14 @@ event_inherited();
 direction_input = -1;
 input_jump = "a";
 input_attack = "b";
+input_swap = "select";
 with(id_input)
 {
 	scr_Input_Add_Verb(other.input_jump);
 	scr_Input_Add_Verb(other.input_attack);
+	scr_Input_Add_Verb(other.input_swap);
 }
-id_input.mouse_available = true;
+id_input.mouse_available = false;
 
 // Behavior vars
 hurt_timer = 0;
@@ -31,6 +33,14 @@ accel_water = 35;
 friction_ground = 0.6;
 friction_hurt = 0.9;
 
+carry_id = id;
+
+list_items = ds_list_create();
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Lift", -1, "", spr_gbj14_hud_item_lift, snd_gbj14_player_attack);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Pick", -1, "scr_gbj14_player_Cursor_Pick", spr_gbj14_hud_item_pick, snd_gbj14_player_attack);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Shovel", -1, "scr_gbj14_player_Cursor_Shovel", spr_gbj14_hud_item_shovel, snd_gbj14_player_attack);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Ladder", -1, "scr_gbj14_player_Cursor_Ladder", spr_gbj14_hud_item_ladder, snd_gbj14_player_attack);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Bomb", -1, "", spr_gbj14_hud_item_bomb, snd_gbj14_player_attack);
 damage = 1;
 
 // Set up physics

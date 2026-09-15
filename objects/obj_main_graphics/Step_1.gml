@@ -4,7 +4,7 @@
 application_surface_draw_enable(!shaders_on);
 if (shaders_on)
 {
-	if (input_check_pressed("select"))
+	if (keyboard_check_pressed(ord("I")))
 	{
 		current_palette = (current_palette + 1) mod palette_count;
 	}

@@ -1,0 +1,111 @@
+// Call these functions only from within obj_gbj14_player
+
+function scr_gbj14_player_Add_Item(_script, _uses, _show_cursor, _sprite, _sound)
+{
+	var _item = {
+		script: _script,
+		uses: _uses,
+		show_cursor: _show_cursor,
+		sprite: _sprite,
+		sound: _sound
+	};
+	ds_list_add(list_items, _item);
+}
+
+function scr_gbj14_player_Scroll_Item()
+{
+	if (ds_list_size(list_items) <= 0) return;
+	// Get the first item from the item list.
+	var _item = ds_list_find_value(list_items, 0);
+	// Pull it out of the list.
+	ds_list_delete(list_items, 0);
+	// Add it back in at the end of the list.
+	ds_list_add(list_items, _item);
+}
+
+function scr_gbj14_player_Cursor_Pick()
+{
+	var _x = position[0] + cos(degtorad(direction_facing)) * 24;
+	var _y = position[1] - 8;
+	return r2(_x,_y);
+}
+function scr_gbj14_player_Cursor_Shovel()
+{
+	var _x = position[0] + cos(degtorad(direction_facing)) * 8;
+	var _y = position[1] + 8;
+	return r2(_x,_y);
+}
+
+function scr_gbj14_player_Use_Item_Lift()
+{
+	if (carry_id == id)
+	{
+		var _pos = scr_gbj14_player_Cursor_Pick();
+		if (instance_exists(obj_block_pushable))
+		{
+			var _block = instance_place(_pos[0],_pos[1], obj_block_pushable);
+			if (instance_exists(_block))
+			{
+				carry_id = _block;
+				_block.dom_id = id;
+				_block.dom_offset_x = 0;
+				_block.dom_offset_y = -32 - 8;
+				_block.mask_index = msk_no_collision;
+				_block.movement_enabled = false;
+				_block.apply_gravity_force = false;
+			}
+		}
+	}
+	else
+	{		
+		carry_id.mask_index = carry_id.sprite_index;
+		carry_id.dom_id = carry_id.id;
+		carry_id.movement_enabled = true;
+		carry_id.apply_gravity_force = true;
+		carry_id.velocity[0] = cos(degtorad(direction_facing)) * 100;
+		carry_id.velocity[1] = -100;
+		carry_id = id;
+	}
+}
+
+function scr_gbj14_player_Use_Item_Pick()
+{
+	var _pos = scr_gbj14_player_Cursor_Pick();
+	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16));
+}
+function scr_gbj14_player_Use_Item_Shovel()
+{
+	var _pos = scr_gbj14_player_Cursor_Shovel();
+	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16));
+}
+
+function _scr_gbj14_player_Use_Item_Dig(_x,_y)
+{
+	if (instance_exists(obj_block_tileset))
+	{
+		var _tilemap = obj_block_tileset.tilemap;
+		if (_tilemap > -1)
+		{
+			var _tile = tilemap_get(_tilemap, _x,_y);
+			if (_tile > 0)
+			{
+				var _random = round(random_range(1,5));
+				var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(_random));
+				if (audio_exists(_sound))
+					play_sound(_sound, 1, 0, 2, 0.6,0.3);
+				tilemap_set(_tilemap, 0, _x,_y);
+				for (var _i = 0; _i < 4; _i++)
+				{
+					var _angle = degtorad(45 + _i * 90);
+					var _pos = r2(_x * 16 + 8 + cos(_angle) * 8, _y * 16 + 8 -sin(_angle) * 8);
+					var _crumb = instance_create_depth(_pos[0],_pos[1], OBJECT_DEPTHS.EFFECT, obj_gbj14_block_crumb);
+					if (instance_exists(_crumb))
+					{
+						_crumb.velocity[0] = (_pos[0] - _x * 16 - 8) * random_range(1,5) * 5;
+						_crumb.velocity[1] = (_pos[1] - _y * 16 - 8) * random_range(1,5) * 5;
+					}
+				}
+			}
+		}
+	}
+}

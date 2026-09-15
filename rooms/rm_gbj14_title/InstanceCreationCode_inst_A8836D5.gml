@@ -29,3 +29,8 @@ scr_scene_Add_Step_Play_Music(queue_steps, -1, 1);
 scr_scene_Add_Step_RoomFade(queue_steps, rm_gbj14_blah, 1, c_white);
 
 skip_to = 12;
+
+if (instance_exists(obj_camera))
+{
+	obj_camera.follow = id;
+}

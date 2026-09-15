@@ -84,20 +84,33 @@ if (!paused)
 	
 	if (can_act)
 	{
-		// TODO: Player non-movement actions (e.g. attacking or whatever) go here.
-		if (instance_exists(obj_block_tileset))
+		if (scr_Input_Read(id_input, input_attack, 0))
 		{
-			if (input_check_pressed(input_attack))
+			// Perform the action of the current item.
+			if (ds_list_size(list_items) > 0)
 			{
-				var _tilemap = obj_block_tileset.tilemap;
-				if (_tilemap > -1)
+				var _item = ds_list_find_value(list_items, 0);
+				var _script = asset_get_index(_item.script);
+				if (script_exists(_script))
 				{
-					var _x = id_input.mouse_position[0];
-					var _y = id_input.mouse_position[1];
-					tilemap_set(_tilemap, 0, _x / 16,_y / 16);
+					script_execute(_script);
+					if (_item.uses > 0)
+					{
+						_item.uses -= 1;
+						if (_item.uses <= 0) ds_list_delete(list_items, 0);
+					}
+					if (audio_exists(_item.sound))
+					{
+						play_sound(_item.sound, 1, 0, 1,1,0.1);
+					}
 				}
 			}
 		}
+	}
+	
+	if (scr_Input_Read(id_input, input_swap, 0))
+	{
+		scr_gbj14_player_Scroll_Item();
 	}
 }
 

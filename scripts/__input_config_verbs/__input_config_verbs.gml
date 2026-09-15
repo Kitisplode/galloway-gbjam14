@@ -17,8 +17,8 @@ return {
         left:  [input_binding_key(vk_left),	input_binding_key("A")],
         right: [input_binding_key(vk_right), input_binding_key("D")],
 		
-		a: [input_binding_key("X"), input_binding_mouse_button(mb_right)],
-		b: [input_binding_key("C"), input_binding_mouse_button(mb_left)],
+		a: [input_binding_key("X"), input_binding_key("J")],
+		b: [input_binding_key("C"), input_binding_key("K")],
 		x: input_binding_key("Z"),
 		y: input_binding_key("S"),
 		
