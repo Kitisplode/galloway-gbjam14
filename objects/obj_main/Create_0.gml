@@ -20,7 +20,7 @@ global.debug_player_invincible = false;
 global.debug_show_level_controllers = false;
 global.debug_show_level_blocks = false;
 
-global.controls_debug_kill_enemies = ord("K");
+global.controls_debug_kill_enemies = ord("O");
 global.controls_debug_restart = ord("R");
 global.controls_debug_exit = vk_escape;
 global.controls_debug_fullscreen = vk_f4;
@@ -108,6 +108,7 @@ global.active_room = -1;
 
 global.font_01 = font_add_sprite_ext(spr_font_01_outline, "!" + chr(34) + "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~ _[]\\", 0,1);
 global.font_02 = font_add_sprite_ext(spr_font, "!" + chr(34) + "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~ _[]\\", 0,1);
+global.font_lexou = font_add_sprite_ext(spr_font_lexou_01, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0,1);
 
 randomize();
 

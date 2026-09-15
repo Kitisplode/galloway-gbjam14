@@ -10,8 +10,8 @@
   "name":"obj_scene",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Base",
-    "path":"folders/Objects/Game Objects/_Base.yy",
+    "name":"Scene",
+    "path":"folders/Objects/Game Objects/_Base/Scene.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -35,6 +35,11 @@ if (stay_in_room)
 			global.active_room.bbox_top - TILE_SIZE, 
 			global.active_room.bbox_bottom + TILE_SIZE - view_height_half*2);
 	}
+	else
+	{
+		x = x_to - view_width_half;
+		y = y_to - view_height_half;
+	}
 }
 else
 {
@@ -49,11 +54,9 @@ y += random_range(-shake_remain, shake_remain);
 shake_remain = max(0, shake_remain - ((1 / shake_length) * shake_magnitude));
 
 // Set camera position
-if (room_get_name(room) == "rm_gbjam_splash_gbjam" ||
-	room_get_name(room) == "rm_gbjam_splash_title" ||
-	room_get_name(room) == "rm_gbjam_splash_galloway")
+if (!instance_exists(obj_base_player) && !instance_exists(obj_player_spawner))
 {
-	//camera_set_view_pos(cam, x,y);
+	camera_set_view_pos(cam, x,y);
 }
 else if (!instance_exists(par_transition))
 {

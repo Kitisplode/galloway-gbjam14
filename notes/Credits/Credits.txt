@@ -8,6 +8,7 @@ Credits:
 + Picto
 + Prism
 + Soral
++ Stuart
 	
 Software used:
 + Game Maker Studio 2
