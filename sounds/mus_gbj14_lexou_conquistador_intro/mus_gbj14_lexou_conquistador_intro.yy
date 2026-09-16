@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mus_gbj14_lexou_conquistador_intro",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":17.066668,
+  "exportDir":"",
+  "name":"mus_gbj14_lexou_conquistador_intro",
+  "parent":{
+    "name":"gbjam14",
+    "path":"folders/Sounds/Music/gbjam14.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_gbj14_lexou_conquistador_intro.wav",
+  "volume":1.0,
+}

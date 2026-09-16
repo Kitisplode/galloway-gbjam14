@@ -18,28 +18,48 @@ function scr_Place_Meeting_3d(_position, _other)
 	return false;
 }
 
+function _scr_tilemap_find_corner_cells(_position, _tilemap)
+{
+	if (_tilemap <= -1) return undefined;
+	var _result = {
+		_l: 0,
+		_r: 0,
+		_t: 0,
+		_b: 0
+	};
+	
+	var _left_cell_x = _position[0] + bbox_left - x;
+	var _right_cell_x = _position[0] + bbox_right - x;
+	var _top_cell_y = _position[1] + bbox_top - y + 1;
+	var _bottom_cell_y = _position[1] + bbox_bottom - y - 1;
+	var _left_cell = tilemap_get_cell_x_at_pixel(_tilemap, _left_cell_x,_top_cell_y);
+	if (_left_cell < 0) _left_cell = 0;
+	var _right_cell = tilemap_get_cell_x_at_pixel(_tilemap, _right_cell_x,_top_cell_y);
+	if (_right_cell < 0) _right_cell = tilemap_get_width(_tilemap) - 1;
+	var _top_cell = tilemap_get_cell_y_at_pixel(_tilemap, _left_cell_x,_top_cell_y);
+	if (_top_cell < 0) _top_cell = 0;
+	var _bottom_cell = tilemap_get_cell_y_at_pixel(_tilemap, _right_cell_x,_bottom_cell_y);
+	if (_bottom_cell < 0) _bottom_cell = tilemap_get_height(_tilemap) - 1;
+	_result._l = _left_cell;
+	_result._r = _right_cell;
+	_result._t = _top_cell;
+	_result._b = _bottom_cell;
+	
+	return _result;
+}
+
 function scr_Place_Meeting_Tilemap(_position, _other)
 {
 	if (!instance_exists(_other) || _other.object_index != obj_block_tileset) return false;
 	if (_other.tilemap <= -1) return false;
 	// Find the overlapped cells.
-	var _left_cell_x = _position[0] + bbox_left - x;
-	var _right_cell_x = _position[0] + bbox_right - x;
-	var _top_cell_y = _position[1] + bbox_top - y;
-	var _bottom_cell_y = _position[1] + bbox_bottom - y;
-	var _left_cell = tilemap_get_cell_x_at_pixel(_other.tilemap, _left_cell_x,_top_cell_y);
-	if (_left_cell < 0) _left_cell = 0;
-	var _right_cell = tilemap_get_cell_x_at_pixel(_other.tilemap, _right_cell_x,_top_cell_y);
-	if (_right_cell < 0) _right_cell = tilemap_get_width(_other.tilemap) - 1;
-	var _top_cell = tilemap_get_cell_y_at_pixel(_other.tilemap, _left_cell_x,_top_cell_y);
-	if (_top_cell < 0) _top_cell = 0;
-	var _bottom_cell = tilemap_get_cell_y_at_pixel(_other.tilemap, _right_cell_x,_bottom_cell_y);
-	if (_bottom_cell < 0) _bottom_cell = tilemap_get_height(_other.tilemap) - 1;
+	var _cell_corners = _scr_tilemap_find_corner_cells(_position, _other.tilemap);
+	if (is_undefined(_cell_corners)) return false;
 	// Check each of the overlapped cells to see if they collide with the object.
 	var _result = false;
-	for(var _x = _left_cell; _x <= _right_cell; _x++)
+	for(var _x = _cell_corners._l; _x <= _cell_corners._r; _x++)
 	{
-		for (var _y = _top_cell; _y <= _bottom_cell; _y++)
+		for (var _y = _cell_corners._t; _y <= _cell_corners._b; _y++)
 		{
 			if (tilemap_get(_other.tilemap, _x,_y) <= 0) continue;
 			_result = true;
