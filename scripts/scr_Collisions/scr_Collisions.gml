@@ -25,8 +25,8 @@ function scr_Place_Meeting_Tilemap(_position, _other)
 	// Find the overlapped cells.
 	var _left_cell_x = _position[0] + bbox_left - x;
 	var _right_cell_x = _position[0] + bbox_right - x;
-	var _top_cell_y = _position[1] + bbox_top - y;
-	var _bottom_cell_y = _position[1] + bbox_bottom - y;
+	var _top_cell_y = _position[1] + bbox_top - y + 1;
+	var _bottom_cell_y = _position[1] + bbox_bottom - y-1;
 	var _left_cell = tilemap_get_cell_x_at_pixel(_other.tilemap, _left_cell_x,_top_cell_y);
 	if (_left_cell < 0) _left_cell = 0;
 	var _right_cell = tilemap_get_cell_x_at_pixel(_other.tilemap, _right_cell_x,_top_cell_y);

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_gbj14_jopes_egyptian_adventuring",
+  "%Name":"mus_gbj14_jopes_spanish_adventuring",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":52.460384,
   "exportDir":"",
-  "name":"mus_gbj14_jopes_egyptian_adventuring",
+  "name":"mus_gbj14_jopes_spanish_adventuring",
   "parent":{
     "name":"gbjam14",
     "path":"folders/Sounds/Music/gbjam14.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_gbj14_jopes_egyptian_adventuring.wav",
+  "soundFile":"mus_gbj14_jopes_spanish_adventuring.wav",
   "volume":1.0,
 }

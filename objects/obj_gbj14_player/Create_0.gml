@@ -50,8 +50,8 @@ up_vector = r3(0,-1,0);
 r3_clone(up_vector, normal_vector);
 force_gravity = 15;
 
-slide_slopes_down = true;
-slide_slopes_up = true;
+slide_slopes_down = false;
+slide_slopes_up = false;
 slide_slopes_distance = 2;
 slide_around_blocks = false;
 slide_around_blocks_distance = 8;

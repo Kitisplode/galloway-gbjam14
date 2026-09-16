@@ -3,6 +3,14 @@
 
 if (!paused)
 {
+	if (action == -1)
+	{
+		if (!place_meeting(position[0],position[1], obj_block_ladder))
+		{
+			action = 0;
+		}
+	}
+	
 	// While hurt, the player cannot move.
 	if (hurt_timer > 0)
 	{
@@ -37,19 +45,32 @@ if (!paused)
 	// Use the input to move.
 	if (direction_input > -1 && can_move)
 	{
-		var _accel = accel_run;
+		if (action > -1)
+		{
+			var _accel = accel_run;
 		
-		if (direction_input < 90 || direction_input > 270)
-			direction_facing = 0;
-		else if (direction_input > 90 && direction_input < 270)
-			direction_facing = 180;
-		direction_aiming = direction_facing;
+			if (direction_input < 90 || direction_input > 270)
+				direction_facing = 0;
+			else if (direction_input > 90 && direction_input < 270)
+				direction_facing = 180;
+			direction_aiming = direction_facing;
 		
-		if ((direction_input >= 0 && direction_input < 90) ||
-			direction_input > 270)
-			velocity[0] += _accel;
-		else if (direction_input < 270 && direction_input > 90)
-			velocity[0] -= _accel;
+			if ((direction_input >= 0 && direction_input < 90) ||
+				direction_input > 270)
+				velocity[0] += _accel;
+			else if (direction_input < 270 && direction_input > 90)
+				velocity[0] -= _accel;
+		}
+		else
+		{
+			var _accel = accel_run;
+		
+			if (direction_input > 0 && direction_input < 180)
+				velocity[1] -= _accel;
+			else if (direction_input > 180)
+				velocity[1] += _accel;
+			
+		}
 	}
 	// Apply friction if we're on the ground
 	if (is_on_ground)
@@ -59,32 +80,48 @@ if (!paused)
 		if (hurt_timer > 0) _temp_friction = friction_hurt;
 		velocity[0] *= _temp_friction;
 	}
+	if (action <= -1)
+	{
+		velocity[1] *= friction_ground;
+	}
 	
 	if (can_move)
 	{
-		// Fall through one way platforms when tapping down.
-		if (input_check_pressed("down") && is_on_ground)
+		if (action > -1)
 		{
-			fall_through_oneway_timer = fall_through_oneway_time;
-		}
-		// Jump!
-		if (scr_Input_Read(id_input, input_jump, 0))
-		{
-			if (is_on_ground)
+			// Fall through one way platforms when tapping down.
+			if (input_check_pressed("down") && is_on_ground)
 			{
+				fall_through_oneway_timer = fall_through_oneway_time;
+			}
+			// Jump!
+			if (scr_Input_Read(id_input, input_jump, 0))
+			{
+				if (is_on_ground)
+				{
+					play_sound(snd_gbj14_player_jump, 1, 0, 1, 1, 0);
+					velocity[1] = -jump_force * 0.97;
+				}
+			}
+			// When the player releases jump while jumping upwards, stop them and start falling.
+			if (input_check_released(input_jump) && !is_on_ground && velocity[1] < -30)
+			{
+				velocity[1] = -30;
+			}
+		}
+		else
+		{
+			// Jump!
+			if (scr_Input_Read(id_input, input_jump, 0))
+			{
+				action = 0;
 				play_sound(snd_gbj14_player_jump, 1, 0, 1, 1, 0);
 				velocity[1] = -jump_force * 0.97;
 			}
-		}
-		//// If jump is still held while falling, slow down our fall.
-		//if (input_check(input_jump) && !is_on_ground && velocity[1] > 0)
-		//{
-		//	velocity[1] *= 0.90;
-		//}
-		// When the player releases jump while jumping upwards, stop them and start falling.
-		if (input_check_released(input_jump) && !is_on_ground && velocity[1] < -30)
-		{
-			velocity[1] = -30;
+			else if (input_check_pressed("left") || input_check_pressed("right"))
+			{
+				action = 0;
+			}
 		}
 	}
 	
@@ -112,11 +149,26 @@ if (!paused)
 				}
 			}
 		}
-	}
+		
+		// If the player is colliding with a ladder and they press up or down, grab onto the ladder.
+		if (action != -1)
+		{
+			var _ladder = instance_place(position[0],position[1], obj_block_ladder);
+			if (instance_exists(_ladder) && (input_check("down") || input_check("up")))
+			{
+				position[0] = _ladder.position[0];
+				x = position[0];
+				velocity[0] = 0;
+				velocity[1] = 0;
+				action = -1;
+			}
+		}
 	
-	if (scr_Input_Read(id_input, input_swap, 0))
-	{
-		scr_gbj14_player_Scroll_Item();
+		// Allow the player to cycle through items.
+		if (scr_Input_Read(id_input, input_swap, 0))
+		{
+			scr_gbj14_player_Scroll_Item();
+		}
 	}
 }
 
