@@ -68,6 +68,21 @@ function scr_gbj14_player_Use_Item_Lift()
 	}
 }
 
+function scr_gbj14_player_Use_Item_Ladder()
+{
+	
+}
+
+function scr_gbj14_player_Use_Item_Bomb()
+{
+	var _bomb = instance_create_depth(position[0], position[1] - 24, depth - 1, obj_gbj14_item_bomb);
+	if (instance_exists(_bomb))
+	{
+		_bomb.velocity[0] = cos(degtorad(direction_facing)) * 100;
+		_bomb.velocity[1] = -100;
+	}
+}
+
 function scr_gbj14_player_Use_Item_Pick()
 {
 	var _pos = scr_gbj14_player_Cursor_Pick();
