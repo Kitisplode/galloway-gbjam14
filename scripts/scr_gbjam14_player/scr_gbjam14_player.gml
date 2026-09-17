@@ -88,7 +88,7 @@ function scr_gbj14_player_Use_Item_Pick()
 	var _pos = scr_gbj14_player_Cursor_Pick();
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_stone");
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
-	if (random(100) < 10)
+	if (random_range(0,100) < 10)
 	{
 		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
 	}
@@ -97,7 +97,7 @@ function scr_gbj14_player_Use_Item_Shovel()
 {
 	var _pos = scr_gbj14_player_Cursor_Shovel();
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
-	if (random(100) < 10)
+	if (random_range(0,100) < 10)
 	{
 		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
 	}

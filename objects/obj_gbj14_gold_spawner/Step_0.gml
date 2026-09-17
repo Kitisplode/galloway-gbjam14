@@ -6,7 +6,7 @@ if (!paused)
 	if (spawn_timer <= 0)
 	{
 		var _index = obj_gbj14_item_gold;
-		if (random(100) < 10) _index = obj_gbj14_item_gold_large;
+		if (random_range(0,100) < 10) _index = obj_gbj14_item_gold_large;
 		var _gold = instance_create_depth(position[0],position[1], depth, _index);
 		if (instance_exists(_gold))
 		{
