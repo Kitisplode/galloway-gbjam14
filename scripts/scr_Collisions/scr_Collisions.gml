@@ -20,7 +20,13 @@ function scr_Place_Meeting_3d(_position, _other)
 
 function _scr_tilemap_find_corner_cells(_position, _tilemap)
 {
-	if (_tilemap <= -1) return undefined;
+	var _x = 0;
+	var _y = 0;
+	if (_tilemap <= -1)
+	{
+		_x = tilemap_get_x(_tilemap);
+		_y = tilemap_get_y(_tilemap);
+	}
 	var _result = {
 		_l: 0,
 		_r: 0,
@@ -32,14 +38,10 @@ function _scr_tilemap_find_corner_cells(_position, _tilemap)
 	var _right_cell_x = _position[0] + bbox_right - x;
 	var _top_cell_y = _position[1] + bbox_top - y + 1;
 	var _bottom_cell_y = _position[1] + bbox_bottom - y - 1;
-	var _left_cell = tilemap_get_cell_x_at_pixel(_tilemap, _left_cell_x,_top_cell_y);
-	if (_left_cell < 0) _left_cell = 0;
-	var _right_cell = tilemap_get_cell_x_at_pixel(_tilemap, _right_cell_x,_top_cell_y);
-	if (_right_cell < 0) _right_cell = tilemap_get_width(_tilemap) - 1;
-	var _top_cell = tilemap_get_cell_y_at_pixel(_tilemap, _left_cell_x,_top_cell_y);
-	if (_top_cell < 0) _top_cell = 0;
-	var _bottom_cell = tilemap_get_cell_y_at_pixel(_tilemap, _right_cell_x,_bottom_cell_y);
-	if (_bottom_cell < 0) _bottom_cell = tilemap_get_height(_tilemap) - 1;
+	var _left_cell = floor((_left_cell_x - _x) / 16);
+	var _right_cell = floor((_right_cell_x - _x) / 16);
+	var _top_cell = floor((_top_cell_y - _y) / 16);
+	var _bottom_cell = floor((_bottom_cell_y - _y) / 16);
 	_result._l = _left_cell;
 	_result._r = _right_cell;
 	_result._t = _top_cell;
@@ -48,7 +50,7 @@ function _scr_tilemap_find_corner_cells(_position, _tilemap)
 	return _result;
 }
 
-function scr_Place_Meeting_Tilemap(_position, _other)
+function scr_Place_Meeting_Tilemap(_position, _other, _precise_collision=false)
 {
 	if (!instance_exists(_other) || _other.object_index != obj_block_tileset) return false;
 	if (_other.tilemap <= -1) return false;
@@ -59,18 +61,26 @@ function scr_Place_Meeting_Tilemap(_position, _other)
 	var _result = false;
 	for(var _x = _cell_corners._l; _x <= _cell_corners._r; _x++)
 	{
+		if (_x <= -1 || _x >= tilemap_get_width(_other.tilemap)) continue;
 		for (var _y = _cell_corners._t; _y <= _cell_corners._b; _y++)
 		{
-			if (tilemap_get(_other.tilemap, _x,_y) <= 0) continue;
-			_result = true;
-			break;
-			//_other.mask_index = spr_block_16;
-			//_other.x = _x * 16; _other.y = _y * 16;
-			//if (place_meeting(_position[0], _position[1], _other))
-			//{
-			//	_result = true;
-			//	break;
-			//}
+			if (_y <= -1 || _y >= tilemap_get_height(_other.tilemap)) continue;
+			if (!_precise_collision)
+			{
+				if (tilemap_get(_other.tilemap, _x,_y) <= 0) continue;
+				_result = true;
+				break;
+			}
+			else
+			{
+				_other.mask_index = spr_block_16;
+				_other.x = _x * 16; _other.y = _y * 16;
+				if (place_meeting(_position[0], _position[1], _other))
+				{
+					_result = true;
+					break;
+				}
+			}
 		}
 	}
 	_other.x = _other.xstart;

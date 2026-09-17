@@ -142,10 +142,6 @@ if (!paused)
 						_item.uses -= 1;
 						if (_item.uses <= 0) ds_list_delete(list_items, 0);
 					}
-					if (audio_exists(_item.sound))
-					{
-						play_sound(_item.sound, 1, 0, 1,1,0.1);
-					}
 				}
 			}
 		}
@@ -165,7 +161,7 @@ if (!paused)
 		}
 	
 		// Allow the player to cycle through items.
-		if (scr_Input_Read(id_input, input_swap, 0))
+		if (scr_Input_Read(id_input, input_swap, 0) && carry_id == id)
 		{
 			scr_gbj14_player_Scroll_Item();
 		}

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (ds_list_size(list_items) > 0)
+if (ds_list_size(list_items) > 0 && can_act)
 {
 	var _item = ds_list_find_value(list_items, 0);
 	var _script = asset_get_index(_item.show_cursor);

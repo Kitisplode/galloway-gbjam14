@@ -1,13 +1,12 @@
 // Call these functions only from within obj_gbj14_player
 
-function scr_gbj14_player_Add_Item(_script, _uses, _show_cursor, _sprite, _sound)
+function scr_gbj14_player_Add_Item(_script, _uses, _show_cursor, _sprite)
 {
 	var _item = {
 		script: _script,
 		uses: _uses,
 		show_cursor: _show_cursor,
-		sprite: _sprite,
-		sound: _sound
+		sprite: _sprite
 	};
 	ds_list_add(list_items, _item);
 }
@@ -53,6 +52,7 @@ function scr_gbj14_player_Use_Item_Lift()
 				_block.mask_index = msk_no_collision;
 				_block.movement_enabled = false;
 				_block.apply_gravity_force = false;
+				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
 			}
 		}
 	}
@@ -65,12 +65,34 @@ function scr_gbj14_player_Use_Item_Lift()
 		carry_id.velocity[0] = cos(degtorad(direction_facing)) * 100;
 		carry_id.velocity[1] = -100;
 		carry_id = id;
+		play_sound(snd_gbj14_player_attack, 1, false, 1, 1, 0);
 	}
 }
 
 function scr_gbj14_player_Use_Item_Ladder()
 {
-	
+	play_sound(snd_gbj14_knock, 1, 0, 1,1,0.1);
+	var _max_ladder_length = 5;
+	for (var _i = 0; _i < _max_ladder_length; _i++)
+	{
+		var _ladder = instance_create_depth(position[0], floor(position[1] / 16) * 16 - _i * 16, depth + 1, obj_block_ladder);
+		if (instance_exists(_ladder))
+		{
+			var _valid = false;
+			var _one_way_plat = false;
+			with(_ladder)
+			{
+				_valid = scr_Check_For_Solids(position, 1);
+				_one_way_plat = place_meeting(position[0],position[1], obj_block_oneway_up);
+			}
+			if (_valid)
+			{
+				instance_destroy(_ladder);
+				break;
+			}
+			if (_one_way_plat) break;
+		}
+	}
 }
 
 function scr_gbj14_player_Use_Item_Bomb()
@@ -85,6 +107,7 @@ function scr_gbj14_player_Use_Item_Bomb()
 
 function scr_gbj14_player_Use_Item_Pick()
 {
+	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	var _pos = scr_gbj14_player_Cursor_Pick();
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_stone");
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
@@ -95,6 +118,7 @@ function scr_gbj14_player_Use_Item_Pick()
 }
 function scr_gbj14_player_Use_Item_Shovel()
 {
+	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	var _pos = scr_gbj14_player_Cursor_Shovel();
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
 	if (random_range(0,100) < 10)
@@ -111,10 +135,39 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 		if (!instance_exists(_id)) continue;
 		if (_id.object_index != obj_block_tileset) continue;
 		if (_id.layer_name != _layer_name) continue;
+		var _tilemap = _id.tilemap;
 		{
-			var _tilemap = _id.tilemap;
-			_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y);
+			if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y))
+			{
+				var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(round(random_range(1,5))));
+				if (audio_exists(_sound)) play_sound(_sound, 1, 0, 1, 1,0.5);
+			}
 		}
+		break;
+	}
+}
+
+function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
+{
+	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
+	{
+		var _id = ds_list_find_value(global.list_solids, _i);
+		if (!instance_exists(_id)) continue;
+		if (_id.object_index != obj_block_tileset) continue;
+		if (_id.layer_name != _layer_name) continue;
+		var _tilemap = _id.tilemap;
+		for (var _x = _corners._l; _x < _corners._r; _x++)
+		{
+			for (var _y = _corners._t; _y < _corners._b; _y++)
+			{
+				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y))
+				{
+					var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(round(random_range(1,5))));
+					if (audio_exists(_sound)) play_sound(_sound, 1, 0, 1, 1,0.5);
+				}
+			}
+		}
+		break;
 	}
 }
 
@@ -134,10 +187,6 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 	var _tile = tilemap_get(_tilemap, _x,_y);
 	if (_tile > 0)
 	{
-		var _random = round(random_range(1,5));
-		var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(_random));
-		if (audio_exists(_sound))
-			play_sound(_sound, 1, 0, 1, 1,0.5);
 		tilemap_set(_tilemap, 0, _x,_y);
 		for (var _j = 0; _j < 4; _j++)
 		{

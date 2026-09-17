@@ -37,11 +37,11 @@ friction_hurt = 0.9;
 carry_id = id;
 
 list_items = ds_list_create();
-scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Lift", -1, "", spr_gbj14_hud_item_lift, snd_gbj14_player_attack);
-scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Pick", -1, "scr_gbj14_player_Cursor_Pick", spr_gbj14_hud_item_pick, snd_gbj14_player_attack);
-scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Shovel", -1, "scr_gbj14_player_Cursor_Shovel", spr_gbj14_hud_item_shovel, snd_gbj14_player_attack);
-scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Ladder", -1, "scr_gbj14_player_Cursor_Ladder", spr_gbj14_hud_item_ladder, snd_gbj14_player_attack);
-scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Bomb", -1, "", spr_gbj14_hud_item_bomb, snd_gbj14_player_attack);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Lift", -1, "", spr_gbj14_hud_item_lift);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Pick", -1, "scr_gbj14_player_Cursor_Pick", spr_gbj14_hud_item_pick);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Shovel", -1, "scr_gbj14_player_Cursor_Shovel", spr_gbj14_hud_item_shovel);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Ladder", -1, "scr_gbj14_player_Cursor_Ladder", spr_gbj14_hud_item_ladder);
+scr_gbj14_player_Add_Item("scr_gbj14_player_Use_Item_Bomb", -1, "", spr_gbj14_hud_item_bomb);
 damage = 1;
 
 // Set up physics
