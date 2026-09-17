@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gbj14_item_bomb",
+  "%Name":"obj_gbj14_item_gold_large",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gbj14_item_bomb",
+  "name":"obj_gbj14_item_gold_large",
   "overriddenProperties":[],
   "parent":{
     "name":"items",
     "path":"folders/Objects/Game Objects/gbjam14/items.yy",
   },
   "parentObjectId":{
-    "name":"par_physics",
-    "path":"objects/par_physics/par_physics.yy",
+    "name":"obj_gbj14_item_gold",
+    "path":"objects/obj_gbj14_item_gold/obj_gbj14_item_gold.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gbj14_item_bomb",
-    "path":"sprites/spr_gbj14_item_bomb/spr_gbj14_item_bomb.yy",
+    "name":"spr_gbj14_item_gold_big",
+    "path":"sprites/spr_gbj14_item_gold_big/spr_gbj14_item_gold_big.yy",
   },
   "spriteMaskId":null,
   "visible":true,

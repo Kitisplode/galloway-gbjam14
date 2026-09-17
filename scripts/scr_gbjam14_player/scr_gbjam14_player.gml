@@ -88,11 +88,19 @@ function scr_gbj14_player_Use_Item_Pick()
 	var _pos = scr_gbj14_player_Cursor_Pick();
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_stone");
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
+	if (random(100) < 10)
+	{
+		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
+	}
 }
 function scr_gbj14_player_Use_Item_Shovel()
 {
 	var _pos = scr_gbj14_player_Cursor_Shovel();
 	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
+	if (random(100) < 10)
+	{
+		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
+	}
 }
 
 function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
@@ -110,6 +118,16 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 	}
 }
 
+function _scr_gbj14_spawn_gold(_x,_y, _count, _depth)
+{
+	var _gold_spawner = instance_create_depth(_x,_y, _depth, obj_gbj14_gold_spawner);
+	if (instance_exists(_gold_spawner))
+	{
+		_gold_spawner.spawn_count = _count;
+	}
+	return _gold_spawner;
+}
+
 function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 {
 	if (_tilemap <= -1) return false;
@@ -119,7 +137,7 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 		var _random = round(random_range(1,5));
 		var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(_random));
 		if (audio_exists(_sound))
-			play_sound(_sound, 1, 0, 2, 1,0.5);
+			play_sound(_sound, 1, 0, 1, 1,0.5);
 		tilemap_set(_tilemap, 0, _x,_y);
 		for (var _j = 0; _j < 4; _j++)
 		{
