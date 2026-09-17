@@ -36,6 +36,11 @@ if (instance_exists(obj_gbj14_player))
 			draw_sprite(_sprite, 0, _x,_y);
 		}
 	}
+	
+	draw_set_halign(fa_right);
+	draw_set_valign(fa_top);
+	draw_set_font(fnt_points);
+	draw_text(144, 3, string(global.player_score));
 }
 
 matrix_set(matrix_world, matrix_build_identity());

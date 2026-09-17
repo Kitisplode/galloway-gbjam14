@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gbj14_item_bomb",
+  "%Name":"obj_gbj14_item_gold",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_base_player","path":"objects/obj_base_player/obj_base_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gbj14_item_bomb",
+  "name":"obj_gbj14_item_gold",
   "overriddenProperties":[],
   "parent":{
     "name":"items",
@@ -34,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gbj14_item_bomb",
-    "path":"sprites/spr_gbj14_item_bomb/spr_gbj14_item_bomb.yy",
+    "name":"spr_gbj14_item_gold_small",
+    "path":"sprites/spr_gbj14_item_gold_small/spr_gbj14_item_gold_small.yy",
   },
   "spriteMaskId":null,
   "visible":true,

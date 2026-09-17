@@ -1,1 +1,1 @@
-play_music(mus_gbj14_jopes_spanish_adventuring, 0, 1, 1,1,0);
+scr_audio_play_song_no_fade(mus_gbj14_jopes_spanish_adventuring, true);
