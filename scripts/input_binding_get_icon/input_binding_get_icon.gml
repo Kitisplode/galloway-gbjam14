@@ -58,13 +58,14 @@ function input_binding_get_icon(_binding, _player_index = 0)
         return _icon ?? "empty";
     }
     
+	var _category;
     switch(_type)
     {
         case __INPUT_BINDING_KEY:
         case __INPUT_BINDING_MOUSE_BUTTON:
         case __INPUT_BINDING_MOUSE_WHEEL_UP:
         case __INPUT_BINDING_MOUSE_WHEEL_DOWN:
-            var _category = "keyboard and mouse";
+            _category = "keyboard and mouse";
         break;
         
         case __INPUT_BINDING_VIRTUAL_BUTTON:
@@ -73,7 +74,7 @@ function input_binding_get_icon(_binding, _player_index = 0)
         
         case __INPUT_BINDING_GAMEPAD_BUTTON:
         case __INPUT_BINDING_GAMEPAD_AXIS:
-            var _category = _global.__players[_player_index].__gamepad_type_override ?? input_player_get_gamepad_type(_player_index, _binding);
+            _category = _global.__players[_player_index].__gamepad_type_override ?? input_player_get_gamepad_type(_player_index, _binding);
         break;
         
         default:

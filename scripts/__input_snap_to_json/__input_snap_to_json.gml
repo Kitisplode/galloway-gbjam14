@@ -43,7 +43,7 @@ function __input_snap_to_json_parser(_ds, _pretty, _alphabetise) constructor
             
             ds_list_sort(_list, true);
             
-            var _i = 0;
+            _i = 0;
             repeat(_count)
             {
                 _names[@ _i] = _list[| _i];
@@ -51,7 +51,7 @@ function __input_snap_to_json_parser(_ds, _pretty, _alphabetise) constructor
             }
             
             ds_list_destroy(_list);
-            var _i = 0;
+            _i = 0;
         }
         
         if (pretty)

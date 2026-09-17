@@ -40,7 +40,7 @@ function __input_multiplayer_assignment_tick()
     }
     
     //Scan for input for the lowest index slot
-    var _p = 0;
+    _p = 0;
     repeat(_global.__join_player_max)
     {
         if (!input_player_connected(_p))
@@ -78,7 +78,7 @@ function __input_multiplayer_assignment_tick()
     }
     
     //Allow players to leave the game
-    var _p = 0;
+    _p = 0;
     repeat(_global.__join_player_max)
     {
         if ((_global.__join_leave_verb != undefined) && input_check_pressed(_global.__join_leave_verb, _p))
