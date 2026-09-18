@@ -36,11 +36,15 @@ if (instance_exists(obj_gbj14_player))
 			draw_sprite(_sprite, 0, _x,_y);
 		}
 	}
-	
+	/*
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_top);
 	draw_set_font(fnt_points);
 	draw_text(144, 3, string(global.player_score));
+	*/
+	var _money = "$" + string(global.player_score);
+	var _right = 140 - string_length(_money)*8;
+	draw_bitmap_text(spr_font_lexou, _right, 4, _money, 128);
 }
 
 matrix_set(matrix_world, matrix_build_identity());

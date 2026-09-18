@@ -1,6 +1,8 @@
 
 depth = OBJECT_DEPTHS.HUD;
 
+global.in_shop = false;
+
 shop_items = [
     { name: "Bomb",    price:  50, sprite: spr_gbj14_hud_item_bomb   , description: "Blasts through almost anything." },
     { name: "Ladder",  price:  50, sprite: spr_gbj14_hud_item_ladder , description: "Put this down to climb upwards." },
