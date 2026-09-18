@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_font_lexou_01",
+  "%Name":"spr_font_pik",
   "bboxMode":0,
   "bbox_bottom":15,
   "bbox_left":0,
@@ -46,7 +46,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"51dcfd99-00dd-4122-89f1-59c4e05d5e53","blendMode":0,"displayName":"default","isLocked":false,"name":"51dcfd99-00dd-4122-89f1-59c4e05d5e53","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_font_lexou_01",
+  "name":"spr_font_pik",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -58,7 +58,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_font_lexou_01",
+    "%Name":"spr_font_pik",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -82,7 +82,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_font_lexou_01",
+    "name":"spr_font_pik",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -94,82 +94,82 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d440f5fb-0da6-4aeb-9499-7f113aa3cfcc","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d440f5fb-0da6-4aeb-9499-7f113aa3cfcc","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"2682f9df-0e38-4f09-aa8b-4b59516d3427","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"aa858f62-b85d-46a2-89c0-ae0bf33ae0d4","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"aa858f62-b85d-46a2-89c0-ae0bf33ae0d4","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0f5094f2-beec-4a10-9450-0000b5455746","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ad812bce-fb4e-44d2-a013-344ae50d5378","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ad812bce-fb4e-44d2-a013-344ae50d5378","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"47786e21-82b8-455f-b40e-8913fe70056c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"606e8efe-1eac-4270-b785-7a290022bb6a","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"606e8efe-1eac-4270-b785-7a290022bb6a","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"13128ac2-fe9c-408d-9bbf-007d3f24329b","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6452a167-ede3-4510-8d69-aafa404764c6","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6452a167-ede3-4510-8d69-aafa404764c6","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"42ec9b2a-adc7-4ed3-8753-a4c715077d62","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c9a8fd5-2181-4613-a215-32c9fd2528f0","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c9a8fd5-2181-4613-a215-32c9fd2528f0","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"798ccbb2-8ac5-4c9a-b77a-2324aa31d902","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"94e2c479-3c29-41fb-b6c6-9d3a008c2501","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"94e2c479-3c29-41fb-b6c6-9d3a008c2501","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a5bb612c-f736-410f-b16d-c2a9b64d87ae","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc6063ef-809b-42f7-ad9e-a503b3e0c28d","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc6063ef-809b-42f7-ad9e-a503b3e0c28d","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"08ba1da0-f9ea-4139-b76e-cabf4b5d8816","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c880d7c-756b-4abf-bdc8-eb91bd5d37fd","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c880d7c-756b-4abf-bdc8-eb91bd5d37fd","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a765fa91-34e1-479e-8b81-7a79a649854f","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a8db7547-4f65-4b2e-8be6-d74f4b331d37","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a8db7547-4f65-4b2e-8be6-d74f4b331d37","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"eead35f8-af75-4935-bf27-56dff5c0f040","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a682ed3-7651-4744-ad1b-bd22ab1e6a64","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a682ed3-7651-4744-ad1b-bd22ab1e6a64","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"757419b0-0a82-49fb-9502-044e56541942","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4e702f8a-4b6b-4848-976a-5042a902f5d1","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4e702f8a-4b6b-4848-976a-5042a902f5d1","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6a80c262-0be8-4f97-b15b-8876137973f3","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae3ab2fe-6865-4646-8f38-37181bf7ff56","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae3ab2fe-6865-4646-8f38-37181bf7ff56","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"99cb33bb-aecc-4c2f-82b4-fb96f2b55168","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"055eaf98-35fb-443d-83e1-eb749d3b6cd5","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"055eaf98-35fb-443d-83e1-eb749d3b6cd5","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"72b864a7-eaf0-49c5-aa40-c3112fe1be5a","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"29d5b2c1-87c4-4bcd-9bf1-c66be93bb706","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"29d5b2c1-87c4-4bcd-9bf1-c66be93bb706","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ffed42b8-91cd-40f9-8598-943984d13a1a","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"04c3331c-e9b2-4f85-8238-656ae0be8a89","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"04c3331c-e9b2-4f85-8238-656ae0be8a89","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4b792fd2-a966-44d5-b9ba-19954cf3839e","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23a34eb4-51e8-489e-bdcf-450bb556f406","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23a34eb4-51e8-489e-bdcf-450bb556f406","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"62d59af0-db71-442f-9256-61d29199cca8","IsCreationKey":false,"Key":16.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3152c85f-4a5a-4c6c-81d9-a33ca9353c2d","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3152c85f-4a5a-4c6c-81d9-a33ca9353c2d","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e8192263-4004-468c-8aa6-a4f729d344f6","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"be7c72dc-cafe-451f-befb-b25123211249","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"be7c72dc-cafe-451f-befb-b25123211249","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"407a6229-8e1a-4d0d-8c15-2e7984d09902","IsCreationKey":false,"Key":18.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1b898f5c-9f02-41ff-8514-0406f30631f8","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1b898f5c-9f02-41ff-8514-0406f30631f8","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"80695df1-8f2d-4f9a-abb9-53b9ac66343f","IsCreationKey":false,"Key":19.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a6ac45d2-a500-4bb8-b114-5bba84738fe4","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a6ac45d2-a500-4bb8-b114-5bba84738fe4","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0554b294-7509-462d-bbf9-82b954443612","IsCreationKey":false,"Key":20.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"469f95f1-c111-4b4a-aefb-12930feae523","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"469f95f1-c111-4b4a-aefb-12930feae523","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"03b9bcc0-d44a-44c5-b2d3-91e7a960bf34","IsCreationKey":false,"Key":21.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a6bd44f-c110-493c-8add-0ba5d24bd1b2","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a6bd44f-c110-493c-8add-0ba5d24bd1b2","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"22addb46-6284-4fea-bded-5a222ee0baba","IsCreationKey":false,"Key":22.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4913d563-e7c3-4c56-8abc-de7ff76c0c57","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4913d563-e7c3-4c56-8abc-de7ff76c0c57","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"77632c63-6dc9-44f9-9409-02a8918b9a6e","IsCreationKey":false,"Key":23.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"61dad698-8b83-4608-95a4-c7e2eb79c152","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"61dad698-8b83-4608-95a4-c7e2eb79c152","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"7ff8441d-a79c-4f03-9f42-9f89c52e5244","IsCreationKey":false,"Key":24.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a04db777-5a3a-4350-a6ea-080702f0ddb7","path":"sprites/spr_font_lexou_01/spr_font_lexou_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a04db777-5a3a-4350-a6ea-080702f0ddb7","path":"sprites/spr_font_pik/spr_font_pik.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"1e67b7c1-f436-42d6-8046-4790d56b2acd","IsCreationKey":false,"Key":25.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
