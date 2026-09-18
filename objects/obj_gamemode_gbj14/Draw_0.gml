@@ -13,7 +13,7 @@ if (instance_exists(obj_gbj14_player))
 {
 	if (global.paused)
 	{
-		paused_alpha = lerp(paused_alpha, 1, 0.05);
+		paused_alpha = lerp(paused_alpha, 1, 0.1);
 	}
 	else
 	{

@@ -64,11 +64,11 @@ function __input_player_tick_sources(_player)
             var _source_gamepad = _source_struct.__gamepad;
             
             var _alternate_array = _current_profile_dict[$ _verb_name];
-            
+            var _alternate;
             switch(_source_type)
             {
                 case __INPUT_SOURCE.KEYBOARD:
-                    var _alternate = 0;
+                    _alternate = 0;
                     repeat(INPUT_MAX_ALTERNATE_BINDINGS)
                     {
                         var _binding = _alternate_array[_alternate];
@@ -149,7 +149,7 @@ function __input_player_tick_sources(_player)
                 break;
                 
                 case __INPUT_SOURCE.MOUSE:
-                    var _alternate = 0;
+                    _alternate = 0;
                     repeat(INPUT_MAX_ALTERNATE_BINDINGS)
                     {
                         var _binding = _alternate_array[_alternate];
@@ -211,7 +211,7 @@ function __input_player_tick_sources(_player)
                         continue;
                     }
                     
-                    var _alternate = 0;
+                    _alternate = 0;
                     repeat(INPUT_MAX_ALTERNATE_BINDINGS)
                     {
                         var _binding = _alternate_array[_alternate];

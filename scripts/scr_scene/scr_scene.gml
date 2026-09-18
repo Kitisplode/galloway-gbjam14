@@ -275,13 +275,15 @@ function scr_scene_Process_Step(_action, _next_step)
 			var _id = ds_map_find_value(map_sprites, _next_step.sprite_name);
 			if (instance_exists(_id))
 			{
+				var _d;
+				
 				_id.xscale_target = _next_step.scale_x;
-				var _d = abs(_next_step.scale_x - _id.image_xscale);
+				_d = abs(_next_step.scale_x - _id.image_xscale);
 				if (_d > 0) _id.xscale_time = _next_step.scale_time / _d;
 				else _id.xscale_time = 0;
 				
 				_id.yscale_target = _next_step.scale_y;
-				var _d = abs(_next_step.scale_y - _id.image_yscale);
+				_d = abs(_next_step.scale_y - _id.image_yscale);
 				if (_d > 0) _id.yscale_time = _next_step.scale_time / _d;
 				else _id.yscale_time = 0;
 			}

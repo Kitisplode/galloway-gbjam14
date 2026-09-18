@@ -180,6 +180,11 @@ function __input_system_tick()
         {
             if (_global.__frame - _global.__mouse_capture_frame > 10)
             {
+				var _old_x;
+				var _old_y;
+				var _pointer_x;
+				var _pointer_y;
+				
                 if (__INPUT_ON_WINDOWS)
                 {
                     _pointer_x = display_mouse_get_x() - window_get_x();
@@ -205,29 +210,29 @@ function __input_system_tick()
                                 if (view_enabled && view_visible[0])
                                 {
                                     var _camera = view_camera[0];
-                                    var _old_x = camera_get_view_width(_camera)/2;
-                                    var _old_y = camera_get_view_height(_camera)/2;
+                                    _old_x = camera_get_view_width(_camera)/2;
+                                    _old_y = camera_get_view_height(_camera)/2;
                                 }
                                 else
                                 {
-                                    var _old_x = room_width/2;
-                                    var _old_y = room_height/2;
+                                    _old_x = room_width/2;
+                                    _old_y = room_height/2;
                                 }
                                 
-                                var _pointer_x = device_mouse_x(_global.__pointer_index);
-                                var _pointer_y = device_mouse_y(_global.__pointer_index);
+                                _pointer_x = device_mouse_x(_global.__pointer_index);
+                                _pointer_y = device_mouse_y(_global.__pointer_index);
                             break;
                             
                             case INPUT_COORD_SPACE.GUI:
-                                var _old_x     = display_get_gui_width()/2;
-                                var _old_y     = display_get_gui_height()/2;
-                                var _pointer_x = device_mouse_x_to_gui(_global.__pointer_index);
-                                var _pointer_y = device_mouse_y_to_gui(_global.__pointer_index);
+                                _old_x     = display_get_gui_width()/2;
+                                _old_y     = display_get_gui_height()/2;
+                                _pointer_x = device_mouse_x_to_gui(_global.__pointer_index);
+                                _pointer_y = device_mouse_y_to_gui(_global.__pointer_index);
                             break;
                             
                             case INPUT_COORD_SPACE.DEVICE:
-                                var _old_x = window_get_width()/2;
-                                var _old_y = window_get_height()/2;
+                                _old_x = window_get_width()/2;
+                                _old_y = window_get_height()/2;
                                 
                                 if (__INPUT_ON_WINDOWS)
                                 {
@@ -265,7 +270,7 @@ function __input_system_tick()
     }
     else if (_global.__window_focus || INPUT_ALLOW_OUT_OF_FOCUS || __INPUT_ON_MACOS)
     {
-        var _m = 0;
+        _m = 0;
         repeat(INPUT_COORD_SPACE.__SIZE)
         {
             var _old_x = _global.__pointer_x[_m];

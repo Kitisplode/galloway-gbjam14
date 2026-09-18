@@ -4,14 +4,14 @@
 function input_system_import(_string)
 {
     __INPUT_GLOBAL_STATIC_LOCAL  //Set static _global
-    
+    var _json;
     if (is_string(_string))
     {
-        var _json = json_parse(_string);
+        _json = json_parse(_string);
     }
     else
     {
-        var _json = _string;
+        _json = _string;
     }
     
     if (!is_struct(_json))

@@ -9,19 +9,20 @@
 
 function input_check_quick_pressed_2d(_verb_l, _verb_r, _verb_u, _verb_d, _player_index = 0)
 {
+	var _player_verbs_struct;
     if (!is_struct(_player_index))
     {
         __INPUT_GLOBAL_STATIC_LOCAL  //Set static _global
         __INPUT_VERIFY_PLAYER_INDEX
         
         //Grab the player's verbs
-        var _player_verbs_struct = _global.__players[_player_index].__verb_state_dict;
+        _player_verbs_struct = _global.__players[_player_index].__verb_state_dict;
     }
     else
     {
         //Secret feature that's used internally!
         //If you provide a player struct instead of an integer index then we pull the verbs struct from that instead
-        var _player_verbs_struct = _player_index.__verb_state_dict;
+        _player_verbs_struct = _player_index.__verb_state_dict;
     }
     
     //And pull out verb structs for each verb name passed into the function
@@ -94,8 +95,8 @@ function input_check_quick_pressed_2d(_verb_l, _verb_r, _verb_u, _verb_d, _playe
     var _i = 1;
     repeat(INPUT_QUICK_BUFFER)
     {
-        var _hx = _history_r[_i] - _history_l[_i];
-        var _hy = _history_d[_i] - _history_u[_i];
+        _hx = _history_r[_i] - _history_l[_i];
+        _hy = _history_d[_i] - _history_u[_i];
         
         if ((sqrt(_hx*_hx + _hy*_hy) < _min_threshold) //This historic point was within the deadzone
         ||  (dot_product(_dx, _dy, _hx, _hy) < -_min_threshold)) //Catches edge cases where the thumbstick travels across the deadzone in a single frame

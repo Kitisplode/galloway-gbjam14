@@ -29,6 +29,11 @@ function __input_transform_coordinate(_x, _y, _input_system, _output_system, _ca
     
     if (_input_system != _output_system) //Only do MATHS if the output system is different
     {
+        var _viewX;
+        var _viewY;
+        var _viewW;
+        var _viewH;
+        var _viewA;
         //Unpack the camera's properties if we're working in room-space at any point
         if ((_input_system == 0) || (_output_system == 0))
         {
@@ -37,20 +42,20 @@ function __input_transform_coordinate(_x, _y, _input_system, _output_system, _ca
             
             if (_camera != undefined)
             {
-                var _viewX = camera_get_view_x(     _camera);
-                var _viewY = camera_get_view_y(     _camera);
-                var _viewW = camera_get_view_width( _camera);
-                var _viewH = camera_get_view_height(_camera);
-                var _viewA = camera_get_view_angle( _camera);
+                _viewX = camera_get_view_x(     _camera);
+                _viewY = camera_get_view_y(     _camera);
+                _viewW = camera_get_view_width( _camera);
+                _viewH = camera_get_view_height(_camera);
+                _viewA = camera_get_view_angle( _camera);
             }
             else
             {
                 //Fall back on the room's dimensions
-                var _viewX = 0;
-                var _viewY = 0;
-                var _viewW = room_width;
-                var _viewH = room_height;
-                var _viewA = 0;
+                _viewX = 0;
+                _viewY = 0;
+                _viewW = room_width;
+                _viewH = room_height;
+                _viewA = 0;
             }
         }
         

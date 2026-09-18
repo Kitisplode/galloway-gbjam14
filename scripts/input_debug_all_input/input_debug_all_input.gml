@@ -96,15 +96,16 @@ function input_debug_all_input(_ignore_array = undefined, _allow_array = undefin
                 var _j = __INPUT_KEYCODE_MIN;
                 repeat(1 + (256 - __INPUT_KEYCODE_MIN)) //Check commonly-used keys
                 {
+					var _keyboard_key;
                     if (_j == 256)
                     {
                         //Instead of checking key 0xFF, check the currently pressed keyboard key (if any)
-                        var _keyboard_key = __input_keyboard_key();
+                        _keyboard_key = __input_keyboard_key();
                         if (_keyboard_key <= 256) break;
                     }
                     else
                     {
-                        var _keyboard_key = _j;
+                        _keyboard_key = _j;
                     }
                     
                     if (keyboard_check(_keyboard_key)

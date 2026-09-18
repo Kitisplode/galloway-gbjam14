@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_draw_bitmap_font",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_draw_bitmap_font",
+  "parent":{
+    "name":"gbjam14",
+    "path":"folders/Scripts/gbjam14.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

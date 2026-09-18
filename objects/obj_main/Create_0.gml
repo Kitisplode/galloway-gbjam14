@@ -108,7 +108,7 @@ global.active_room = -1;
 
 global.font_01 = font_add_sprite_ext(spr_font_01_outline, "!" + chr(34) + "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~ _[]\\", 0,1);
 global.font_02 = font_add_sprite_ext(spr_font, "!" + chr(34) + "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~ _[]\\", 0,1);
-global.font_lexou = font_add_sprite_ext(spr_font_lexou_01, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0,1);
+global.font_lexou = font_add_sprite_ext(spr_font_pik, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0,1);
 
 //randomize();
 
