@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gbj14_enemy_boss_core",
+  "%Name":"obj_gbj14_item_treasure",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gbj14_enemy_boss_core",
+  "name":"obj_gbj14_item_treasure",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/Objects/Game Objects/gbjam14/enemy.yy",
+    "name":"items",
+    "path":"folders/Objects/Game Objects/gbjam14/items.yy",
   },
   "parentObjectId":{
-    "name":"obj_base_enemy",
-    "path":"objects/obj_base_enemy/obj_base_enemy.yy",
+    "name":"obj_block_pushable",
+    "path":"objects/obj_block_pushable/obj_block_pushable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,9 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base_circle_16",
-    "path":"sprites/spr_base_circle_16/spr_base_circle_16.yy",
+    "name":"spr_gbj14_item_gem",
+    "path":"sprites/spr_gbj14_item_gem/spr_gbj14_item_gem.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

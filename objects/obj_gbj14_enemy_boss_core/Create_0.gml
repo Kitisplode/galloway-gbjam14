@@ -8,3 +8,5 @@ movement_collision = false;
 
 boss_id = instance_create_depth(x,y, depth, obj_gbj14_enemy_boss_real);
 boss_id.dom_id = id;
+
+chase_id = id;
