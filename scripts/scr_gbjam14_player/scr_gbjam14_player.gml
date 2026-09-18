@@ -1,14 +1,19 @@
 // Call these functions only from within obj_gbj14_player
 
-function scr_gbj14_player_Add_Item(_script, _uses, _show_cursor, _sprite)
+function scr_gbj14_player_Add_Item(_player, _item)
 {
-	var _item = {
-		script: _script,
-		uses: _uses,
-		show_cursor: _show_cursor,
-		sprite: _sprite
-	};
-	ds_list_add(list_items, _item);
+	// if player already has this item, just add uses to it
+	for (var _i = 0; _i < ds_list_size(_player.list_items); ++_i)
+	{
+		var _player_item = ds_list_find_value(_player.list_items, _i);
+		if (_player_item.sprite == _item.sprite)
+		{
+			_player_item.uses += _item.uses;
+			return;
+		}
+	}
+	// otherwise add new item to list
+	ds_list_add(_player.list_items, _item);
 }
 
 function scr_gbj14_player_Scroll_Item()

@@ -35,6 +35,13 @@ if (instance_exists(obj_gbj14_player))
 		{
 			draw_sprite(_sprite, 0, _x,_y);
 		}
+		if (_item.uses > 0)
+		{
+			_x += 20;
+			_y = 4;
+			var _uses = "x" + string(_item.uses);
+			draw_bitmap_text(spr_font_lexou, _x, _y, _uses, 32);
+		}
 	}
 	/*
 	draw_set_halign(fa_right);

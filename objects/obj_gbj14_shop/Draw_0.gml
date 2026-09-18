@@ -8,7 +8,6 @@ matrix_set(matrix_world, _mat);
 event_inherited();
 
 
-global.in_shop = global.paused; // TODO change this
 if (instance_exists(obj_gbj14_player) && global.in_shop)
 {
 	var _player = obj_gbj14_player;

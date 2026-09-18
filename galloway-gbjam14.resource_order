@@ -157,6 +157,7 @@
     {"name":"snd_gbj14_button_off","order":15,"path":"sounds/snd_gbj14_button_off/snd_gbj14_button_off.yy",},
     {"name":"snd_gbj14_button_on","order":14,"path":"sounds/snd_gbj14_button_on/snd_gbj14_button_on.yy",},
     {"name":"snd_gbj14_coin_small","order":12,"path":"sounds/snd_gbj14_coin_small/snd_gbj14_coin_small.yy",},
+    {"name":"snd_gbj14_item_get","order":16,"path":"sounds/snd_gbj14_item_get/snd_gbj14_item_get.yy",},
     {"name":"snd_gbj14_keyslam_drop","order":1,"path":"sounds/snd_gbj14_keyslam_drop/snd_gbj14_keyslam_drop.yy",},
     {"name":"snd_gbj14_keyslam_shine","order":2,"path":"sounds/snd_gbj14_keyslam_shine/snd_gbj14_keyslam_shine.yy",},
     {"name":"snd_gbj14_knock","order":10,"path":"sounds/snd_gbj14_knock/snd_gbj14_knock.yy",},

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.2807483,
+  "duration":0.0,
   "exportDir":"",
   "name":"snd_gbj14_button_on",
   "parent":{

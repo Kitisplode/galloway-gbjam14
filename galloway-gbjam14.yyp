@@ -153,7 +153,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -659,6 +659,7 @@
     {"id":{"name":"snd_gbj14_button_off","path":"sounds/snd_gbj14_button_off/snd_gbj14_button_off.yy",},},
     {"id":{"name":"snd_gbj14_button_on","path":"sounds/snd_gbj14_button_on/snd_gbj14_button_on.yy",},},
     {"id":{"name":"snd_gbj14_coin_small","path":"sounds/snd_gbj14_coin_small/snd_gbj14_coin_small.yy",},},
+    {"id":{"name":"snd_gbj14_item_get","path":"sounds/snd_gbj14_item_get/snd_gbj14_item_get.yy",},},
     {"id":{"name":"snd_gbj14_keyslam_drop","path":"sounds/snd_gbj14_keyslam_drop/snd_gbj14_keyslam_drop.yy",},},
     {"id":{"name":"snd_gbj14_keyslam_shine","path":"sounds/snd_gbj14_keyslam_shine/snd_gbj14_keyslam_shine.yy",},},
     {"id":{"name":"snd_gbj14_knock","path":"sounds/snd_gbj14_knock/snd_gbj14_knock.yy",},},

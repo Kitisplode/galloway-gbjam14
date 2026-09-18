@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_door_enter",
+  "%Name":"snd_gbj14_item_get",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,15 +12,15 @@
   "conversionMode":0,
   "duration":0.0,
   "exportDir":"",
-  "name":"snd_door_enter",
+  "name":"snd_gbj14_item_get",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds/Sounds.yy",
+    "name":"gbjam14",
+    "path":"folders/Sounds/Sounds/gbjam14.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_door_enter.wav",
+  "soundFile":"snd_gbj14_item_get.wav",
   "volume":1.0,
 }
