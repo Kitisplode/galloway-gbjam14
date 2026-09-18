@@ -38,3 +38,5 @@ list_music_loops = ds_list_create();
 //scr_audio_add_song(mus_nm_cirno_intro, mus_nm_cirno_loop);
 
 scr_audio_add_song(mus_gbjam12_escape_intro, mus_gbjam12_escape_loop);
+scr_audio_add_song(mus_gbj14_lexou_conquistador_intro, mus_gbj14_lexou_conquistador_loop);
+scr_audio_add_song(mus_gbj14_lexou_pyramid_intro, mus_gbj14_lexou_pyramid_loop);
