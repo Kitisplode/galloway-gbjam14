@@ -48,11 +48,15 @@ function scr_gbj14_player_Use_Item_Lift()
 				carry_id = _block;
 				_block.dom_id = id;
 				_block.dom_offset_x = 0;
-				_block.dom_offset_y = -32 - 8;
+				_block.dom_offset_y = -29;
 				_block.mask_index = msk_no_collision;
 				_block.movement_enabled = false;
 				_block.apply_gravity_force = false;
 				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
+				action = 1;
+				velocity[0] = 0;
+				velocity[1] = 0;
+				scr_change_sprite(spr_gbj14_player_lift);
 			}
 		}
 	}

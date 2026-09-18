@@ -12,23 +12,56 @@ if (paused) exit;
 	else image_xscale = 1;
 }
 
-if (is_on_ground)
+if (hurt_timer > 0)
 {
-	if (abs(velocity[0]) > 10)
-	{
-		scr_change_sprite(spr_gbj14_player_walk);
-		anim_speed = 0.15;
-	}
-	else
-	{
-		scr_change_sprite(spr_gbj14_player_idle);
-		anim_speed = 0;
-	}
+	scr_change_sprite(spr_gbj14_player_hurt);
+	anim_speed = 0;
 }
 else
 {
-	scr_change_sprite(spr_gbj14_player_jump);
-	anim_speed = 0;
-	if (velocity[1] < 10) anim_frame = 0;
-	else anim_frame = 1;
+	if (action == -1)
+	{
+		
+	}
+	else if (action == 0)
+	{
+		if (carry_id == id)
+		{
+			if (is_on_ground)
+			{
+				if (abs(velocity[0]) > 10)
+				{
+					scr_change_sprite(spr_gbj14_player_walk);
+					anim_speed = 0.15;
+				}
+				else
+				{
+					scr_change_sprite(spr_gbj14_player_idle);
+					anim_speed = 0;
+				}
+			}
+			else
+			{
+				scr_change_sprite(spr_gbj14_player_jump);
+				anim_speed = 0;
+				if (velocity[1] < 10) anim_frame = 0;
+				else anim_frame = 1;
+			}
+		}
+		else
+		{
+			scr_change_sprite(spr_gbj14_player_lift_idle);
+			anim_speed = 0;
+		}
+	}
+	else if (action == 1)
+	{
+		scr_change_sprite(spr_gbj14_player_lift);
+		anim_speed = 0.25;
+		if (anim_looped != 0)
+		{
+			action = 0;
+			scr_change_sprite(spr_gbj14_player_lift_idle);
+		}
+	}
 }
