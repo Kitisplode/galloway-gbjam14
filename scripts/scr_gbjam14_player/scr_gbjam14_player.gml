@@ -39,10 +39,15 @@ function scr_gbj14_player_Use_Item_Lift()
 {
 	if (carry_id == id)
 	{
-		var _pos = scr_gbj14_player_Cursor_Pick();
+		var _pos1 = scr_gbj14_player_Cursor_Pick();
+		var _pos2 = scr_gbj14_player_Cursor_Shovel();
 		if (instance_exists(obj_block_pushable))
 		{
-			var _block = instance_place(_pos[0],_pos[1], obj_block_pushable);
+			var _block1 = instance_place(_pos1[0],_pos1[1], obj_block_pushable);
+			var _block2 = instance_place(_pos2[0],_pos2[1], obj_block_pushable);
+			var _block = -1;
+			if (instance_exists(_block1)) _block = _block1;
+			else if (instance_exists(_block2)) _block = _block2;
 			if (instance_exists(_block))
 			{
 				carry_id = _block;
