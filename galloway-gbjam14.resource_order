@@ -79,6 +79,8 @@
     {"name":"obj_enemy_dying","order":4,"path":"objects/obj_enemy_dying/obj_enemy_dying.yy",},
     {"name":"obj_enemy_hoverer","order":1,"path":"objects/obj_enemy_hoverer/obj_enemy_hoverer.yy",},
     {"name":"obj_gamemode_gbj14","order":1,"path":"objects/obj_gamemode_gbj14/obj_gamemode_gbj14.yy",},
+    {"name":"obj_gbj14_enemy_boss_core","order":1,"path":"objects/obj_gbj14_enemy_boss_core/obj_gbj14_enemy_boss_core.yy",},
+    {"name":"obj_gbj14_enemy_boss_real","order":2,"path":"objects/obj_gbj14_enemy_boss_real/obj_gbj14_enemy_boss_real.yy",},
     {"name":"obj_gbj14_gold_spawner","order":3,"path":"objects/obj_gbj14_gold_spawner/obj_gbj14_gold_spawner.yy",},
     {"name":"obj_gbj14_item_gold_large","order":2,"path":"objects/obj_gbj14_item_gold_large/obj_gbj14_item_gold_large.yy",},
     {"name":"obj_gbj14_item_gold","order":1,"path":"objects/obj_gbj14_item_gold/obj_gbj14_item_gold.yy",},

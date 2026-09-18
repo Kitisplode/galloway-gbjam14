@@ -29,6 +29,7 @@
     {"name":"inst_2CB02F12","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},
     {"name":"inst_34ACDAE8","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},
     {"name":"inst_F291CF0","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},
+    {"name":"inst_56386834","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -80,6 +81,7 @@
         {"$GMRInstance":"v4","%Name":"inst_2CB02F12","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2CB02F12","objectId":{"name":"obj_block_oneway_up","path":"objects/obj_block_oneway_up/obj_block_oneway_up.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":0.25,"x":416.0,"y":176.0,},
         {"$GMRInstance":"v4","%Name":"inst_34ACDAE8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_34ACDAE8","objectId":{"name":"obj_gbj14_button","path":"objects/obj_gbj14_button/obj_gbj14_button.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":208.0,},
         {"$GMRInstance":"v4","%Name":"inst_F291CF0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_F291CF0","objectId":{"name":"obj_block_switch_vanish","path":"objects/obj_block_switch_vanish/obj_block_switch_vanish.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":272.0,"y":160.0,},
+        {"$GMRInstance":"v4","%Name":"inst_56386834","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_56386834","objectId":{"name":"obj_gbj14_enemy_boss_core","path":"objects/obj_gbj14_enemy_boss_core/obj_gbj14_enemy_boss_core.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":80.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":302,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
