@@ -38,6 +38,12 @@ if (!paused)
 			can_act = false;
 			apply_gravity_force = false;
 		}
+		// Lifting an item
+		if (action == 1)
+		{
+			can_move = false;
+			can_act = false;
+		}
 	}
 	
 	// Update the input.
@@ -171,3 +177,32 @@ if (!paused)
 // Inherit the parent event
 event_inherited();
 
+// If we're holding a block, adjust its position according to the current animation frame.
+if (carry_id != id)
+{
+	if (instance_exists(carry_id))
+	{
+		var _dir = cos(degtorad(direction_facing));
+		var _pos = r2(_dir * 4,-29);
+		if (sprite_index == spr_gbj14_player_lift)
+		{
+			switch (floor(anim_frame))
+			{
+				case 0: _pos[0] = _dir * 20; _pos[1] = 0; break;
+				case 1: _pos[0] = _dir * 20; _pos[1] = -1; break;
+				case 2: _pos[0] = _dir * 19; _pos[1] = -3; break;
+				case 3: _pos[0] = _dir * 18; _pos[1] = -31; break;
+				case 4: _pos[0] = _dir * 16; _pos[1] = -35; break;
+				case 5: _pos[0] = _dir * 14; _pos[1] = -37; break;
+				case 6: _pos[0] = _dir * 12; _pos[1] = -40; break;
+				case 7: _pos[0] = _dir * 10; _pos[1] = -40; break;
+				case 8: _pos[0] = _dir * 7; _pos[1] = -36; break;
+				case 9: _pos[0] = _dir * 4; _pos[1] = -29; break;
+			}
+		}
+		carry_id.dom_offset_x = _pos[0];
+		carry_id.dom_offset_y = _pos[1];
+	}
+	else
+		carry_id = id;
+}
