@@ -805,6 +805,8 @@
     {"id":{"name":"spr_gb12_scene_mask","path":"sprites/spr_gb12_scene_mask/spr_gb12_scene_mask.yy",},},
     {"id":{"name":"spr_gb12_scene_title_logo","path":"sprites/spr_gb12_scene_title_logo/spr_gb12_scene_title_logo.yy",},},
     {"id":{"name":"spr_gb12_scene_title","path":"sprites/spr_gb12_scene_title/spr_gb12_scene_title.yy",},},
+    {"id":{"name":"spr_gbj14_bg_pyramid_day","path":"sprites/spr_gbj14_bg_pyramid_day/spr_gbj14_bg_pyramid_day.yy",},},
+    {"id":{"name":"spr_gbj14_bg_pyramid_night","path":"sprites/spr_gbj14_bg_pyramid_night/spr_gbj14_bg_pyramid_night.yy",},},
     {"id":{"name":"spr_gbj14_enemy_bug","path":"sprites/spr_gbj14_enemy_bug/spr_gbj14_enemy_bug.yy",},},
     {"id":{"name":"spr_gbj14_face_nun","path":"sprites/spr_gbj14_face_nun/spr_gbj14_face_nun.yy",},},
     {"id":{"name":"spr_gbj14_fx_crumb","path":"sprites/spr_gbj14_fx_crumb/spr_gbj14_fx_crumb.yy",},},

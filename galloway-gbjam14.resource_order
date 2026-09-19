@@ -253,6 +253,8 @@
     {"name":"spr_gb12_scene_mask","order":4,"path":"sprites/spr_gb12_scene_mask/spr_gb12_scene_mask.yy",},
     {"name":"spr_gb12_scene_title_logo","order":3,"path":"sprites/spr_gb12_scene_title_logo/spr_gb12_scene_title_logo.yy",},
     {"name":"spr_gb12_scene_title","order":2,"path":"sprites/spr_gb12_scene_title/spr_gb12_scene_title.yy",},
+    {"name":"spr_gbj14_bg_pyramid_day","order":12,"path":"sprites/spr_gbj14_bg_pyramid_day/spr_gbj14_bg_pyramid_day.yy",},
+    {"name":"spr_gbj14_bg_pyramid_night","order":13,"path":"sprites/spr_gbj14_bg_pyramid_night/spr_gbj14_bg_pyramid_night.yy",},
     {"name":"spr_gbj14_face_nun","order":3,"path":"sprites/spr_gbj14_face_nun/spr_gbj14_face_nun.yy",},
     {"name":"spr_gbj14_fx_sparkle","order":1,"path":"sprites/spr_gbj14_fx_sparkle/spr_gbj14_fx_sparkle.yy",},
     {"name":"spr_gbj14_galleon","order":11,"path":"sprites/spr_gbj14_galleon/spr_gbj14_galleon.yy",},

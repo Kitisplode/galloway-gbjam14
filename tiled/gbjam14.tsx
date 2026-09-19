@@ -355,23 +355,9 @@
    <object id="1" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
- <tile id="231">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="15.9673">
-    <polygon points="-0.00941378,0.0329482 16.0089,-15.972 15.9995,0.045103"/>
-   </object>
-  </objectgroup>
- </tile>
  <tile id="232">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="233">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="0.0741004" y="0.0741004">
-    <polygon points="-0.0703125,-0.0664063 15.9375,15.9337 -0.0722065,15.9317"/>
-   </object>
   </objectgroup>
  </tile>
  <tile id="249">
