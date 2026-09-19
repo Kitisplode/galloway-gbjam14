@@ -120,6 +120,7 @@
     {"name":"par_animation","order":1,"path":"objects/par_animation/par_animation.yy",},
     {"name":"par_game_object","order":4,"path":"objects/par_game_object/par_game_object.yy",},
     {"name":"par_physics","order":3,"path":"objects/par_physics/par_physics.yy",},
+    {"name":"rm_gbj14_map","order":2,"path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"rm_gbj14_title","order":1,"path":"rooms/rm_gbj14_title/rm_gbj14_title.yy",},
     {"name":"rm_gbjam12_boss","order":2,"path":"rooms/rm_gbjam12_boss/rm_gbjam12_boss.yy",},
     {"name":"rm_gbjam12_splash_galloway","order":1,"path":"rooms/rm_gbjam12_splash_galloway/rm_gbjam12_splash_galloway.yy",},

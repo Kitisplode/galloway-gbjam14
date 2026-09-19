@@ -1,5 +1,5 @@
 {
-    "activeFile": "gbjam14_rules.tmx",
+    "activeFile": "gbjam14_map.tmx",
     "automapping.whileDrawing": true,
     "expandedProjectPaths": [
         "."
@@ -29,23 +29,26 @@
             "scaleInEditor": 1
         },
         "gbjam14.tsx": {
-            "scaleInDock": 2.6401,
-            "scaleInEditor": 2.79
+            "scaleInDock": 2.5469,
+            "scaleInEditor": 4.06
         },
         "gbjam14_map.tmx": {
-            "scale": 1.4349,
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 3.87,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1354.1013311032127,
-                "y": 1132.4830998675866
+                "x": 1448.7080103359172,
+                "y": 1906.7183462532298
             }
         },
         "gbjam14_rules.tmx": {
-            "scale": 3.8363,
-            "selectedLayer": 0,
+            "scale": 3.4596,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 182.2068138571019,
-                "y": 59.95360112608503
+                "x": 157.96623887154584,
+                "y": 141.92392184067526
             }
         },
         "rocks_rule.tmx": {
@@ -57,7 +60,10 @@
             }
         }
     },
+    "last.exportedFilePath": "/home/lexou/Projects/GameJams/2026_gbjam-14/rooms/rm_gbj14_map",
     "last.imagePath": "/home/lexou/Projects/GameJams/2026_gbjam-14",
+    "last.objectTemplatePath": "/home/lexou/Projects/GameJams/2026_gbjam-14/tiled",
+    "map.lastUsedExportFilter": "GameMaker Studio 2 files (*.yy)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
@@ -69,8 +75,8 @@
     "project": "gbjam14.tiled-project",
     "recentFiles": [
         "gbjam14.tsx",
-        "gbjam14_map.tmx",
         "gbjam14_rules.tmx",
+        "gbjam14_map.tmx",
         "gbjam14.old.tsx",
         "gbjam14.old.tmx",
         "gbjam14 map.tmx",

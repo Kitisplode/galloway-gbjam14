@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="enemy_beetle" type="obj_gbj14_enemy_beetle" width="16" height="16"/>
+</template>

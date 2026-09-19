@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="enemy_god_ra" type="obj_gbj14_enemy_god_ra" width="32" height="48"/>
+</template>
