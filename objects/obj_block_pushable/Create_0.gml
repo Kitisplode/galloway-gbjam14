@@ -10,4 +10,8 @@ r3_clone(up_vector, normal_vector);
 force_gravity = 15;
 friction_ground = 0.8;
 
+// Carryable objects are only dangerous to enemies after they have been
+// released by the player.
+is_thrown = false;
+
 ds_list_add(global.list_pushables, id);

@@ -7,8 +7,23 @@ event_inherited();
 
 hp_max = 100;
 hp = hp_max;
+normal_damage = damage;
 
 velocity[0] = -50;
+
+// This is enabled when the player releases a carryable bug.
+is_thrown = false;
+throw_has_left_ground = false;
+is_throw_stunned = false;
+throw_stun_timer = 0;
+throw_stun_time = 0.25;
+
+// Visual-only carried rotation. The physics/collision angle stays unchanged.
+carry_visual_angle = 0;
+carry_visual_angle_lerp = 0.16;
+
+// Keep the bug's animation clock running while it is being carried.
+anim_speed = 0.15;
 
 dont_walk_off_cliffs = true;
 walk_off_cliffs_multiplier = -1;

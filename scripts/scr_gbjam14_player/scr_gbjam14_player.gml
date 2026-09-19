@@ -56,6 +56,8 @@ function scr_gbj14_player_Use_Item_Box()
 				_block.mask_index = msk_no_collision;
 				_block.movement_enabled = false;
 				_block.apply_gravity_force = false;
+				_block.is_thrown = false;
+				_block.axis_max_speed[0] = 120;
 				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
 				action = 1;
 				velocity[0] = 0;
@@ -72,28 +74,47 @@ function scr_gbj14_player_Use_Item_Lift()
 	{
 		var _pos1 = scr_gbj14_player_Cursor_Pick();
 		var _pos2 = scr_gbj14_player_Cursor_Shovel();
-		if (instance_exists(obj_block_pushable))
+		var _block1 = instance_place(_pos1[0],_pos1[1], obj_block_pushable);
+		var _block2 = instance_place(_pos2[0],_pos2[1], obj_block_pushable);
+		var _block = undefined;
+		if (instance_exists(_block1)) _block = _block1;
+		else if (instance_exists(_block2)) _block = _block2;
+
+		// The GBJam14 shuffle bug can also be picked up, even though it is an
+		// enemy rather than a member of the pushable-block parent.
+		if (is_undefined(_block) || !instance_exists(_block))
 		{
-			var _block1 = instance_place(_pos1[0],_pos1[1], obj_block_pushable);
-			var _block2 = instance_place(_pos2[0],_pos2[1], obj_block_pushable);
-			var _block = undefined;
-			if (instance_exists(_block1)) _block = _block1;
-			else if (instance_exists(_block2)) _block = _block2;
-			if (!is_undefined(_block) && instance_exists(_block))
+			var _enemy = instance_place(_pos1[0],_pos1[1], obj_gbj14_enemy_shuffle);
+			if (instance_exists(_enemy)) _block = _enemy;
+			else
 			{
-				carry_id = _block;
-				_block.dom_id = id;
-				_block.dom_offset_x = 0;
-				_block.dom_offset_y = -29;
-				_block.mask_index = msk_no_collision;
-				_block.movement_enabled = false;
-				_block.apply_gravity_force = false;
-				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
-				action = 1;
-				velocity[0] = 0;
-				velocity[1] = 0;
-				scr_change_sprite(spr_gbj14_player_lift);
+				_enemy = instance_place(_pos2[0],_pos2[1], obj_gbj14_enemy_shuffle);
+				if (instance_exists(_enemy)) _block = _enemy;
 			}
+		}
+
+		if (!is_undefined(_block) && instance_exists(_block))
+		{
+			carry_id = _block;
+			_block.dom_id = id;
+			_block.dom_offset_x = 0;
+			_block.dom_offset_y = -29;
+			_block.mask_index = msk_no_collision;
+			_block.movement_enabled = false;
+			_block.apply_gravity_force = false;
+			_block.is_thrown = false;
+			_block.axis_max_speed[0] = 120;
+			if (_block.object_index == obj_gbj14_enemy_shuffle)
+			{
+				_block.damage = 0;
+				_block.is_throw_stunned = false;
+				_block.throw_stun_timer = 0;
+			}
+			play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
+			action = 1;
+			velocity[0] = 0;
+			velocity[1] = 0;
+			scr_change_sprite(spr_gbj14_player_lift);
 		}
 	}
 	else
@@ -102,8 +123,33 @@ function scr_gbj14_player_Use_Item_Lift()
 		carry_id.dom_id = carry_id.id;
 		carry_id.movement_enabled = true;
 		carry_id.apply_gravity_force = true;
-		carry_id.velocity[0] = cos(degtorad(direction_facing)) * 100;
-		carry_id.velocity[1] = -100;
+		carry_id.is_thrown = true;
+		carry_id.throw_has_left_ground = false;
+		var _throw_speed = 180;
+		if (carry_id.object_index == obj_gbj14_enemy_shuffle)
+		{
+			// Bugs use the same launch profile as crates and cannot hurt the
+			// player while they are in their thrown state.
+			carry_id.damage = 0;
+			// Match the pushable crate's physics while airborne.
+			carry_id.movement_collision = true;
+			carry_id.force_gravity = 15;
+			carry_id.friction_ground = 0.8;
+			carry_id.axis_max_speed[1] = 1200;
+			carry_id.axis_max_speed[2] = 0;
+			carry_id.slide_slopes_up = true;
+			carry_id.slide_slopes_down = true;
+			carry_id.slide_around_blocks = true;
+			carry_id.slide_around_blocks_distance = 8;
+			carry_id.dont_walk_off_cliffs = false;
+			carry_id.walk_from_walls_multiplier = r3_zero();
+			carry_id.carry_visual_angle = 180;
+			carry_id.anim_angle = 180;
+			carry_id.image_angle_matching_visual = false;
+		}
+		carry_id.axis_max_speed[0] = _throw_speed;
+		carry_id.velocity[0] = cos(degtorad(direction_facing)) * _throw_speed;
+		carry_id.velocity[1] = -80;
 		carry_id = id;
 		play_sound(snd_gbj14_player_attack, 1, false, 1, 1, 0);
 	}
