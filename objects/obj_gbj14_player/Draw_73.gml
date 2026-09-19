@@ -21,7 +21,10 @@ else
 {
 	if (action == -1)
 	{
-		
+		image_xscale = 1;
+		scr_change_sprite(spr_gbj14_player_climb);
+		if (abs(velocity[1]) > 10) anim_speed = 0.15;
+		else anim_speed = 0;
 	}
 	else if (action == 0)
 	{

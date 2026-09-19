@@ -9,3 +9,5 @@ walk_from_walls_multiplier[0] = -0.25;
 walk_from_walls_multiplier[1] = -0.25;
 
 bomb_timer = 5;
+
+damage = 10;

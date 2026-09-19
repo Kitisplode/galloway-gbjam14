@@ -18,12 +18,15 @@ if (_invuln_timer_previous != invuln_timer)
 	
 	if (carry_id != id)
 	{
-		carry_id.dom_id = carry_id.id;
-		carry_id.movement_enabled = true;
-		carry_id.apply_gravity_force = true;
-		carry_id.mask_index = carry_id.sprite_index;
-		if (carry_id.object_index == obj_gbj14_enemy_shuffle)
-			carry_id.damage = carry_id.normal_damage;
-		carry_id = id;
+		_scr_gbj14_player_Use_Item_Throw(r3_zero());
+		// Delete the throw item.
+		if (ds_list_size(list_items) > 0)
+		{
+			var _item = ds_list_find_value(list_items, 0);
+			if (_item.name == "Throw")
+			{
+				ds_list_delete(list_items, 0);
+			}
+		}
 	}
 }

@@ -179,8 +179,8 @@ if (!paused)
 				var _script = asset_get_index(_item.script);
 				if (script_exists(_script))
 				{
-					script_execute(_script);
-					if (_item.uses > 0)
+					var _result = script_execute(_script);
+					if (_item.uses > 0 && _result)
 					{
 						_item.uses -= 1;
 						if (_item.uses <= 0) ds_list_delete(list_items, 0);
@@ -194,7 +194,7 @@ if (!paused)
 		}
 		
 		// If the player is colliding with a ladder and they press up or down, grab onto the ladder.
-		if (action != -1)
+		if (action != -1 && carry_id == id)
 		{
 			var _ladder = instance_place(position[0],position[1], obj_block_ladder);
 			if (instance_exists(_ladder) && (input_check("down") || input_check("up")))
@@ -207,14 +207,31 @@ if (!paused)
 			}
 		}
 		
+		// Change the active item to Throw when we are carrying an item.
 		if (carry_id != id)
 		{
-			if (ds_list_size(list_items) > 0)
+			if (instance_exists(carry_id))
 			{
-				var _item = ds_list_find_value(list_items, 0);
-				if (_item.name != "Throw")
+				if (ds_list_size(list_items) > 0)
 				{
-					ds_list_insert(list_items, 0, item_throw);
+					var _item = ds_list_find_value(list_items, 0);
+					if (_item.name != "Throw")
+					{
+						ds_list_insert(list_items, 0, item_throw);
+					}
+				}
+			}
+			// If the item being carried is gone suddenly, get rid of the throw item.
+			else
+			{
+				carry_id = id;
+				if (ds_list_size(list_items) > 0)
+				{
+					var _item = ds_list_find_value(list_items, 0);
+					if (_item.name == "Throw")
+					{
+						ds_list_delete(list_items, 0);
+					}
 				}
 			}
 		}
