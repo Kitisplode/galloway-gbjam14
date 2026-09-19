@@ -6,8 +6,8 @@ if (global.debug_global) global.player_score = 1000; // TODO remove this in rele
 
 shop_items = [
 //  { name: "Lift",    price:   0, uses: -1, sprite: spr_gbj14_hud_item_lift   , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Lift"   , show_cursor: ""                               , description: "Lift and carry objects." },
-    { name: "Shovel",  price: 100, uses: 10, sprite: spr_gbj14_hud_item_shovel , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Shovel" , show_cursor: "scr_gbj14_player_Cursor_Shovel" , description: "Can dig through rocky terrain." },
-    { name: "Pickaxe", price: 250, uses: 10, sprite: spr_gbj14_hud_item_pick   , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Pick"   , show_cursor: "scr_gbj14_player_Cursor_Pick"   , description: "Can dig through almost anything." },
+    { name: "Shovel",  price: 100, uses: 10, sprite: spr_gbj14_hud_item_shovel , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Shovel" , show_cursor: "scr_gbj14_player_Cursor_Tool"   , description: "Can dig through rocky terrain." },
+    { name: "Pickaxe", price: 250, uses: 10, sprite: spr_gbj14_hud_item_pick   , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Pick"   , show_cursor: "scr_gbj14_player_Cursor_Tool"   , description: "Can dig through almost anything." },
     { name: "Bomb",    price:  50, uses:  1, sprite: spr_gbj14_hud_item_bomb   , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Bomb"   , show_cursor: ""                               , description: "Blasts through almost anything." },
     { name: "Ladder",  price:  50, uses:  1, sprite: spr_gbj14_hud_item_ladder , sound: snd_gbj14_player_attack, script: "scr_gbj14_player_Use_Item_Ladder" , show_cursor: "scr_gbj14_player_Cursor_Ladder" , description: "Put this down to climb upwards." },
     //{ name: "Springs", price: 500, uses: -1, sprite: spr_gbj14_hud_item_shoes  , sound: snd_gbj14_player_attack, script: ""                                 , show_cursor: ""                               , description: "Allows you to jump higher." },
