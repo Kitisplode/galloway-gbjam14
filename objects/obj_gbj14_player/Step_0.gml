@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// player room wrapping left-right
+//move_wrap(true, false, sprite_width / 2);
+if (x > room_width)
+	x = 0;
+else if (x < 0)
+	x = room_width;
+	
 if (!paused)
 {
 	if (global.player_hp <= 0 && hurt_timer <= 0 && is_on_ground)

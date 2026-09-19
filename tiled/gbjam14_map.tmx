@@ -1245,7 +1245,7 @@
  <objectgroup id="11" name="Instances" offsetx="-16" offsety="-16">
   <object id="51" template="door.tx" type="obj_block_switch_vanish" x="2336.37" y="1374.02"/>
   <object id="52" template="button.tx" type="obj_gbj14_button" x="2288.84" y="1409.96"/>
-  <object id="53" template="player.tx" type="obj_gbj14_player_spawner" x="1789.72" y="1371.94"/>
+  <object id="53" template="player.tx" type="obj_gbj14_player_spawner" x="708.353" y="1358.84"/>
   <object id="54" name="collide_metal" type="obj_block_tileset" x="0" y="0">
    <properties>
     <property name="hasCreationCode" type="bool" value="true"/>
