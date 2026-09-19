@@ -9,3 +9,8 @@ outline_color = c_white;
 
 sparkle_index = spr_gbj14_fx_sparkle;
 sparkle_anim_speed = 0.15;
+
+pushes_others = false;
+
+solid = false;
+normal_vector = r3(0,-1,0);

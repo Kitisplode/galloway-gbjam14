@@ -14,8 +14,8 @@
     "path":"folders/Objects/Game Objects/gbjam14/items.yy",
   },
   "parentObjectId":{
-    "name":"par_animation",
-    "path":"objects/par_animation/par_animation.yy",
+    "name":"obj_shot_player",
+    "path":"objects/obj_shot_player/obj_shot_player.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

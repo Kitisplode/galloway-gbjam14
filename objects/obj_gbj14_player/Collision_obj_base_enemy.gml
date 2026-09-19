@@ -15,4 +15,13 @@ if (_invuln_timer_previous != invuln_timer)
 	velocity[1] = -abs(sin(degtorad(_dir)) * run_speed);
 	play_sound(snd_gbj14_player_hurt, 1, 0, 2,1,0.5);
 	play_sound(snd_gbj14_knock, 1, 0, 1,1,0);
+	
+	if (carry_id != id)
+	{
+		carry_id.dom_id = carry_id.id;
+		carry_id.movement_enabled = true;
+		carry_id.apply_gravity_force = true;
+		carry_id.mask_index = carry_id.sprite_index;
+		carry_id = id;
+	}
 }

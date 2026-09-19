@@ -36,6 +36,8 @@ friction_hurt = 0.9;
 
 carry_id = id;
 
+last_safe_position = r2_zero();
+
 list_items = ds_list_create();
 scr_gbj14_player_Add_Item(self, {
 	name: "Lift",
@@ -47,6 +49,17 @@ scr_gbj14_player_Add_Item(self, {
 	show_cursor: "",
 	description: "Lift and carry objects."
 });
+
+item_throw = {
+	name: "Throw",
+	price: 0,
+	uses: -1,
+	sprite:  spr_gbj14_hud_item_throw,
+	sound:   snd_gbj14_player_attack,
+	script: "scr_gbj14_player_Use_Item_Lift",
+	show_cursor: "",
+	description: "Throw objects"
+};
 damage = 1;
 
 // Set up physics

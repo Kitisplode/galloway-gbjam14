@@ -151,10 +151,10 @@ function scr_spawn_projectiles_random_spread(_projectile_count, _projectile_dist
 
 // Spawns an evenly spaced fan of the specified object around the caller's position, each pointing outwards.
 function scr_spawn_projectiles_fan(_projectile_count, _projectile_distance, _projectile_direction,
-									_projectile_index, _projectile_fan_range, _depth = -5)
+									_projectile_index, _projectile_fan_range, _depth = -5, _depth_absolute=false)
 {
 	var temp_projectile_count = _projectile_count;
-	if (_projectile_fan_range < 360)
+	if (_projectile_fan_range < 360 && _projectile_count > 1)
 	{
 		_projectile_direction -= _projectile_fan_range / 2;
 		temp_projectile_count = _projectile_count - 1;
@@ -165,9 +165,11 @@ function scr_spawn_projectiles_fan(_projectile_count, _projectile_distance, _pro
 								  i * _projectile_fan_range / (temp_projectile_count));
 		var temp_velx = cos(temp_angle);
 		var temp_vely = -sin(temp_angle);
+		var _depth_actual = depth + _depth;
+		if (_depth_absolute) _depth_actual = _depth;
 		var temp_ID = instance_create_depth(x + temp_velx * _projectile_distance,
 											y + temp_vely * _projectile_distance,
-											depth + _depth, _projectile_index);
+											_depth_actual, _projectile_index);
 		if (!instance_exists(temp_ID)) continue;
 		temp_ID.velocity[0] = temp_velx * temp_ID.total_max_speed;
 		temp_ID.velocity[1] = temp_vely * temp_ID.total_max_speed;
@@ -178,10 +180,10 @@ function scr_spawn_projectiles_fan(_projectile_count, _projectile_distance, _pro
 
 // Spawns an evenly spaced ring of the specified object around the caller's position, each pointing outwards.
 function scr_spawn_projectiles_ring(_projectile_count, _projectile_distance, _projectile_direction,
-									_projectile_index, _depth = -5)
+									_projectile_index, _depth = -5, _depth_absolute=false)
 {
 	scr_spawn_projectiles_fan(_projectile_count, _projectile_distance, _projectile_direction,
-							  _projectile_index, 360, _depth)
+							  _projectile_index, 360, _depth, _depth_absolute)
 }
 
 function scr_enemy_fade()
