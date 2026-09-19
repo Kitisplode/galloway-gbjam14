@@ -80,7 +80,7 @@
         "gbjam14_map.tmx"
     ],
     "project": "gbjam14.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
         "gbjam14_map.tmx",
         "gbjam14_rules.tmx",

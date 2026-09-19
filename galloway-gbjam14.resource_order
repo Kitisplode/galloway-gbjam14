@@ -255,6 +255,7 @@
     {"name":"spr_gb12_scene_title","order":2,"path":"sprites/spr_gb12_scene_title/spr_gb12_scene_title.yy",},
     {"name":"spr_gbj14_face_nun","order":3,"path":"sprites/spr_gbj14_face_nun/spr_gbj14_face_nun.yy",},
     {"name":"spr_gbj14_fx_sparkle","order":1,"path":"sprites/spr_gbj14_fx_sparkle/spr_gbj14_fx_sparkle.yy",},
+    {"name":"spr_gbj14_galleon","order":11,"path":"sprites/spr_gbj14_galleon/spr_gbj14_galleon.yy",},
     {"name":"spr_gbj14_hud_item_ankh","order":5,"path":"sprites/spr_gbj14_hud_item_ankh/spr_gbj14_hud_item_ankh.yy",},
     {"name":"spr_gbj14_hud_item_bomb","order":3,"path":"sprites/spr_gbj14_hud_item_bomb/spr_gbj14_hud_item_bomb.yy",},
     {"name":"spr_gbj14_hud_item_box","order":10,"path":"sprites/spr_gbj14_hud_item_box/spr_gbj14_hud_item_box.yy",},
