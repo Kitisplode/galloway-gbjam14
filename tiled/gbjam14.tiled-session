@@ -35,21 +35,22 @@
         },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
-                7
+                7,
+                3
             ],
-            "scale": 1.8314,
-            "selectedLayer": 6,
+            "scale": 1.7636,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 1256.4158567216336,
-                "y": 1403.2980233700991
+                "x": 1784.4182354275345,
+                "y": 1348.3783170787028
             }
         },
         "gbjam14_rules.tmx": {
-            "scale": 1.9915,
+            "scale": 5.0725,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 272.1566658297765,
-                "y": 192.81948280190807
+                "x": 420.5027106949236,
+                "y": 65.05667816658452
             }
         },
         "rocks_rule.tmx": {

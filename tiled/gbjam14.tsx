@@ -1108,10 +1108,10 @@
  </tile>
  <wangsets>
   <wangset name="tiles" type="corner" tile="-1">
-   <wangcolor name="rocks" color="#ff0000" tile="-1" probability="1"/>
+   <wangcolor name="rocky" color="#ff0000" tile="-1" probability="1"/>
    <wangcolor name="earth" color="#00ff00" tile="-1" probability="1"/>
-   <wangcolor name="bricks" color="#0000ff" tile="-1" probability="1"/>
-   <wangcolor name="sand" color="#ff7700" tile="-1" probability="1"/>
+   <wangcolor name="brick" color="#0000ff" tile="-1" probability="1"/>
+   <wangcolor name="sandy" color="#ff7700" tile="-1" probability="1"/>
    <wangtile tileid="39" wangid="0,4,0,0,0,4,0,4"/>
    <wangtile tileid="40" wangid="0,4,0,0,0,0,0,4"/>
    <wangtile tileid="41" wangid="0,4,0,4,0,0,0,4"/>
@@ -1271,10 +1271,10 @@
    <wangtile tileid="746" wangid="0,3,0,3,0,3,0,0"/>
   </wangset>
   <wangset name="mixed" type="mixed" tile="-1">
-   <wangcolor name="rocks" color="#ff0000" tile="-1" probability="1"/>
+   <wangcolor name="rocky" color="#ff0000" tile="-1" probability="1"/>
    <wangcolor name="earth" color="#00ff00" tile="-1" probability="1"/>
-   <wangcolor name="bricks" color="#0000ff" tile="-1" probability="1"/>
-   <wangcolor name="sand" color="#ffa348" tile="-1" probability="1"/>
+   <wangcolor name="brick" color="#0000ff" tile="-1" probability="1"/>
+   <wangcolor name="sandy" color="#ffa348" tile="-1" probability="1"/>
    <wangtile tileid="39" wangid="4,4,4,0,4,4,4,4"/>
    <wangtile tileid="40" wangid="4,4,4,0,0,0,4,4"/>
    <wangtile tileid="41" wangid="4,4,4,4,4,0,4,4"/>
