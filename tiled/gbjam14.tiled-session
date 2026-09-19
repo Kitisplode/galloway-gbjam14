@@ -2,7 +2,8 @@
     "activeFile": "gbjam14_map.tmx",
     "automapping.whileDrawing": true,
     "expandedProjectPaths": [
-        "."
+        ".",
+        "tiled"
     ],
     "fileStates": {
         ":/automap-tiles.tsx": {
@@ -30,25 +31,26 @@
         },
         "gbjam14.tsx": {
             "scaleInDock": 2.5469,
-            "scaleInEditor": 4.06
+            "scaleInEditor": 2.06
         },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
+                6,
                 3
             ],
-            "scale": 3.87,
-            "selectedLayer": 1,
+            "scale": 1.8495,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 1448.7080103359172,
-                "y": 1906.7183462532298
+                "x": 1234.6580156799134,
+                "y": 1505.271695052717
             }
         },
         "gbjam14_rules.tmx": {
-            "scale": 3.4596,
-            "selectedLayer": 1,
+            "scale": 1.9915,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 157.96623887154584,
-                "y": 141.92392184067526
+                "x": 248.807431584233,
+                "y": 192.81948280190807
             }
         },
         "rocks_rule.tmx": {
@@ -58,9 +60,14 @@
                 "x": 86.99057369024644,
                 "y": 110.76613241587647
             }
+        },
+        "ts_gbj14.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1.8104
         }
     },
-    "last.exportedFilePath": "/home/lexou/Projects/GameJams/2026_gbjam-14/rooms/rm_gbj14_map",
+    "last.exportedFilePath": "/home/lexou/Projects/GameJams/2026_gbjam-14/tiled",
+    "last.externalTilesetPath": "/home/lexou/Projects/GameJams/2026_gbjam-14/tiled",
     "last.imagePath": "/home/lexou/Projects/GameJams/2026_gbjam-14",
     "last.objectTemplatePath": "/home/lexou/Projects/GameJams/2026_gbjam-14/tiled",
     "map.lastUsedExportFilter": "GameMaker Studio 2 files (*.yy)",
@@ -73,10 +80,12 @@
         "gbjam14_map.tmx"
     ],
     "project": "gbjam14.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
-        "gbjam14.tsx",
-        "gbjam14_rules.tmx",
         "gbjam14_map.tmx",
+        "gbjam14_rules.tmx",
+        "ts_gbj14.tsx",
+        "gbjam14.tsx",
         "gbjam14.old.tsx",
         "gbjam14.old.tmx",
         "gbjam14 map.tmx",
