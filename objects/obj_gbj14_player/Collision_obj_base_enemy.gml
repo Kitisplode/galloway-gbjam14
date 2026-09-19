@@ -22,6 +22,8 @@ if (_invuln_timer_previous != invuln_timer)
 		carry_id.movement_enabled = true;
 		carry_id.apply_gravity_force = true;
 		carry_id.mask_index = carry_id.sprite_index;
+		if (carry_id.object_index == obj_gbj14_enemy_shuffle)
+			carry_id.damage = carry_id.normal_damage;
 		carry_id = id;
 	}
 }

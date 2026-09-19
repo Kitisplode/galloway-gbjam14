@@ -3,8 +3,24 @@
 // Update target
 if (instance_exists(follow))
 {
-	x_to = follow.x + offset_x;
-	y_to = follow.y + offset_y;
+	// Keep the target point aligned with the player for now. This is separate
+	// from the camera position so the camera can ease toward it.
+	var _focus_target_x = 0;
+	var _input_right = input_check("right");
+	var _input_left = input_check("left");
+	if (_input_right && !_input_left)
+		_focus_target_x = camera_focus_distance;
+	else if (_input_left && !_input_right)
+		_focus_target_x = -camera_focus_distance;
+
+	camera_focus_x = lerp(camera_focus_x, _focus_target_x, camera_focus_lerp_amount);
+	var _focus_target_y = 0;
+	if (follow.velocity[1] > 0)
+		_focus_target_y = camera_fall_focus_distance;
+	camera_focus_y = lerp(camera_focus_y, _focus_target_y, camera_vertical_focus_lerp_amount);
+
+	target_x = follow.x + offset_x + camera_focus_x;
+	target_y = follow.y + offset_y + camera_vertical_offset + camera_focus_y;
 }
 else
 {
@@ -14,37 +30,43 @@ else
 	}
 	else
 	{
-		x = view_width_half;
-		y = view_height_half;
+		target_x = x + view_width_half;
+		target_y = y + view_height_half + camera_vertical_offset;
 	}
 }
 
-// Update camera position
-//x += (xTo - x) / 15;
-//y += (yTo - y) / 15;
+// Convert the target point into the camera's top-left position, then move
+// toward it with a tight, responsive interpolation.
+var _target_camera_x = target_x - view_width_half;
+var _target_camera_y = target_y - view_height_half;
 
 // Keep camera center inside room
 if (stay_in_room)
 {
 	if (instance_exists(global.active_room))
 	{
-		x = clamp(x_to - view_width_half, 
+		_target_camera_x = clamp(_target_camera_x,
 			global.active_room.bbox_left - TILE_SIZE, 
 			global.active_room.bbox_right + TILE_SIZE - view_width_half*2);
-		y = clamp(y_to - view_height_half, 
+		_target_camera_y = clamp(_target_camera_y,
 			global.active_room.bbox_top - TILE_SIZE, 
 			global.active_room.bbox_bottom + TILE_SIZE - view_height_half*2);
 	}
-	else
-	{
-		x = x_to - view_width_half;
-		y = y_to - view_height_half;
-	}
 }
-else
+
+x = lerp(x, _target_camera_x, camera_lerp_amount);
+y = lerp(y, _target_camera_y, camera_vertical_lerp_amount);
+
+// Keep the interpolated camera inside the room as well, including when the
+// room or active region changes while the camera is still catching up.
+if (stay_in_room && instance_exists(global.active_room))
 {
-	x = x_to - view_width_half;
-	y = y_to - view_height_half;
+	x = clamp(x,
+		global.active_room.bbox_left - TILE_SIZE,
+		global.active_room.bbox_right + TILE_SIZE - view_width_half*2);
+	y = clamp(y,
+		global.active_room.bbox_top - TILE_SIZE,
+		global.active_room.bbox_bottom + TILE_SIZE - view_height_half*2);
 }
 
 // Update screenshake

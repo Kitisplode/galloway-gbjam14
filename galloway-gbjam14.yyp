@@ -273,6 +273,7 @@
     {"id":{"name":"par_physics","path":"objects/par_physics/par_physics.yy",},},
     {"id":{"name":"par_transition","path":"objects/par_transition/par_transition.yy",},},
     {"id":{"name":"rm_gbj14_blah","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},},
+    {"id":{"name":"rm_gbj14_test","path":"rooms/rm_gbj14_test/rm_gbj14_test.yy",},},
     {"id":{"name":"rm_gbj14_map","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},},
     {"id":{"name":"rm_gbj14_title","path":"rooms/rm_gbj14_title/rm_gbj14_title.yy",},},
     {"id":{"name":"rm_gbjam12_boss","path":"rooms/rm_gbjam12_boss/rm_gbjam12_boss.yy",},},
@@ -854,6 +855,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_gbj14_title","path":"rooms/rm_gbj14_title/rm_gbj14_title.yy",},},
     {"roomId":{"name":"rm_gbj14_blah","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},},
+    {"roomId":{"name":"rm_gbj14_test","path":"rooms/rm_gbj14_test/rm_gbj14_test.yy",},},
     {"roomId":{"name":"rm_gbjam12_splash_gbjam","path":"rooms/rm_gbjam12_splash_gbjam/rm_gbjam12_splash_gbjam.yy",},},
     {"roomId":{"name":"rm_gbjam12_splash_title","path":"rooms/rm_gbjam12_splash_title/rm_gbjam12_splash_title.yy",},},
     {"roomId":{"name":"rm_gbjam12_splash_galloway","path":"rooms/rm_gbjam12_splash_galloway/rm_gbjam12_splash_galloway.yy",},},
