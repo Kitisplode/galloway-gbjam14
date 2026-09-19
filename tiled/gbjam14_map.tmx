@@ -1242,10 +1242,8 @@
   </object>
   <object id="16" name="main" type="obj_main" x="0" y="0"/>
  </objectgroup>
- <objectgroup id="7" name="Regions">
-  <object id="20" type="obj_room_region" x="1091.95" y="1163.17" width="694.653" height="328.586"/>
-  <object id="23" type="obj_room_region" x="1786.61" y="1162.54" width="694.653" height="328.586"/>
-  <object id="24" type="obj_room_region" x="1570.09" y="1492.5" width="694.653" height="328.586"/>
+ <objectgroup id="7" name="Regions" visible="0">
+  <object id="23" type="obj_room_region" x="0" y="0" width="6400" height="4800"/>
  </objectgroup>
  <objectgroup id="6" name="UI">
   <object id="15" name="Shop" type="obj_gbj14_shop" x="0" y="0"/>
