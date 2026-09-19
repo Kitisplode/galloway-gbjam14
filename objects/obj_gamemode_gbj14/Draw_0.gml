@@ -21,7 +21,7 @@ if (instance_exists(obj_gbj14_player))
 	}
 	
 	scr_draw_rectangle_color_alpha(0,0, 160,144, c_white, paused_alpha / 4);
-	draw_sprite_ext(spr_gbj14_hud_paused, 0, 80, 72, 1,1, 0, c_white, paused_alpha);
+	draw_sprite_ext(spr_gbj14_hud_paused, 0, 80 -16, 72, 1,1, 0, c_white, paused_alpha);
 	
 	var _x = -10;
 	var _y = 3;

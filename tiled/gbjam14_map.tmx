@@ -4,7 +4,7 @@
   <export target="rm_gbj14_map.yy" format="yy"/>
  </editorsettings>
  <tileset firstgid="1" source="gbjam14.tsx"/>
- <imagelayer id="8" name="Background" visible="0" locked="1" tintcolor="#000000"/>
+ <imagelayer id="8" name="Background" locked="1" tintcolor="#000000"/>
  <imagelayer id="10" name="Galleon" locked="1" offsetx="16" offsety="1216">
   <image source="../ship_bar.png" width="560" height="224"/>
   <properties>
