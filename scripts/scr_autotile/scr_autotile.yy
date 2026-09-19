@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_autotile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_autotile",
+  "parent":{
+    "name":"gbjam14",
+    "path":"folders/Scripts/gbjam14.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

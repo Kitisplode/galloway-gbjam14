@@ -610,6 +610,7 @@
     {"id":{"name":"input_x","path":"scripts/input_x/input_x.yy",},},
     {"id":{"name":"input_xy","path":"scripts/input_xy/input_xy.yy",},},
     {"id":{"name":"input_y","path":"scripts/input_y/input_y.yy",},},
+    {"id":{"name":"scr_autotile","path":"scripts/scr_autotile/scr_autotile.yy",},},
     {"id":{"name":"scr_base","path":"scripts/scr_base/scr_base.yy",},},
     {"id":{"name":"scr_collision_subscripts","path":"scripts/scr_collision_subscripts/scr_collision_subscripts.yy",},},
     {"id":{"name":"scr_Collisions","path":"scripts/scr_Collisions/scr_Collisions.yy",},},
