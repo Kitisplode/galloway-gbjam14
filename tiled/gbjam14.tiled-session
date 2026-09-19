@@ -35,21 +35,20 @@
         },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
-                6,
-                3
+                7
             ],
-            "scale": 1.8495,
-            "selectedLayer": 3,
+            "scale": 1.8314,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 1234.6580156799134,
-                "y": 1505.271695052717
+                "x": 1256.4158567216336,
+                "y": 1403.2980233700991
             }
         },
         "gbjam14_rules.tmx": {
             "scale": 1.9915,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 248.807431584233,
+                "x": 272.1566658297765,
                 "y": 192.81948280190807
             }
         },
