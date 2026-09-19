@@ -89,7 +89,7 @@ global.difficulty = 0;
 global.gameplay_speed_scale = 1;
 global.seen_title = false;
 
-global.player_hp_max = 12;
+global.player_hp_max = 1;
 global.player_hp = global.player_hp_max;
 global.item_hp_increase = 1;
 

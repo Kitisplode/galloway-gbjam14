@@ -3,6 +3,7 @@
   "%Name":"obj_gbj14_enemy_shuffle",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_gbj14_enemy_shuffle",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base_enemy",
-    "path":"sprites/spr_base_enemy/spr_base_enemy.yy",
+    "name":"spr_gbj14_enemy_bug",
+    "path":"sprites/spr_gbj14_enemy_bug/spr_gbj14_enemy_bug.yy",
   },
   "spriteMaskId":null,
   "visible":true,

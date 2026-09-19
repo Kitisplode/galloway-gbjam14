@@ -3,6 +3,22 @@
 
 if (!paused)
 {
+	if (global.player_hp <= 0 && hurt_timer <= 0 && is_on_ground)
+	{
+		//var _temp_id = instance_create_depth(x,y, depth, obj_gbjam12_player_dead);
+		//_temp_id.sprite_index = sprite_index;
+		//_temp_id.image_xscale = image_xscale;
+		//_temp_id.image_angle = image_angle;
+		//scr_transition_fade_to_color(rm_gbjam_gameover, 1);
+		instance_destroy();
+		exit;
+	}
+	
+	if (hurt_timer <= 0 && is_on_ground && is_on_ground_previous)
+	{
+		r2_clone(position, last_safe_position);
+	}
+	
 	if (action == -1)
 	{
 		if (!place_meeting(position[0],position[1], obj_block_ladder))
@@ -12,7 +28,7 @@ if (!paused)
 	}
 	
 	// While hurt, the player cannot move.
-	if (hurt_timer > 0)
+	if (hurt_timer > 0 || global.player_hp <= 0)
 	{
 		hurt_timer -= scr_get_tick_length();
 		can_act = false;
@@ -148,6 +164,10 @@ if (!paused)
 						_item.uses -= 1;
 						if (_item.uses <= 0) ds_list_delete(list_items, 0);
 					}
+					else if (_item.name == "Throw")
+					{
+						ds_list_delete(list_items, 0);
+					}
 				}
 			}
 		}
@@ -163,6 +183,18 @@ if (!paused)
 				velocity[0] = 0;
 				velocity[1] = 0;
 				action = -1;
+			}
+		}
+		
+		if (carry_id != id)
+		{
+			if (ds_list_size(list_items) > 0)
+			{
+				var _item = ds_list_find_value(list_items, 0);
+				if (_item.name != "Throw")
+				{
+					ds_list_insert(list_items, 0, item_throw);
+				}
 			}
 		}
 	

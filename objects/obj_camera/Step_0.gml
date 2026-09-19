@@ -63,9 +63,10 @@ else if (!instance_exists(par_transition))
 	if (stay_in_room)
 	{
 		//var _pos = r2(lerp(camera_get_view_x(cam),x,0.2), lerp(camera_get_view_y(cam),y,0.2));
-		camera_set_view_pos(cam, 
-			floor(lerp(camera_get_view_x(cam),x,0.1)), 
-			floor(lerp(camera_get_view_y(cam),y,0.1)));
+		camera_set_view_pos(cam, x,y);
+		//camera_set_view_pos(cam, 
+		//	(lerp(camera_get_view_x(cam),x,0.1)), 
+		//	(lerp(camera_get_view_y(cam),y,0.1)));
 	}
 	else
 		camera_set_view_pos(cam, x,y);
@@ -75,3 +76,6 @@ else
 	cam = view_camera[0];
 	camera_set_view_pos(cam, x,y);
 }
+
+//x = round(x);
+//y = round(y);

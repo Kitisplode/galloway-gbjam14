@@ -10,3 +10,5 @@ boss_id = instance_create_depth(x,y, depth, obj_gbj14_enemy_boss_real);
 boss_id.dom_id = id;
 
 chase_id = id;
+dom_distance = 0;
+dom_distance_target = 64;
