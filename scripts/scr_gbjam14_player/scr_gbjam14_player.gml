@@ -40,6 +40,32 @@ function scr_gbj14_player_Cursor_Shovel()
 	return r2(_x,_y);
 }
 
+function scr_gbj14_player_Use_Item_Box()
+{
+	if (carry_id == id)
+	{
+		//if (!instance_exists(obj_gbj14_item_box))
+		{
+			var _block = instance_create_depth(position[0],position[1], depth + 1, obj_gbj14_item_box);
+			if (instance_exists(_block))
+			{
+				carry_id = _block;
+				_block.dom_id = id;
+				_block.dom_offset_x = 0;
+				_block.dom_offset_y = -29;
+				_block.mask_index = msk_no_collision;
+				_block.movement_enabled = false;
+				_block.apply_gravity_force = false;
+				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
+				action = 1;
+				velocity[0] = 0;
+				velocity[1] = 0;
+				scr_change_sprite(spr_gbj14_player_lift);
+			}
+		}
+	}
+}
+
 function scr_gbj14_player_Use_Item_Lift()
 {
 	if (carry_id == id)
@@ -50,10 +76,10 @@ function scr_gbj14_player_Use_Item_Lift()
 		{
 			var _block1 = instance_place(_pos1[0],_pos1[1], obj_block_pushable);
 			var _block2 = instance_place(_pos2[0],_pos2[1], obj_block_pushable);
-			var _block = -1;
+			var _block = undefined;
 			if (instance_exists(_block1)) _block = _block1;
 			else if (instance_exists(_block2)) _block = _block2;
-			if (instance_exists(_block))
+			if (!is_undefined(_block) && instance_exists(_block))
 			{
 				carry_id = _block;
 				_block.dom_id = id;
@@ -202,7 +228,14 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 	if (_tile > 0)
 	{
 		tilemap_set(_tilemap, 0, _x,_y);
-		for (var _j = 0; _j < 4; _j++)
+		_scr_gbj14_Spawn_Crumbs(_x,_y);
+	}
+	return true;
+}
+
+function _scr_gbj14_Spawn_Crumbs(_x,_y)
+{
+	for (var _j = 0; _j < 4; _j++)
 		{
 			var _angle = degtorad(45 + _j * 90);
 			var _pos = r2(_x * 16 + 8 + cos(_angle) * 8, _y * 16 + 8 -sin(_angle) * 8);
@@ -213,6 +246,4 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 				_crumb.velocity[1] = (_pos[1] - _y * 16 - 8) * random_range(1,5) * 10;
 			}
 		}
-	}
-	return true;
 }

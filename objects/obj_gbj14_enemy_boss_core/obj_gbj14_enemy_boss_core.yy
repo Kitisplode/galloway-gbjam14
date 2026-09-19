@@ -37,6 +37,9 @@
     "name":"spr_base_circle_16",
     "path":"sprites/spr_base_circle_16/spr_base_circle_16.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"msk_no_collision",
+    "path":"sprites/msk_no_collision/msk_no_collision.yy",
+  },
   "visible":false,
 }
