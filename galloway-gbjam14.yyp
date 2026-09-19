@@ -274,6 +274,7 @@
     {"id":{"name":"par_transition","path":"objects/par_transition/par_transition.yy",},},
     {"id":{"name":"rm_gbj14_blah","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},},
     {"id":{"name":"rm_gbj14_test","path":"rooms/rm_gbj14_test/rm_gbj14_test.yy",},},
+    {"id":{"name":"rm_gbj14_map","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},},
     {"id":{"name":"rm_gbj14_title","path":"rooms/rm_gbj14_title/rm_gbj14_title.yy",},},
     {"id":{"name":"rm_gbjam12_boss","path":"rooms/rm_gbjam12_boss/rm_gbjam12_boss.yy",},},
     {"id":{"name":"rm_gbjam12_courtyard","path":"rooms/rm_gbjam12_courtyard/rm_gbjam12_courtyard.yy",},},
@@ -863,6 +864,7 @@
     {"roomId":{"name":"rm_gbjam12_tower_01","path":"rooms/rm_gbjam12_tower_01/rm_gbjam12_tower_01.yy",},},
     {"roomId":{"name":"rm_gbjam12_boss","path":"rooms/rm_gbjam12_boss/rm_gbjam12_boss.yy",},},
     {"roomId":{"name":"rm_gbjam12_gameover","path":"rooms/rm_gbjam12_gameover/rm_gbjam12_gameover.yy",},},
+    {"roomId":{"name":"rm_gbj14_map","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

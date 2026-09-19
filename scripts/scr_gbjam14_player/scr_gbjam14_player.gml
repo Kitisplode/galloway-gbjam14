@@ -195,21 +195,25 @@ function scr_gbj14_player_Use_Item_Pick()
 {
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	var _pos = scr_gbj14_player_Cursor_Pick();
-	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_stone");
-	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
-	if (random_range(0,100) < 10)
+	if (_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_earth"))
 	{
-		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
+		if (random_range(0,100) < 10)
+			_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
 	}
+	if (_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_stone"))
+	{
+		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 5, OBJECT_DEPTHS.PLAYER + 10);
+	}
+	
 }
 function scr_gbj14_player_Use_Item_Shovel()
 {
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	var _pos = scr_gbj14_player_Cursor_Shovel();
-	_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_dirt");
-	if (random_range(0,100) < 10)
+	if (_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_earth"))
 	{
-		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
+		if (random_range(0,100) < 10)
+			_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
 	}
 }
 
@@ -227,10 +231,12 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 			{
 				var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(round(random_range(1,5))));
 				if (audio_exists(_sound)) play_sound(_sound, 1, 0, 1, 1,0.5);
+				return true;
 			}
 		}
 		break;
 	}
+	return false;
 }
 
 function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="player" type="obj_gbj14_player_spawner" width="32" height="32"/>
+</template>
