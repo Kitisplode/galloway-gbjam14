@@ -1,3 +1,9 @@
+if (global.debug_global && global.debug_skip_intro)
+{
+        room_goto(rm_gbj14_test);
+	exit;
+}
+
 var _hrw = room_width / 2;
 var _hrh = room_height / 2;
 var _rw = room_width;

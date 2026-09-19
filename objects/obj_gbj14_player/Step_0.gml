@@ -61,9 +61,25 @@ if (!paused)
 			can_act = false;
 		}
 	}
+
+	// Keep a short jump window after leaving the ground so jumps do not
+	// require pixel-perfect timing at an edge.
+	if (is_on_ground)
+		jump_coyote_timer = jump_coyote_time;
+	else
+		jump_coyote_timer = max(0, jump_coyote_timer - scr_get_tick_length());
 	
 	// Update the input.
 	direction_input = id_input.direction_input;
+	var _horizontal_input = can_move && (input_check("left") || input_check("right"));
+
+	// Remember a recent jump press briefly so landing does not require
+	// frame-perfect input timing.
+	if (jump_buffer_timer > 0)
+		jump_buffer_timer = max(0, jump_buffer_timer - scr_get_tick_length());
+	if (can_move && scr_Input_Read(id_input, input_jump, 0))
+		jump_buffer_timer = jump_buffer_time;
+
 	// Use the input to move.
 	if (direction_input > -1 && can_move)
 	{
@@ -94,8 +110,10 @@ if (!paused)
 			
 		}
 	}
-	// Apply friction if we're on the ground
-	if (is_on_ground)
+	// Apply friction only when there is no horizontal input. When the player
+	// holds the opposite direction, acceleration will brake the player first
+	// and then move them back in the new direction.
+	if (is_on_ground && !_horizontal_input)
 	{
 		var _temp_friction = friction_ground;
 		if (action == 1) _temp_friction = 1;
@@ -117,28 +135,31 @@ if (!paused)
 				fall_through_oneway_timer = fall_through_oneway_time;
 			}
 			// Jump!
-			if (scr_Input_Read(id_input, input_jump, 0))
+			if (jump_buffer_timer > 0)
 			{
-				if (is_on_ground)
+				if (jump_coyote_timer > 0)
 				{
 					play_sound(snd_gbj14_player_jump, 1, 0, 1, 1, 0);
 					velocity[1] = -jump_force * 0.97;
+					jump_coyote_timer = 0;
+					jump_buffer_timer = 0;
 				}
 			}
 			// When the player releases jump while jumping upwards, stop them and start falling.
 			if (input_check_released(input_jump) && !is_on_ground && velocity[1] < -30)
 			{
-				velocity[1] = -30;
+				velocity[1] *= 0.3;
 			}
 		}
 		else
 		{
 			// Jump!
-			if (scr_Input_Read(id_input, input_jump, 0))
+			if (jump_buffer_timer > 0)
 			{
 				action = 0;
 				play_sound(snd_gbj14_player_jump, 1, 0, 1, 1, 0);
 				velocity[1] = -jump_force * 0.97;
+				jump_buffer_timer = 0;
 			}
 			else if (input_check_pressed("left") || input_check_pressed("right"))
 			{
@@ -204,6 +225,19 @@ if (!paused)
 			scr_gbj14_player_Scroll_Item();
 		}
 	}
+}
+
+// Use stronger gravity once the player starts falling.
+if (velocity[1] > 0)
+{
+	force_gravity = gravity_force * fall_gravity_multiplier;
+	axis_max_speed[1] = max_fall_speed;
+}
+else
+{
+	force_gravity = gravity_force;
+	// Keep the upward limit high so the fall cap does not shorten jumps.
+	axis_max_speed[1] = 1200;
 }
 
 // Inherit the parent event
