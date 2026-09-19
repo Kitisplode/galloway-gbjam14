@@ -271,6 +271,7 @@
     {"name":"spr_gbj14_item_ladder","order":1,"path":"sprites/spr_gbj14_item_ladder/spr_gbj14_item_ladder.yy",},
     {"name":"spr_gbj14_level_spikes","order":1,"path":"sprites/spr_gbj14_level_spikes/spr_gbj14_level_spikes.yy",},
     {"name":"spr_gbj14_mask_bomb_explosion","order":4,"path":"sprites/spr_gbj14_mask_bomb_explosion/spr_gbj14_mask_bomb_explosion.yy",},
+    {"name":"spr_gbj14_player_climb","order":10,"path":"sprites/spr_gbj14_player_climb/spr_gbj14_player_climb.yy",},
     {"name":"spr_gbj14_player_coll","order":2,"path":"sprites/spr_gbj14_player_coll/spr_gbj14_player_coll.yy",},
     {"name":"spr_gbj14_player_cursor","order":4,"path":"sprites/spr_gbj14_player_cursor/spr_gbj14_player_cursor.yy",},
     {"name":"spr_gbj14_player_die","order":9,"path":"sprites/spr_gbj14_player_die/spr_gbj14_player_die.yy",},

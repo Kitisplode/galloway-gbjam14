@@ -20,6 +20,7 @@ global.debug_player_invincible = false;
 global.debug_show_level_controllers = false;
 global.debug_show_level_blocks = false;
 global.debug_skip_intro = true;
+global.debug_skip_intro_level = rm_gbj14_blah;
 
 global.controls_debug_kill_enemies = ord("O");
 global.controls_debug_restart = ord("R");

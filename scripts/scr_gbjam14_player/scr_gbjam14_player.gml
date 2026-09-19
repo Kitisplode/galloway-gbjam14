@@ -13,7 +13,15 @@ function scr_gbj14_player_Add_Item(_player, _item)
 		}
 	}
 	// otherwise add new item to list
-	ds_list_add(_player.list_items, _item);
+	var _new_item = {
+		name:_item.name,
+		uses:_item.uses,
+		sprite:_item.sprite,
+		sound:_item.sound,
+		script:_item.script,
+		show_cursor:_item.show_cursor
+	};
+	ds_list_add(_player.list_items, _new_item);
 }
 
 function scr_gbj14_player_Scroll_Item()
@@ -66,6 +74,48 @@ function scr_gbj14_player_Use_Item_Box()
 			}
 		}
 	}
+	return true;
+}
+
+function _scr_gbj14_player_Use_Item_Throw(_velocity)
+{
+	if (carry_id != id && instance_exists(carry_id))
+	{
+		carry_id.dom_id = carry_id.id;
+		carry_id.movement_enabled = true;
+		carry_id.apply_gravity_force = true;
+		carry_id.mask_index = carry_id.sprite_index;
+		carry_id.is_thrown = true;
+		carry_id.throw_has_left_ground = false;
+		var _throw_speed = 180;
+		if (carry_id.object_index == obj_gbj14_enemy_shuffle)
+		{
+			// Bugs use the same launch profile as crates and cannot hurt the
+			// player while they are in their thrown state.
+			carry_id.damage = 0;
+			// Match the pushable crate's physics while airborne.
+			carry_id.movement_collision = true;
+			carry_id.force_gravity = 15;
+			carry_id.friction_ground = 0.8;
+			carry_id.axis_max_speed[1] = 1200;
+			carry_id.axis_max_speed[2] = 0;
+			carry_id.slide_slopes_up = true;
+			carry_id.slide_slopes_down = true;
+			carry_id.slide_around_blocks = true;
+			carry_id.slide_around_blocks_distance = 8;
+			carry_id.dont_walk_off_cliffs = false;
+			carry_id.walk_from_walls_multiplier = r3_zero();
+			carry_id.carry_visual_angle = 180;
+			carry_id.anim_angle = 180;
+			carry_id.image_angle_matching_visual = false;
+		}
+		carry_id.axis_max_speed[0] = _throw_speed;
+		//carry_id.velocity[0] = cos(degtorad(direction_facing)) * _throw_speed;
+		//carry_id.velocity[1] = -80;
+		r3_clone(_velocity, carry_id.velocity);
+		carry_id = id;
+	}
+	return true;
 }
 
 function scr_gbj14_player_Use_Item_Lift()
@@ -119,40 +169,10 @@ function scr_gbj14_player_Use_Item_Lift()
 	}
 	else
 	{		
-		carry_id.mask_index = carry_id.sprite_index;
-		carry_id.dom_id = carry_id.id;
-		carry_id.movement_enabled = true;
-		carry_id.apply_gravity_force = true;
-		carry_id.is_thrown = true;
-		carry_id.throw_has_left_ground = false;
-		var _throw_speed = 180;
-		if (carry_id.object_index == obj_gbj14_enemy_shuffle)
-		{
-			// Bugs use the same launch profile as crates and cannot hurt the
-			// player while they are in their thrown state.
-			carry_id.damage = 0;
-			// Match the pushable crate's physics while airborne.
-			carry_id.movement_collision = true;
-			carry_id.force_gravity = 15;
-			carry_id.friction_ground = 0.8;
-			carry_id.axis_max_speed[1] = 1200;
-			carry_id.axis_max_speed[2] = 0;
-			carry_id.slide_slopes_up = true;
-			carry_id.slide_slopes_down = true;
-			carry_id.slide_around_blocks = true;
-			carry_id.slide_around_blocks_distance = 8;
-			carry_id.dont_walk_off_cliffs = false;
-			carry_id.walk_from_walls_multiplier = r3_zero();
-			carry_id.carry_visual_angle = 180;
-			carry_id.anim_angle = 180;
-			carry_id.image_angle_matching_visual = false;
-		}
-		carry_id.axis_max_speed[0] = _throw_speed;
-		carry_id.velocity[0] = cos(degtorad(direction_facing)) * _throw_speed;
-		carry_id.velocity[1] = -80;
-		carry_id = id;
+		_scr_gbj14_player_Use_Item_Throw(r3(cos(degtorad(direction_facing)) * 180, -80,0));
 		play_sound(snd_gbj14_player_attack, 1, false, 1, 1, 0);
 	}
+	return true;
 }
 
 function scr_gbj14_player_Use_Item_Ladder()
@@ -179,16 +199,38 @@ function scr_gbj14_player_Use_Item_Ladder()
 			if (_one_way_plat) break;
 		}
 	}
+	return true;
 }
 
 function scr_gbj14_player_Use_Item_Bomb()
 {
-	var _bomb = instance_create_depth(position[0], position[1] - 24, depth - 1, obj_gbj14_item_bomb);
-	if (instance_exists(_bomb))
+	if (carry_id == id)
 	{
-		_bomb.velocity[0] = cos(degtorad(direction_facing)) * 100;
-		_bomb.velocity[1] = -100;
+		if (!instance_exists(obj_gbj14_item_bomb))
+		{
+			var _bomb = instance_create_depth(position[0],position[1], depth + 1, obj_gbj14_item_bomb);
+			if (instance_exists(_bomb))
+			{
+				carry_id = _bomb;
+				_bomb.dom_id = id;
+				_bomb.dom_offset_x = 0;
+				_bomb.dom_offset_y = -29;
+				_bomb.mask_index = msk_no_collision;
+				_bomb.movement_enabled = false;
+				_bomb.apply_gravity_force = false;
+				_bomb.is_thrown = false;
+				_bomb.axis_max_speed[0] = 120;
+				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
+				action = 1;
+				velocity[0] = 0;
+				velocity[1] = 0;
+				scr_change_sprite(spr_gbj14_player_lift);
+			}
+		}
+		else
+			return false;
 	}
+	return true;
 }
 
 function scr_gbj14_player_Use_Item_Pick()
@@ -199,11 +241,14 @@ function scr_gbj14_player_Use_Item_Pick()
 	{
 		if (random_range(0,100) < 10)
 			_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
+		return true;
 	}
 	if (_scr_gbj14_player_Use_Item_Dig(floor(_pos[0]/16), floor(_pos[1]/16), "tilemap_stone"))
 	{
 		_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 5, OBJECT_DEPTHS.PLAYER + 10);
+		return true;
 	}
+	return false;
 	
 }
 function scr_gbj14_player_Use_Item_Shovel()
@@ -214,7 +259,9 @@ function scr_gbj14_player_Use_Item_Shovel()
 	{
 		if (random_range(0,100) < 10)
 			_scr_gbj14_spawn_gold(floor(_pos[0]/16) * 16 + 8, floor(_pos[1]/16) * 16 + 12, 10, OBJECT_DEPTHS.PLAYER + 10);
+		return true;
 	}
+	return false;
 }
 
 function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
@@ -234,7 +281,6 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 				return true;
 			}
 		}
-		break;
 	}
 	return false;
 }
@@ -281,8 +327,9 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 	{
 		tilemap_set(_tilemap, 0, _x,_y);
 		_scr_gbj14_Spawn_Crumbs(_x,_y);
+		return true;
 	}
-	return true;
+	return false;
 }
 
 function _scr_gbj14_Spawn_Crumbs(_x,_y)

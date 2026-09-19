@@ -154,7 +154,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -273,8 +273,8 @@
     {"id":{"name":"par_physics","path":"objects/par_physics/par_physics.yy",},},
     {"id":{"name":"par_transition","path":"objects/par_transition/par_transition.yy",},},
     {"id":{"name":"rm_gbj14_blah","path":"rooms/rm_gbj14_blah/rm_gbj14_blah.yy",},},
-    {"id":{"name":"rm_gbj14_test","path":"rooms/rm_gbj14_test/rm_gbj14_test.yy",},},
     {"id":{"name":"rm_gbj14_map","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},},
+    {"id":{"name":"rm_gbj14_test","path":"rooms/rm_gbj14_test/rm_gbj14_test.yy",},},
     {"id":{"name":"rm_gbj14_title","path":"rooms/rm_gbj14_title/rm_gbj14_title.yy",},},
     {"id":{"name":"rm_gbjam12_boss","path":"rooms/rm_gbjam12_boss/rm_gbjam12_boss.yy",},},
     {"id":{"name":"rm_gbjam12_courtyard","path":"rooms/rm_gbjam12_courtyard/rm_gbjam12_courtyard.yy",},},
@@ -828,6 +828,7 @@
     {"id":{"name":"spr_gbj14_level_button","path":"sprites/spr_gbj14_level_button/spr_gbj14_level_button.yy",},},
     {"id":{"name":"spr_gbj14_level_spikes","path":"sprites/spr_gbj14_level_spikes/spr_gbj14_level_spikes.yy",},},
     {"id":{"name":"spr_gbj14_mask_bomb_explosion","path":"sprites/spr_gbj14_mask_bomb_explosion/spr_gbj14_mask_bomb_explosion.yy",},},
+    {"id":{"name":"spr_gbj14_player_climb","path":"sprites/spr_gbj14_player_climb/spr_gbj14_player_climb.yy",},},
     {"id":{"name":"spr_gbj14_player_coll","path":"sprites/spr_gbj14_player_coll/spr_gbj14_player_coll.yy",},},
     {"id":{"name":"spr_gbj14_player_cursor","path":"sprites/spr_gbj14_player_cursor/spr_gbj14_player_cursor.yy",},},
     {"id":{"name":"spr_gbj14_player_die","path":"sprites/spr_gbj14_player_die/spr_gbj14_player_die.yy",},},

@@ -1,6 +1,6 @@
 if (global.debug_global && global.debug_skip_intro)
 {
-        room_goto(rm_gbj14_test);
+    scr_transition_instant(global.debug_skip_intro_level);
 	exit;
 }
 
