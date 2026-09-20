@@ -34,3 +34,33 @@ function scr_transition_fade_to_color(_target_room,
 		transition_ID = -1;
 	return transition_ID;
 }
+
+// used to transition back into the same room, for infinite wrapping
+function scr_transition_wrap(_target_x)
+{
+    var _t = instance_create_depth(0, 0, OBJECT_DEPTHS.TRANSITION, obj_transition_fade);
+    _t.wrap_target_x = _target_x;
+	_t.switch_action = method(_t, function()
+	{
+	    with (obj_gbj14_player)
+	    {
+	        var _dx = other.wrap_target_x - position[0];
+
+	        position[0] = other.wrap_target_x; // the authoritative coordinate
+	        x = position[0];                   // keep the mirror in sync immediately
+	        xprevious = x;                     // no giant one-frame delta
+
+	        // Keep the hurt-respawn point on THIS side of the map, otherwise
+	        // taking damage later warps you back across the world.
+	        r2_clone(position, last_safe_position);
+
+	        var _cam_dx = _dx;
+	        with (obj_camera)
+	        {
+	            x += _cam_dx;
+	            target_x += _cam_dx;
+	            camera_set_view_pos(cam, x, y);
+	        }
+	    }
+	});
+}

@@ -25,3 +25,6 @@ wait_timer = 0;
 sound_end_room = -1;
 // And when the new room starts
 sound_start_room = -1;
+
+// If set, this runs at the midpoint of the transition instead of restarting / changing rooms.
+switch_action = undefined;

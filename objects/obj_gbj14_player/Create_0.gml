@@ -95,3 +95,5 @@ draw_2d_z = false;
 
 outline_thickness = 0;
 outline_color = c_ltgray;
+
+can_wrap = true;

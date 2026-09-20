@@ -1,13 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// player room wrapping left-right
-//move_wrap(true, false, sprite_width / 2);
-if (x > room_width)
-	x = 0;
-else if (x < 0)
-	x = room_width;
-	
+// room wrapping left-right
+#macro WRAP_TRIGGER 16   // outer band that starts a wrap
+#macro WRAP_LAND    40   // where you appear on the far side, well clear of the band
+if (!instance_exists(par_transition))
+{
+    if (can_wrap)
+    {
+        if (x < WRAP_TRIGGER)
+        {
+            can_wrap = false;
+            scr_transition_wrap(room_width - WRAP_LAND);
+        }
+        else if (x > room_width - WRAP_TRIGGER)
+        {
+            can_wrap = false;
+            scr_transition_wrap(WRAP_LAND);
+        }
+    }
+    else if (x > WRAP_LAND && x < room_width - WRAP_LAND)
+    {
+        can_wrap = true; // re-arm only after leaving both edge zones
+    }
+}
+
 if (!paused)
 {
 	if (global.player_hp <= 0 && hurt_timer <= 0 && is_on_ground)
