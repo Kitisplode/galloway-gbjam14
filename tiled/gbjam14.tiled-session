@@ -5,7 +5,19 @@
         ".",
         "tiled"
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "/home/lexou/Downloads/gbjam14.tsx": {
+            "scaleInDock": 1
+        },
+        "/home/lexou/Downloads/gbjam14_map.tmx": {
+            "scale": 0.4922,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2108.898821617229,
+                "y": 1898.618447785453
+            }
+        },
         ":/automap-tiles.tsx": {
             "scaleInDock": 1
         },
@@ -33,24 +45,34 @@
             "scaleInDock": 1.9474,
             "scaleInEditor": 3.1054
         },
+        "gbjam14_map.old.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.3942,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 1042.6179604261797,
+                "y": 1062.9122272957889
+            }
+        },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
-                7,
-                3
+                17
             ],
-            "scale": 3.6323,
-            "selectedLayer": 7,
+            "scale": 2.5555,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 156.09944112545767,
-                "y": 1447.842964512843
+                "x": 3711.993738994326,
+                "y": 3335.942085697515
             }
         },
         "gbjam14_rules.tmx": {
-            "scale": 5.0725,
-            "selectedLayer": 2,
+            "scale": 2.3311,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 264.9581074420897,
-                "y": 255.98817151306065
+                "x": 147.14083479902195,
+                "y": 197.76071382609064
             }
         },
         "rocks_rule.tmx": {
@@ -82,9 +104,11 @@
     "project": "gbjam14.tiled-project",
     "property.type": "int",
     "recentFiles": [
+        "gbjam14_map.tmx",
+        "gbjam14_map.old.tmx",
+        "/home/lexou/Downloads/gbjam14_map.tmx",
         "gbjam14.tsx",
         "gbjam14_rules.tmx",
-        "gbjam14_map.tmx",
         "ts_gbj14.tsx",
         "gbjam14.old.tsx",
         "gbjam14.old.tmx",
