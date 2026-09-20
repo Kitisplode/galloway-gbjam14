@@ -77,7 +77,7 @@ gravity_force = 12;
 fall_gravity_multiplier = 1.5;
 force_gravity = gravity_force;
 
-slide_slopes_down = false;
+slide_slopes_down = true;
 // Let horizontal movement step up small ledge corners instead of stopping
 // the player's forward motion when they clip one while jumping.
 slide_slopes_up = true;
