@@ -301,6 +301,12 @@ terrain_build_lookup();
 
 
 
+function terrain_is_slope(_tile)
+{
+    return (_tile == 231 || _tile == 233 ||
+            _tile == 599 || _tile == 602 ||
+            _tile == 645 || _tile == 650);
+}
 
 
 function terrain_is_type(_tilemap, _x, _y, _type)
@@ -390,6 +396,9 @@ function terrain_update_tile(_tilemap, _x, _y)
     if (_x < 0 || _x >= _terrain_w ||
         _y < 0 || _y >= _terrain_h)
         return;
+		
+	if (terrain_is_slope(tilemap_get(_tilemap, _x, _y)))
+		return;
 
     var _tile = terrain_get_tile(_tilemap, _x, _y);
     if (_tile > -1)
@@ -405,4 +414,35 @@ function terrain_update_region(_tilemap, _x, _y)
             terrain_update_tile(_tilemap, xx, yy);
         }
     }
+}
+
+
+
+/// function to fix things getting stuck when terrain changes under them
+function scr_Unstick_From_Solids(_max_push = 12)
+{
+    if (!scr_Check_For_Solids(position, false))
+		return true;
+
+    var _dirs = [[0,-1], [0,1], [-1,0], [1,0]];
+    for (var _step = 1; _step <= _max_push; _step++)
+    {
+        for (var _d = 0; _d < 4; _d++)
+        {
+            var _try = [
+				position[0] + _dirs[_d][0] * _step,
+                position[1] + _dirs[_d][1] * _step,
+                position[2]
+			];
+            if (!scr_Check_For_Solids(_try, false))
+            {
+                position[0] = _try[0];
+                position[1] = _try[1];
+                x = position[0];
+                y = position[1];
+                return true;
+            }
+        }
+    }
+    return false;
 }

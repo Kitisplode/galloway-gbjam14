@@ -322,6 +322,7 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y)
 	{
 		tilemap_set(_tilemap, 0, _x,_y);
 		terrain_update_region(_tilemap, _x, _y);
+		with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
 		_scr_gbj14_Spawn_Crumbs(_x,_y);
 		return true;
 	}
