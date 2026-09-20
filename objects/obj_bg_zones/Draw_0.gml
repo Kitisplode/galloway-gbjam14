@@ -1,0 +1,1 @@
+scr_bg_zones_draw();
