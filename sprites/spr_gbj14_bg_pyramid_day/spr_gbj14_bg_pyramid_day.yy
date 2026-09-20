@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"gbjam14",
-    "path":"folders/Sprites/gbjam14.yy",
+    "name":"bgs",
+    "path":"folders/Sprites/gbjam14/bgs.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
