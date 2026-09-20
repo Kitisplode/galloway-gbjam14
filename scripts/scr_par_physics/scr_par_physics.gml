@@ -99,6 +99,7 @@ function scr_par_physics_Apply_Movement_Axis(_distance, _axis)
 	_temp_move_vector[_axis] = 1;
 	var _temp_up_axis = r3_unit(up_vector);
 	var _temp_other_axis = r3_cross(_temp_up_axis, _temp_move_vector);
+	var _upward_speed = r3_dot(velocity, _temp_up_axis);
 	for (var i = 0; i < floor(abs(_distance)); i += 1)
 	{
 		var _temp_move_sign = r3_scale(_temp_move_vector, sign(_distance));
@@ -148,7 +149,7 @@ function scr_par_physics_Apply_Movement_Axis(_distance, _axis)
 							_temp_moved = true;
 							break;
 						}
-						else if (!scr_Check_For_Solids(r3_subtract(_temp_moved_position, _temp_other_axis_movement), true))
+						else if (_upward_speed <= 0 && !scr_Check_For_Solids(r3_subtract(_temp_moved_position, _temp_other_axis_movement), true))
 						{
 							_scr_par_physics_Actually_Move(r3_scale(_temp_other_axis, -1, _temp_other_axis));
 							_temp_moved = true;
@@ -184,7 +185,7 @@ function scr_par_physics_Apply_Movement_Axis(_distance, _axis)
 			if (!r3_parallel(_temp_move_vector, _temp_up_axis))
 			{
 				// Moving down slopes:
-				if (force_gravity > 0 && slide_slopes_down)
+				if (force_gravity > 0 && slide_slopes_down && _upward_speed <= 0 && is_on_ground_previous)
 				{
 					for (var _up_axis_distance = 1;
 						 _up_axis_distance <= slide_slopes_distance;
