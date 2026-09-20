@@ -274,6 +274,7 @@
     {"name":"spr_gbj14_hud_item_throw","order":11,"path":"sprites/spr_gbj14_hud_item_throw/spr_gbj14_hud_item_throw.yy",},
     {"name":"spr_gbj14_hud_paused","order":6,"path":"sprites/spr_gbj14_hud_paused/spr_gbj14_hud_paused.yy",},
     {"name":"spr_gbj14_hud_shop_bg","order":8,"path":"sprites/spr_gbj14_hud_shop_bg/spr_gbj14_hud_shop_bg.yy",},
+    {"name":"spr_gbj14_item_coin","order":6,"path":"sprites/spr_gbj14_item_coin/spr_gbj14_item_coin.yy",},
     {"name":"spr_gbj14_item_gem","order":5,"path":"sprites/spr_gbj14_item_gem/spr_gbj14_item_gem.yy",},
     {"name":"spr_gbj14_item_gold_big","order":3,"path":"sprites/spr_gbj14_item_gold_big/spr_gbj14_item_gold_big.yy",},
     {"name":"spr_gbj14_item_gold_small","order":2,"path":"sprites/spr_gbj14_item_gold_small/spr_gbj14_item_gold_small.yy",},

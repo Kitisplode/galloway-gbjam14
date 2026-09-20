@@ -830,6 +830,7 @@
     {"id":{"name":"spr_gbj14_hud_paused","path":"sprites/spr_gbj14_hud_paused/spr_gbj14_hud_paused.yy",},},
     {"id":{"name":"spr_gbj14_hud_shop_bg","path":"sprites/spr_gbj14_hud_shop_bg/spr_gbj14_hud_shop_bg.yy",},},
     {"id":{"name":"spr_gbj14_item_bomb","path":"sprites/spr_gbj14_item_bomb/spr_gbj14_item_bomb.yy",},},
+    {"id":{"name":"spr_gbj14_item_coin","path":"sprites/spr_gbj14_item_coin/spr_gbj14_item_coin.yy",},},
     {"id":{"name":"spr_gbj14_item_gem","path":"sprites/spr_gbj14_item_gem/spr_gbj14_item_gem.yy",},},
     {"id":{"name":"spr_gbj14_item_gold_big","path":"sprites/spr_gbj14_item_gold_big/spr_gbj14_item_gold_big.yy",},},
     {"id":{"name":"spr_gbj14_item_gold_small","path":"sprites/spr_gbj14_item_gold_small/spr_gbj14_item_gold_small.yy",},},
