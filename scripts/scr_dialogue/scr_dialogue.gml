@@ -63,8 +63,8 @@ global.cutscene_played = [
 
 global.cutscenes[0] = [ // At camp
 	scr_line(Characters.SHOPKEEPER, "Don Bruto, you're in luck! Now that the chaos has settled down, we've set up shop here in the shipwreck camp!"),
-	scr_line(Characters.DON_BRUTO,  "A shop? But what are you selling? Don't tell you're selling our old ship's equipment back to us!"),
-	scr_line(Characters.SHOPKEEPER, "We all must make a living...\n" + "And not all of us can go risk our lives in that pyramid."),
+	scr_line(Characters.DON_BRUTO,  "A shop? But what are you selling? Don't tell me that you're selling our old ship's equipment back to us!"),
+	scr_line(Characters.SHOPKEEPER, "We all must make a living...\n" + "And not all of us can go risk our lives in that fearsome pyramid."),
 	scr_line(Characters.DON_BRUTO,  "You'd better not swindle me!\n" + "That certainly wouldn't befit a woman of the cloth!"),
 ];
 global.cutscenes[1] = [ // At camp
