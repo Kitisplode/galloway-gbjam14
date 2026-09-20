@@ -12,3 +12,5 @@ angle_based_on_velocity = true;
 sound_dead = -1;
 
 creator_id = id;
+
+despawn_when_far_away = true;

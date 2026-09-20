@@ -42,6 +42,8 @@ friction_hurt = 0.9;
 carry_id = id;
 
 last_safe_position = r2_zero();
+idle_animation_timer = 0;
+idle_animation_time = 5;
 
 list_items = ds_list_create();
 scr_gbj14_player_Add_Item(self, {

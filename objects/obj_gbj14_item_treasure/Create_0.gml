@@ -14,3 +14,6 @@ pushes_others = false;
 
 solid = false;
 normal_vector = r3(0,-1,0);
+
+boss_id = instance_create_depth(x, y -80, OBJECT_DEPTHS.ENEMY, obj_gbj14_enemy_boss_core_2);
+boss_id.chase_id = id;
