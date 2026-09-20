@@ -49,3 +49,11 @@ debug_killed = false;
 stunned = false;
 
 switch_name = "";
+
+active_room = id;
+obeys_room = true;
+
+inactive_when_far_away = true;
+despawn_when_far_away = false;
+distance_far_away = 320;
+respawn_when_far_away = false;

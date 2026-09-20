@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gbj14_enemy_boss_real",
+  "%Name":"obj_gbj14_enemy_ghost",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gbj14_enemy_boss_real",
+  "name":"obj_gbj14_enemy_ghost",
   "overriddenProperties":[],
   "parent":{
     "name":"enemy",
@@ -34,12 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base_enemy_32",
-    "path":"sprites/spr_base_enemy_32/spr_base_enemy_32.yy",
+    "name":"spr_gbj14_enemy_ghost",
+    "path":"sprites/spr_gbj14_enemy_ghost/spr_gbj14_enemy_ghost.yy",
   },
-  "spriteMaskId":{
-    "name":"msk_no_collision",
-    "path":"sprites/msk_no_collision/msk_no_collision.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

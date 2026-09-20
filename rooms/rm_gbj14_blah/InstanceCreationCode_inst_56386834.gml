@@ -1,1 +1,0 @@
-chase_id = obj_gbj14_item_treasure;

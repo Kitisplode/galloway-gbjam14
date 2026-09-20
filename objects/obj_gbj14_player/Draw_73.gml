@@ -39,8 +39,16 @@ else
 				}
 				else
 				{
-					scr_change_sprite(spr_gbj14_player_idle);
-					anim_speed = 0;
+					if (idle_animation_timer >= idle_animation_time)
+					{
+						scr_change_sprite(spr_gbj14_player_idle_play);
+						anim_speed = 0.15;
+					}
+					else
+					{
+						scr_change_sprite(spr_gbj14_player_idle);
+						anim_speed = 0;
+					}
 				}
 			}
 			else

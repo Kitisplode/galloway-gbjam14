@@ -188,9 +188,18 @@ function scr_gbj14_player_Use_Item_Lift()
 			scr_change_sprite(spr_gbj14_player_lift);
 		}
 	}
+	// Throw
 	else
 	{		
-		_scr_gbj14_player_Use_Item_Throw(r3(cos(degtorad(direction_facing)) * 180, -80,0));
+		if (input_check("down"))
+		{
+			carry_id.position[0] = position[0] + cos(degtorad(direction_facing)) * 16;
+			_scr_gbj14_player_Use_Item_Throw(r3_zero());
+		}
+		else
+		{
+			_scr_gbj14_player_Use_Item_Throw(r3(cos(degtorad(direction_facing)) * 180, -80,0));
+		}
 		play_sound(snd_gbj14_player_attack, 1, false, 1, 1, 0);
 	}
 	return true;
