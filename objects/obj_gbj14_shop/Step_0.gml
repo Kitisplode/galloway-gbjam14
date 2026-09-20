@@ -1,5 +1,6 @@
-global.in_shop = global.paused; // TODO remove this in release build
-if (global.in_shop)
+if (global.debug_global) global.in_shop = global.paused; // TODO remove this in release build
+
+if (global.in_shop && !global.cutscene_playing)
 {
 	if (input_check_pressed("up" ))   selected_item -= shop_row_size;
 	if (input_check_pressed("down"))  selected_item += shop_row_size;
@@ -12,7 +13,7 @@ if (global.in_shop)
 	if (input_check_pressed("b"))
 	{
 		global.in_shop = false;
-		global.paused = false; // TODO remove this in release build
+		if (global.debug_global) global.paused = false; // TODO remove this in release build
 	}
 	if (input_check_pressed("a"))
 	{

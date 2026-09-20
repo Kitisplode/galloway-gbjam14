@@ -143,6 +143,11 @@ function scr_gbj14_player_Use_Item_Lift()
 {
 	if (carry_id == id)
 	{
+		scr_dialogue_start([
+		    "Hello there, welcome to the mines!",
+		    "Press A to dig for gold.\nWatch out for spikes.",
+		]);
+		return true;
 		var _pos1 = scr_gbj14_player_Cursor_Tool_Mid();
 		var _pos2 = scr_gbj14_player_Cursor_Tool_Low();
 		var _block1 = instance_place(_pos1[0],_pos1[1], obj_block_pushable);

@@ -30,27 +30,27 @@
             "scaleInEditor": 1
         },
         "gbjam14.tsx": {
-            "scaleInDock": 2.5469,
-            "scaleInEditor": 2.06
+            "scaleInDock": 1.9474,
+            "scaleInEditor": 3.1054
         },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
                 7,
                 3
             ],
-            "scale": 2.755,
-            "selectedLayer": 1,
+            "scale": 3.6323,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 1864.9727767695101,
-                "y": 1441.7422867513612
+                "x": 156.09944112545767,
+                "y": 1447.842964512843
             }
         },
         "gbjam14_rules.tmx": {
             "scale": 5.0725,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 427.599802858551,
-                "y": 91.276490882208
+                "x": 264.9581074420897,
+                "y": 255.98817151306065
             }
         },
         "rocks_rule.tmx": {
@@ -80,12 +80,12 @@
         "gbjam14_map.tmx"
     ],
     "project": "gbjam14.tiled-project",
-    "property.type": "string",
+    "property.type": "int",
     "recentFiles": [
-        "gbjam14_map.tmx",
-        "gbjam14_rules.tmx",
-        "ts_gbj14.tsx",
         "gbjam14.tsx",
+        "gbjam14_rules.tmx",
+        "gbjam14_map.tmx",
+        "ts_gbj14.tsx",
         "gbjam14.old.tsx",
         "gbjam14.old.tmx",
         "gbjam14 map.tmx",

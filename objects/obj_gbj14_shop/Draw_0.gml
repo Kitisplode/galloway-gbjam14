@@ -8,7 +8,7 @@ matrix_set(matrix_world, _mat);
 event_inherited();
 
 
-if (instance_exists(obj_gbj14_player) && global.in_shop)
+if (instance_exists(obj_gbj14_player) && global.in_shop && !global.cutscene_playing)
 {
 	var _player = obj_gbj14_player;
 	
