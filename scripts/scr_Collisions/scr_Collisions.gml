@@ -50,7 +50,7 @@ function _scr_tilemap_find_corner_cells(_position, _tilemap)
 	return _result;
 }
 
-function scr_Place_Meeting_Tilemap(_position, _other, _precise_collision=false)
+function scr_Place_Meeting_Tilemap(_position, _other, _precise_collision=true)
 {
 	if (!instance_exists(_other) || _other.object_index != obj_block_tileset) return false;
 	if (_other.tilemap <= -1) return false;
@@ -73,7 +73,11 @@ function scr_Place_Meeting_Tilemap(_position, _other, _precise_collision=false)
 			}
 			else
 			{
+				var _tile = tilemap_get(_other.tilemap, _x,_y);
+				if (_tile <= 0) continue;
 				_other.mask_index = spr_block_16;
+				if (_tile == 231 || _tile == 599 || _tile == 645) _other.mask_index = spr_block_slope_135;
+				else if (_tile == 233 || _tile == 602 || _tile == 650) _other.mask_index = spr_block_slope_045;
 				_other.x = _x * 16; _other.y = _y * 16;
 				if (place_meeting(_position[0], _position[1], _other))
 				{
