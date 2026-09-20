@@ -267,6 +267,13 @@ else
 // Inherit the parent event
 event_inherited();
 
+if (direction_input > -1 || input_check(["a","b"]))
+{
+	idle_animation_timer = 0;
+}
+else if (idle_animation_timer < idle_animation_time)
+	idle_animation_timer += scr_get_tick_length();
+
 // If we're holding a block, adjust its position according to the current animation frame.
 if (carry_id != id)
 {
@@ -286,8 +293,8 @@ if (carry_id != id)
 				case 5: _pos[0] = _dir * 14; _pos[1] = -37; break;
 				case 6: _pos[0] = _dir * 12; _pos[1] = -40; break;
 				case 7: _pos[0] = _dir * 10; _pos[1] = -40; break;
-			case 8: _pos[0] = _dir * 7; _pos[1] = -36; break;
-			case 9: _pos[0] = _dir * 4; _pos[1] = -29; break;
+				case 8: _pos[0] = _dir * 7; _pos[1] = -36; break;
+				case 9: _pos[0] = _dir * 4; _pos[1] = -29; break;
 			}
 		}
 		// The bug's sprite origin is at its feet. As it rotates onto its

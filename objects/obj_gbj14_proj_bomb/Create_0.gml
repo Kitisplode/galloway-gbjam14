@@ -9,3 +9,4 @@ anim_speed = 0.25;
 damage = 1;
 
 hits_only_once = true;
+piercing = true;
