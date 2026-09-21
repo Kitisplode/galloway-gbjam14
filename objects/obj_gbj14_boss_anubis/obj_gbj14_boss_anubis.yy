@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gbj14_enemy_boss_head_anubis",
-    "path":"sprites/spr_gbj14_enemy_boss_head_anubis/spr_gbj14_enemy_boss_head_anubis.yy",
+    "name":"spr_gbj14_enemy_boss_anubis",
+    "path":"sprites/spr_gbj14_enemy_boss_anubis/spr_gbj14_enemy_boss_anubis.yy",
   },
   "spriteMaskId":null,
   "visible":true,

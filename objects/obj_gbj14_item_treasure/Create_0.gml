@@ -23,7 +23,8 @@ visible = true;
 // this with their specific core object instead of the generic one.
 spawn_boss_core = function(_core_object)
 {
-	boss_id = instance_create_depth(x, y - 80, OBJECT_DEPTHS.ENEMY, _core_object);
+	// 48 matches the core's hover_height (see obj_gbj14_enemy_boss_core_2).
+	boss_id = instance_create_depth(x, y - 48, OBJECT_DEPTHS.ENEMY, _core_object);
 	boss_id.chase_id = id;
 }
 if (object_index == obj_gbj14_item_treasure)

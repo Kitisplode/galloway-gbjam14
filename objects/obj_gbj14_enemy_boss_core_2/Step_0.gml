@@ -20,15 +20,17 @@ if (!paused)
 		{
 			if (chase_id.dom_id != chase_id.id)
 			{
+				// Chase near the top-center of the screen. obj_camera is the view's
+				// top-left; the head sprite hangs 38px above the target point.
 				target_pos[0] = obj_camera.x + 80;
-				target_pos[1] = obj_camera.y + 20;
+				target_pos[1] = obj_camera.y + 60;
 				//if (dom_distance < dom_distance_target) dom_distance += 1;
 				//boss_id.image_alpha = dom_distance / dom_distance_target;
 			}
 			else
 			{
 				target_pos[0] = chase_id.position[0];
-				target_pos[1] = chase_id.position[1] - 80;
+				target_pos[1] = chase_id.position[1] - hover_height;
 				//if (dom_distance > 0) dom_distance -= 1;
 				//else dom_distance = 0;
 				//boss_id.image_alpha = dom_distance / dom_distance_target;

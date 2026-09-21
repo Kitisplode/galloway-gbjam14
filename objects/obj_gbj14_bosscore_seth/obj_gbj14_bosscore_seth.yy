@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_base_circle_16",
+    "path":"sprites/spr_base_circle_16/spr_base_circle_16.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

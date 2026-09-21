@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gbj14_enemy_boss_head_ra",
-    "path":"sprites/spr_gbj14_enemy_boss_head_ra/spr_gbj14_enemy_boss_head_ra.yy",
+    "name":"spr_gbj14_enemy_boss_ra",
+    "path":"sprites/spr_gbj14_enemy_boss_ra/spr_gbj14_enemy_boss_ra.yy",
   },
   "spriteMaskId":null,
   "visible":true,

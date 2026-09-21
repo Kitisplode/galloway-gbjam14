@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gbj14_enemy_boss_head_seth",
-    "path":"sprites/spr_gbj14_enemy_boss_head_seth/spr_gbj14_enemy_boss_head_seth.yy",
+    "name":"spr_gbj14_enemy_boss_seth",
+    "path":"sprites/spr_gbj14_enemy_boss_seth/spr_gbj14_enemy_boss_seth.yy",
   },
   "spriteMaskId":null,
   "visible":true,
