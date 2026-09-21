@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.5,
   "exportDir":"",
   "name":"snd_gbjam9_Some_Kind_of_Hit",
   "parent":{
