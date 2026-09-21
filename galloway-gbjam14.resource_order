@@ -247,6 +247,7 @@
     {"name":"spr_effect_ring_small","order":3,"path":"sprites/spr_effect_ring_small/spr_effect_ring_small.yy",},
     {"name":"spr_effect_snowflake","order":2,"path":"sprites/spr_effect_snowflake/spr_effect_snowflake.yy",},
     {"name":"spr_effect_sparkle_small","order":1,"path":"sprites/spr_effect_sparkle_small/spr_effect_sparkle_small.yy",},
+    {"name":"spr_font_lexou_2","order":2,"path":"sprites/spr_font_lexou_2/spr_font_lexou_2.yy",},
     {"name":"spr_font_lexou","order":1,"path":"sprites/spr_font_lexou/spr_font_lexou.yy",},
     {"name":"spr_gb12_en_alien","order":3,"path":"sprites/spr_gb12_en_alien/spr_gb12_en_alien.yy",},
     {"name":"spr_gb12_en_door","order":2,"path":"sprites/spr_gb12_en_door/spr_gb12_en_door.yy",},

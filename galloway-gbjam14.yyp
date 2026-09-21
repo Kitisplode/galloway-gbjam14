@@ -774,6 +774,7 @@
     {"id":{"name":"spr_effect_sparkle_small_outlined","path":"sprites/spr_effect_sparkle_small_outlined/spr_effect_sparkle_small_outlined.yy",},},
     {"id":{"name":"spr_effect_sparkle_small","path":"sprites/spr_effect_sparkle_small/spr_effect_sparkle_small.yy",},},
     {"id":{"name":"spr_font_01_outline","path":"sprites/spr_font_01_outline/spr_font_01_outline.yy",},},
+    {"id":{"name":"spr_font_lexou_2","path":"sprites/spr_font_lexou_2/spr_font_lexou_2.yy",},},
     {"id":{"name":"spr_font_lexou","path":"sprites/spr_font_lexou/spr_font_lexou.yy",},},
     {"id":{"name":"spr_font_pik","path":"sprites/spr_font_pik/spr_font_pik.yy",},},
     {"id":{"name":"spr_font","path":"sprites/spr_font/spr_font.yy",},},
