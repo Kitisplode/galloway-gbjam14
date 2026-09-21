@@ -1,4 +1,4 @@
 // Inherit the parent event
 event_inherited();
 
-boss_id = instance_create_depth(x,y, depth, obj_gbj14_boss_ra);
+spawn_boss(obj_gbj14_boss_ra);

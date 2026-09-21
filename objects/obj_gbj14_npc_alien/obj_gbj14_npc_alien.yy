@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_gbjam14_alien",
+    "path":"sprites/spr_gbjam14_alien/spr_gbjam14_alien.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
