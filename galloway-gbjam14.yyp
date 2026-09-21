@@ -225,6 +225,7 @@
     {"id":{"name":"obj_gbj14_player","path":"objects/obj_gbj14_player/obj_gbj14_player.yy",},},
     {"id":{"name":"obj_gbj14_proj_bomb","path":"objects/obj_gbj14_proj_bomb/obj_gbj14_proj_bomb.yy",},},
     {"id":{"name":"obj_gbj14_shop","path":"objects/obj_gbj14_shop/obj_gbj14_shop.yy",},},
+    {"id":{"name":"obj_gbj14_treasure_spot","path":"objects/obj_gbj14_treasure_spot/obj_gbj14_treasure_spot.yy",},},
     {"id":{"name":"obj_gbjam12_cap__base","path":"objects/obj_gbjam12_cap__base/obj_gbjam12_cap__base.yy",},},
     {"id":{"name":"obj_gbjam12_cap_alien","path":"objects/obj_gbjam12_cap_alien/obj_gbjam12_cap_alien.yy",},},
     {"id":{"name":"obj_gbjam12_cap_candle","path":"objects/obj_gbjam12_cap_candle/obj_gbjam12_cap_candle.yy",},},
