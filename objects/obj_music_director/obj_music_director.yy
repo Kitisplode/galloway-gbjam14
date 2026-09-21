@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_ladder",
-  "eventList":[],
+  "%Name":"obj_music_director",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_block_ladder",
+  "name":"obj_music_director",
   "overriddenProperties":[],
   "parent":{
-    "name":"Blocks",
-    "path":"folders/Objects/Game Objects/_Base/Blocks.yy",
+    "name":"level",
+    "path":"folders/Objects/Game Objects/gbjam14/level.yy",
   },
-  "parentObjectId":{
-    "name":"par_physics",
-    "path":"objects/par_physics/par_physics.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"msk_no_collision",
-    "path":"sprites/msk_no_collision/msk_no_collision.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

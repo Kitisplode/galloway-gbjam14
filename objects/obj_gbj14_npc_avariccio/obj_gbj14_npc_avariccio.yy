@@ -9,8 +9,8 @@
   "name":"obj_gbj14_npc_avariccio",
   "overriddenProperties":[],
   "parent":{
-    "name":"gbjam14",
-    "path":"folders/Objects/Game Objects/gbjam14.yy",
+    "name":"npc",
+    "path":"folders/Objects/Game Objects/gbjam14/npc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

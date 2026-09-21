@@ -1,0 +1,1 @@
+scr_music_zones_init();

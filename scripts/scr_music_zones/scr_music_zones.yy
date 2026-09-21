@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_music_zones",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_music_zones",
+  "parent":{
+    "name":"gbjam14",
+    "path":"folders/Scripts/gbjam14.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

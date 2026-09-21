@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_ladder",
+  "%Name":"obj_block_ladder_player",
   "eventList":[],
   "managed":true,
-  "name":"obj_block_ladder",
+  "name":"obj_block_ladder_player",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"msk_no_collision",
-    "path":"sprites/msk_no_collision/msk_no_collision.yy",
+    "name":"spr_gbj14_item_ladder",
+    "path":"sprites/spr_gbj14_item_ladder/spr_gbj14_item_ladder.yy",
   },
   "spriteMaskId":null,
   "visible":true,

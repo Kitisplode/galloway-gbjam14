@@ -29,6 +29,7 @@ scr_scene_Add_Step_Sprite_Remove(queue_steps, "bg_galloway", 1);
 
 scr_scene_Add_Step_Sprite_Add(queue_steps, "bg_title", spr_gbj14_splash_title, 0,0, 102, 0,0,
 								0);
+scr_scene_Add_Step_Play_Music(queue_steps, mus_gbj14_jopes_spanish_adventuring, 0);
 								
 scr_scene_Add_Step_Pause_For_Input(queue_steps, ["a", "b", "start"]);
 scr_scene_Add_Step_Play_Music(queue_steps, -1, 1);
