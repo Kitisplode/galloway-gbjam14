@@ -61,3 +61,7 @@ view_locked = false;
 
 outline_thickness = 0;
 outline_color = c_dkgray;
+
+hover_cycle = 0;
+hover_cycle_speed = 0;
+hover_cycle_distance = 0;

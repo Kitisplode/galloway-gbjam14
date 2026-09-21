@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gbj14_treasure_spot",
+  "%Name":"obj_gbj14_elevator",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gbj14_treasure_spot",
+  "name":"obj_gbj14_elevator",
   "overriddenProperties":[],
   "parent":{
     "name":"level",
     "path":"folders/Objects/Game Objects/gbjam14/level.yy",
   },
   "parentObjectId":{
-    "name":"par_animation",
-    "path":"objects/par_animation/par_animation.yy",
+    "name":"obj_block",
+    "path":"objects/obj_block/obj_block.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base_enemy",
-    "path":"sprites/spr_base_enemy/spr_base_enemy.yy",
+    "name":"spr_gbj14_level_elevator",
+    "path":"sprites/spr_gbj14_level_elevator/spr_gbj14_level_elevator.yy",
   },
   "spriteMaskId":null,
   "visible":true,
