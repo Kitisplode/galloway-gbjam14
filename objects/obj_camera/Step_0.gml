@@ -15,7 +15,7 @@ if (instance_exists(follow))
 
 	camera_focus_x = lerp(camera_focus_x, _focus_target_x, camera_focus_lerp_amount);
 	var _focus_target_y = 0;
-	if (follow.velocity[1] > 0)
+	if (follow.object_index == obj_gbj14_player && follow.velocity[1] > 0)
 		_focus_target_y = camera_fall_focus_distance;
 	camera_focus_y = lerp(camera_focus_y, _focus_target_y, camera_vertical_focus_lerp_amount);
 

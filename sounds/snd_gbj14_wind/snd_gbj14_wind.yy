@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_gbj14_wind",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.764694,
+  "exportDir":"",
+  "name":"snd_gbj14_wind",
+  "parent":{
+    "name":"gbjam14",
+    "path":"folders/Sounds/Sounds/gbjam14.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_gbj14_wind.wav",
+  "volume":1.0,
+}
