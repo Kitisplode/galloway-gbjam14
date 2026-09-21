@@ -21,7 +21,7 @@ function scr_gbj14_player_Add_Item(_player, _item)
 		script:_item.script,
 		show_cursor:_item.show_cursor
 	};
-	ds_list_add(_player.list_items, _new_item);
+	ds_list_insert(_player.list_items, 0, _new_item);
 }
 
 function scr_gbj14_player_Scroll_Item()
