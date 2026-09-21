@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":52.460384,
+  "duration":0.0,
   "exportDir":"",
   "name":"mus_gbj14_jopes_spanish_adventuring",
   "parent":{

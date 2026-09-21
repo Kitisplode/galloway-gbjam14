@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gbj14_alien",
+  "%Name":"obj_gbj14_npc_alien",
   "eventList":[],
   "managed":true,
-  "name":"obj_gbj14_alien",
+  "name":"obj_gbj14_npc_alien",
   "overriddenProperties":[],
   "parent":{
     "name":"npc",

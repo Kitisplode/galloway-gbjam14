@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":1,
   "parent":{
-    "name":"scenes",
-    "path":"folders/Sprites/gbjam14/scenes.yy",
+    "name":"npc",
+    "path":"folders/Sprites/gbjam14/npc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
