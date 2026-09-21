@@ -61,7 +61,7 @@ else
 		}
 		else
 		{
-			if (!is_on_ground)
+			if (is_on_ground)
 			{
 				if (abs(velocity[0]) > 10)
 				{

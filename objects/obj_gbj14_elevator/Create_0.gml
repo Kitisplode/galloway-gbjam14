@@ -4,7 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-movement_collision = false;
+//movement_collision = false;
+pushes_others = true;
 
 // obj_block hides level blocks at create; the altar is a visible platform.
 visible = true;

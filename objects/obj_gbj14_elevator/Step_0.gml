@@ -19,5 +19,10 @@ if (!spots_checked)
 	}
 }
 
+if (global.gbj14_flash)
+{
+	instance_destroy();
+}
+
 // Inherit the parent event
 event_inherited();

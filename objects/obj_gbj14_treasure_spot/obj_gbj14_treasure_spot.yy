@@ -38,5 +38,5 @@
     "path":"sprites/spr_base_enemy/spr_base_enemy.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -15,7 +15,7 @@ if (!paused)
 		if (shot_timer <= 0)
 		{
 			shot_timer = shot_time;
-			scr_spawn_projectiles_fan(shot_count, 1, 270, obj_gbj14_enemy_shot, 90, OBJECT_DEPTHS.EFFECT, true);
+			if (shot_count > 0) scr_spawn_projectiles_fan(shot_count, 1, 270, obj_gbj14_enemy_shot, 90, OBJECT_DEPTHS.EFFECT, true);
 		}
 	}
 	//else shot_timer = shot_time;
