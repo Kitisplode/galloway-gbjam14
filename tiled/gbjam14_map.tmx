@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="350" height="300" tilewidth="16" tileheight="16" infinite="0" nextlayerid="22" nextobjectid="1376">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="350" height="300" tilewidth="16" tileheight="16" infinite="0" nextlayerid="22" nextobjectid="1461">
  <editorsettings>
   <export target="rm_gbj14_map.yy" format="yy"/>
  </editorsettings>
  <tileset firstgid="1" source="gbjam14.tsx"/>
  <imagelayer id="8" name="Background" locked="1" tintcolor="#000000"/>
- <objectgroup id="3" name="Platforms" visible="0">
+ <objectgroup id="3" name="Obstacles">
   <object id="37" template="platform.tx" type="obj_block_oneway_up" x="30.0916" y="1417.55" width="540.212" height="4.17568"/>
   <object id="38" template="platform.tx" x="327.791" y="1406.11" width="29.315" height="2.91864"/>
   <object id="39" template="platform.tx" x="310.076" y="1391" width="29.315" height="2.91864"/>
@@ -246,6 +246,49 @@
   <object id="1354" template="platform.tx" x="2384" y="1152" width="48" height="16"/>
   <object id="1355" template="platform.tx" x="2176" y="1392" width="80" height="16"/>
   <object id="1356" template="platform.tx" x="976" y="1488" width="64" height="16"/>
+  <object id="1418" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2848" y="1120" width="32" height="16"/>
+  <object id="1419" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2944" y="1120" width="32" height="16"/>
+  <object id="1420" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="3008" y="1120" width="32" height="16"/>
+  <object id="1421" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2304" y="1264" width="48" height="16"/>
+  <object id="1422" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2464" y="1264" width="48" height="16"/>
+  <object id="1423" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4160" y="1472" width="32" height="16"/>
+  <object id="1424" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2592" y="1616" width="16" height="16"/>
+  <object id="1425" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2720" y="1616" width="16" height="16"/>
+  <object id="1426" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2608" y="1632" width="16" height="16"/>
+  <object id="1427" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2704" y="1632" width="16" height="16"/>
+  <object id="1428" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2624" y="1648" width="64" height="16"/>
+  <object id="1429" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="1952" y="1792" width="32" height="16"/>
+  <object id="1430" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="2096" y="1792" width="32" height="16"/>
+  <object id="1431" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="208" y="2016" width="32" height="16"/>
+  <object id="1432" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="512" y="2432" width="32" height="16"/>
+  <object id="1433" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="640" y="2464" width="32" height="16"/>
+  <object id="1434" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="688" y="2464" width="32" height="16"/>
+  <object id="1435" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="752" y="2480" width="32" height="16"/>
+  <object id="1436" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="3328" y="2736" width="16" height="16"/>
+  <object id="1437" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="3312" y="2784" width="16" height="16"/>
+  <object id="1438" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="3296" y="2800" width="16" height="16"/>
+  <object id="1439" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="3264" y="2816" width="32" height="16"/>
+  <object id="1440" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4656" y="2880" width="16" height="16"/>
+  <object id="1441" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4672" y="2896" width="32" height="16"/>
+  <object id="1442" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4704" y="2912" width="16" height="16"/>
+  <object id="1443" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4512" y="2928" width="16" height="16"/>
+  <object id="1444" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4720" y="2928" width="32" height="16"/>
+  <object id="1445" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4528" y="2944" width="48" height="16"/>
+  <object id="1446" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4752" y="2944" width="48" height="16"/>
+  <object id="1447" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4576" y="2960" width="48" height="16"/>
+  <object id="1448" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4400" y="2976" width="16" height="16"/>
+  <object id="1449" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4624" y="2976" width="48" height="16"/>
+  <object id="1450" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4416" y="2992" width="48" height="16"/>
+  <object id="1451" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4464" y="3024" width="16" height="16"/>
+  <object id="1452" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4480" y="3040" width="64" height="16"/>
+  <object id="1453" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4576" y="3312" width="16" height="16"/>
+  <object id="1454" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4592" y="3328" width="16" height="16"/>
+  <object id="1455" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4976" y="3328" width="32" height="16"/>
+  <object id="1456" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4608" y="3344" width="16" height="16"/>
+  <object id="1457" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4928" y="3344" width="48" height="16"/>
+  <object id="1458" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4624" y="3360" width="128" height="16"/>
+  <object id="1459" name="spikes" type="obj_gbj14_enemy_spikepit" gid="733" x="4896" y="3360" width="32" height="16"/>
+  <object id="1460" template="spikes.tx" gid="733" x="976" y="1536" width="64" height="16"/>
  </objectgroup>
  <imagelayer id="10" name="Galleon" locked="1" offsetx="16" offsety="1216">
   <image source="../ship_bar.png" width="560" height="224"/>
@@ -2685,7 +2728,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="17" name="Instances" visible="0">
+ <objectgroup id="17" name="Instances">
   <object id="375" name="enemy_beetle" type="obj_gbj14_enemy_shuffle" x="3504" y="832" width="16" height="16"/>
   <object id="376" name="enemy_beetle" type="obj_gbj14_enemy_shuffle" x="3552" y="832" width="16" height="16"/>
   <object id="377" name="enemy_beetle" type="obj_gbj14_enemy_shuffle" x="3600" y="832" width="16" height="16"/>
@@ -2840,48 +2883,6 @@
   <object id="526" name="enemy_ghost" type="obj_gbj14_enemy_ghost" x="3232" y="3376" width="16" height="16"/>
   <object id="527" name="enemy_ghost" type="obj_gbj14_enemy_ghost" x="3056" y="3424" width="16" height="16"/>
   <object id="528" name="enemy_ghost" type="obj_gbj14_enemy_ghost" x="3184" y="3424" width="16" height="16"/>
-  <object id="532" name="spikes" type="obj_gbj14_enemy_spikepit" x="2848" y="1104" width="32" height="16"/>
-  <object id="534" name="spikes" type="obj_gbj14_enemy_spikepit" x="2944" y="1104" width="32" height="16"/>
-  <object id="536" name="spikes" type="obj_gbj14_enemy_spikepit" x="3008" y="1104" width="32" height="16"/>
-  <object id="538" name="spikes" type="obj_gbj14_enemy_spikepit" x="2304" y="1248" width="48" height="16"/>
-  <object id="541" name="spikes" type="obj_gbj14_enemy_spikepit" x="2464" y="1248" width="48" height="16"/>
-  <object id="544" name="spikes" type="obj_gbj14_enemy_spikepit" x="4160" y="1456" width="32" height="16"/>
-  <object id="546" name="spikes" type="obj_gbj14_enemy_spikepit" x="2592" y="1600" width="16" height="16"/>
-  <object id="547" name="spikes" type="obj_gbj14_enemy_spikepit" x="2720" y="1600" width="16" height="16"/>
-  <object id="548" name="spikes" type="obj_gbj14_enemy_spikepit" x="2608" y="1616" width="16" height="16"/>
-  <object id="549" name="spikes" type="obj_gbj14_enemy_spikepit" x="2704" y="1616" width="16" height="16"/>
-  <object id="550" name="spikes" type="obj_gbj14_enemy_spikepit" x="2624" y="1632" width="64" height="16"/>
-  <object id="554" name="spikes" type="obj_gbj14_enemy_spikepit" x="1952" y="1776" width="32" height="16"/>
-  <object id="556" name="spikes" type="obj_gbj14_enemy_spikepit" x="2096" y="1776" width="32" height="16"/>
-  <object id="558" name="spikes" type="obj_gbj14_enemy_spikepit" x="208" y="2000" width="32" height="16"/>
-  <object id="560" name="spikes" type="obj_gbj14_enemy_spikepit" x="512" y="2416" width="32" height="16"/>
-  <object id="562" name="spikes" type="obj_gbj14_enemy_spikepit" x="640" y="2448" width="32" height="16"/>
-  <object id="564" name="spikes" type="obj_gbj14_enemy_spikepit" x="688" y="2448" width="32" height="16"/>
-  <object id="566" name="spikes" type="obj_gbj14_enemy_spikepit" x="752" y="2464" width="32" height="16"/>
-  <object id="568" name="spikes" type="obj_gbj14_enemy_spikepit" x="3328" y="2720" width="16" height="16"/>
-  <object id="569" name="spikes" type="obj_gbj14_enemy_spikepit" x="3312" y="2768" width="16" height="16"/>
-  <object id="570" name="spikes" type="obj_gbj14_enemy_spikepit" x="3296" y="2784" width="16" height="16"/>
-  <object id="571" name="spikes" type="obj_gbj14_enemy_spikepit" x="3264" y="2800" width="32" height="16"/>
-  <object id="573" name="spikes" type="obj_gbj14_enemy_spikepit" x="4656" y="2864" width="16" height="16"/>
-  <object id="574" name="spikes" type="obj_gbj14_enemy_spikepit" x="4672" y="2880" width="32" height="16"/>
-  <object id="576" name="spikes" type="obj_gbj14_enemy_spikepit" x="4704" y="2896" width="16" height="16"/>
-  <object id="577" name="spikes" type="obj_gbj14_enemy_spikepit" x="4512" y="2912" width="16" height="16"/>
-  <object id="578" name="spikes" type="obj_gbj14_enemy_spikepit" x="4720" y="2912" width="32" height="16"/>
-  <object id="580" name="spikes" type="obj_gbj14_enemy_spikepit" x="4528" y="2928" width="48" height="16"/>
-  <object id="583" name="spikes" type="obj_gbj14_enemy_spikepit" x="4752" y="2928" width="48" height="16"/>
-  <object id="586" name="spikes" type="obj_gbj14_enemy_spikepit" x="4576" y="2944" width="48" height="16"/>
-  <object id="589" name="spikes" type="obj_gbj14_enemy_spikepit" x="4400" y="2960" width="16" height="16"/>
-  <object id="590" name="spikes" type="obj_gbj14_enemy_spikepit" x="4624" y="2960" width="48" height="16"/>
-  <object id="593" name="spikes" type="obj_gbj14_enemy_spikepit" x="4416" y="2976" width="48" height="16"/>
-  <object id="596" name="spikes" type="obj_gbj14_enemy_spikepit" x="4464" y="3008" width="16" height="16"/>
-  <object id="597" name="spikes" type="obj_gbj14_enemy_spikepit" x="4480" y="3024" width="64" height="16"/>
-  <object id="601" name="spikes" type="obj_gbj14_enemy_spikepit" x="4576" y="3296" width="16" height="16"/>
-  <object id="602" name="spikes" type="obj_gbj14_enemy_spikepit" x="4592" y="3312" width="16" height="16"/>
-  <object id="603" name="spikes" type="obj_gbj14_enemy_spikepit" x="4976" y="3312" width="32" height="16"/>
-  <object id="605" name="spikes" type="obj_gbj14_enemy_spikepit" x="4608" y="3328" width="16" height="16"/>
-  <object id="606" name="spikes" type="obj_gbj14_enemy_spikepit" x="4928" y="3328" width="48" height="16"/>
-  <object id="609" name="spikes" type="obj_gbj14_enemy_spikepit" x="4624" y="3344" width="128" height="16"/>
-  <object id="617" name="spikes" type="obj_gbj14_enemy_spikepit" x="4896" y="3344" width="32" height="16"/>
   <object id="1357" template="enemy_ghost.tx" x="544" y="2224"/>
   <object id="1358" template="enemy_ghost.tx" x="656" y="2304"/>
   <object id="1359" template="enemy_ghost.tx" x="688" y="2144"/>
@@ -2911,7 +2912,6 @@
   <object id="530" template="enemy_god_seth.tx" x="512.565" y="3787.21"/>
   <object id="531" template="enemy_god_anubis.tx" x="4798.54" y="3208.95"/>
   <object id="1361" template="enemy_beetle.tx" x="1033.02" y="1710.22"/>
-  <object id="1362" template="spikes.tx" x="976" y="1520" width="64" height="16"/>
   <object id="1365" template="avariccio.tx" type="obj_gbj14_npc_avariccio" x="436.625" y="1350.8"/>
   <object id="1367" template="avariccio.tx" type="obj_gbj14_npc_avariccio" x="2029.56" y="1406.1">
    <properties>
