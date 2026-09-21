@@ -90,8 +90,9 @@ global.cutscenes[4] = [ // In the dungeon, deeper
 	scr_line(Characters.DON_BRUTO,  "This tomb is quite the terrifying prospect, isn't it!\n" + "There is still a path to the surface, Avariccio!"),
 	scr_line(Characters.AVARICCIO,  "No me jodas! The treasure that lay below is grander than we thought!"),
 	scr_line(Characters.DON_BRUTO,  "What do you speak of, Avariccio?"),
-	scr_line(Characters.AVARICCIO,  "The walls whisper of men so rich they were said to be MADE of golde! Can you imagine?"),
+	scr_line(Characters.AVARICCIO,  "The walls whisper of men so rich they were said to be MADE of gold! Can you imagine?"),
 	scr_line(Characters.DON_BRUTO,  "Hah! The siren has called you! Ten cuidado. This tomb may claim you yet!"),
+	scr_line(Characters.AVARICCIO,  "Not before I see the treasure!\n" + "And in fact, I believe this impressive statue here may be the key..."),
 ];
 global.cutscenes[5] = [ // Near the end
 	scr_line(Characters.DON_BRUTO,  "Dios mio! Increible!\n" + "Was Avariccio telling the truth?!"),

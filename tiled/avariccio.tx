@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="Avariccio" type="obj_gbj14_npc_avariccio" width="28" height="33">
+  <properties>
+   <property name="cutscene_id" type="int" value="1"/>
+  </properties>
+ </object>
+</template>
