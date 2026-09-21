@@ -100,6 +100,7 @@
     {"name":"obj_gbj14_item_gold_large","order":2,"path":"objects/obj_gbj14_item_gold_large/obj_gbj14_item_gold_large.yy",},
     {"name":"obj_gbj14_item_gold","order":1,"path":"objects/obj_gbj14_item_gold/obj_gbj14_item_gold.yy",},
     {"name":"obj_gbj14_item_treasure","order":5,"path":"objects/obj_gbj14_item_treasure/obj_gbj14_item_treasure.yy",},
+    {"name":"obj_gbj14_player_corpse","order":2,"path":"objects/obj_gbj14_player_corpse/obj_gbj14_player_corpse.yy",},
     {"name":"obj_gbj14_player_spawner","order":1,"path":"objects/obj_gbj14_player_spawner/obj_gbj14_player_spawner.yy",},
     {"name":"obj_gbj14_proj_bomb","order":4,"path":"objects/obj_gbj14_proj_bomb/obj_gbj14_proj_bomb.yy",},
     {"name":"obj_gbj14_shop","order":4,"path":"objects/obj_gbj14_shop/obj_gbj14_shop.yy",},
