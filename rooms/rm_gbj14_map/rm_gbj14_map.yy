@@ -187,7 +187,6 @@
     {"name":"enemy_ghost_65","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"enemy_god_anubis","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"enemy_ghost_68","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
-    {"name":"enemy_god_seth","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"alien","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"platform","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"platform_1","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
@@ -478,6 +477,7 @@
     {"name":"inst_422A0222","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"inst_2D5FB9FA","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"inst_481DF1F3","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
+    {"name":"enemy_god_seth","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -574,7 +574,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":437.0,"y":1351.0,},
         {"$GMRInstance":"v4","%Name":"enemy_beetle_13","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"enemy_beetle_13","objectId":{"name":"obj_gbj14_enemy_shuffle","path":"objects/obj_gbj14_enemy_shuffle/obj_gbj14_enemy_shuffle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":1359.0,},
         {"$GMRInstance":"v4","%Name":"enemy_ghost_27","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"enemy_ghost_27","objectId":{"name":"obj_gbj14_enemy_ghost","path":"objects/obj_gbj14_enemy_ghost/obj_gbj14_enemy_ghost.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2400.0,"y":1360.0,},
-        {"$GMRInstance":"v4","%Name":"player","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"player","objectId":{"name":"obj_gbj14_player_spawner","path":"objects/obj_gbj14_player_spawner/obj_gbj14_player_spawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":80.0,"y":1408.0,},
+        {"$GMRInstance":"v4","%Name":"player","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"player","objectId":{"name":"obj_gbj14_player_spawner","path":"objects/obj_gbj14_player_spawner/obj_gbj14_player_spawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":1408.0,},
         {"$GMRInstance":"v4","%Name":"Avariccio_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Avariccio_2","objectId":{"name":"obj_gbj14_npc_avariccio","path":"objects/obj_gbj14_npc_avariccio/obj_gbj14_npc_avariccio.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_gbj14_npc_avariccio","path":"objects/obj_gbj14_npc_avariccio/obj_gbj14_npc_avariccio.yy",},"propertyId":{"name":"cutscene_id","path":"objects/obj_gbj14_npc_avariccio/obj_gbj14_npc_avariccio.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4260.0,"y":1390.0,},

@@ -66,7 +66,9 @@ global.cutscenes[0] = [ // At camp
 	scr_line(Characters.DON_BRUTO,  "A shop? But what are you selling? Don't tell me that you're selling our old ship's equipment back to us!"),
 	scr_line(Characters.SHOPKEEPER, "We all must make a living...\n" + "And not all of us can go risk our lives in that fearsome pyramid."),
 	scr_line(Characters.DON_BRUTO,  "You'd better not swindle me!\n" + "That certainly wouldn't befit a woman of the cloth!"),
-	scr_line(Characters.SHOPKEEPER, "Of course I won't! In fact, I'll give you a huge discount on a shovel!\n" + "You absolutely need a shovel! It'll be very useful for all this sand."),
+	scr_line(Characters.SHOPKEEPER, "Of course I won't! In fact, I'll give you a huge discount on a shovel!"),
+	scr_line(Characters.SHOPKEEPER, "You absolutely need a shovel! It'll be very useful for all this sand."),
+	scr_line(Characters.SHOPKEEPER, "But you're flat broke? Well go kill some beetles to get some money then!"),
 	scr_line(Characters.SHOPKEEPER, "(Also, you can shop anytime you want, just by pausing!)"),
 ];
 global.cutscenes[1] = [ // At camp
