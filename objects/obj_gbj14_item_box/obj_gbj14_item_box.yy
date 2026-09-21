@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block_pushable",
-    "path":"sprites/spr_block_pushable/spr_block_pushable.yy",
+    "name":"spr_gbj14_item_box",
+    "path":"sprites/spr_gbj14_item_box/spr_gbj14_item_box.yy",
   },
   "spriteMaskId":null,
   "visible":true,

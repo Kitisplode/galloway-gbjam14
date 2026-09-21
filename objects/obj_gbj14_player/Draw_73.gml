@@ -61,8 +61,25 @@ else
 		}
 		else
 		{
-			scr_change_sprite(spr_gbj14_player_lift_idle);
-			anim_speed = 0;
+			if (!is_on_ground)
+			{
+				if (abs(velocity[0]) > 10)
+				{
+					scr_change_sprite(spr_gbj14_player_lift_walk);
+					anim_speed = 0.15;
+				}
+				else
+				{
+					scr_change_sprite(spr_gbj14_player_lift_idle);
+					anim_speed = 0.15;
+				}
+			}
+			else
+			{
+				scr_change_sprite(spr_gbj14_player_lift_walk);
+				anim_frame = 1;
+				anim_speed = 0;
+			}
 		}
 	}
 	else if (action == 1)
@@ -94,6 +111,16 @@ else
 			anim_speed = 0;
 			anim_frame = sprite_get_number(spr_gbj14_player_ending) - 1;
 			ending_anim_done = true;
+		}
+	}
+	else if (action == 4)
+	{
+		scr_change_sprite(spr_gbj14_player_throw);
+		anim_speed = 0.1;
+		if (anim_looped != 0)
+		{
+			action = 0;
+			scr_change_sprite(spr_gbj14_player_idle);
 		}
 	}
 }

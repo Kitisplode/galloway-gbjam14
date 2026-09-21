@@ -85,6 +85,12 @@ if (!paused)
 			can_move = false;
 			can_act = false;
 		}
+		// Throwing an item
+		if (action == 4)
+		{
+			can_move = true;
+			can_act = false;
+		}
 		// Attacking with the sword
 		if (action == 2)
 		{
