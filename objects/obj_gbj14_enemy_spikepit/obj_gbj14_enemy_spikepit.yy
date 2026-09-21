@@ -38,5 +38,5 @@
     "path":"sprites/spr_gbj14_level_spikes/spr_gbj14_level_spikes.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
