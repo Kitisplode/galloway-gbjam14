@@ -872,6 +872,7 @@
     {"id":{"name":"spr_gbj14_hud_item_pick","path":"sprites/spr_gbj14_hud_item_pick/spr_gbj14_hud_item_pick.yy",},},
     {"id":{"name":"spr_gbj14_hud_item_shoes","path":"sprites/spr_gbj14_hud_item_shoes/spr_gbj14_hud_item_shoes.yy",},},
     {"id":{"name":"spr_gbj14_hud_item_shovel","path":"sprites/spr_gbj14_hud_item_shovel/spr_gbj14_hud_item_shovel.yy",},},
+    {"id":{"name":"spr_gbj14_hud_item_sword","path":"sprites/spr_gbj14_hud_item_sword/spr_gbj14_hud_item_sword.yy",},},
     {"id":{"name":"spr_gbj14_hud_item_throw","path":"sprites/spr_gbj14_hud_item_throw/spr_gbj14_hud_item_throw.yy",},},
     {"id":{"name":"spr_gbj14_hud_paused","path":"sprites/spr_gbj14_hud_paused/spr_gbj14_hud_paused.yy",},},
     {"id":{"name":"spr_gbj14_hud_shop_bg","path":"sprites/spr_gbj14_hud_shop_bg/spr_gbj14_hud_shop_bg.yy",},},

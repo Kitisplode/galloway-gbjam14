@@ -315,6 +315,7 @@
     {"name":"spr_gbj14_hud_item_pick","order":2,"path":"sprites/spr_gbj14_hud_item_pick/spr_gbj14_hud_item_pick.yy",},
     {"name":"spr_gbj14_hud_item_shoes","order":9,"path":"sprites/spr_gbj14_hud_item_shoes/spr_gbj14_hud_item_shoes.yy",},
     {"name":"spr_gbj14_hud_item_shovel","order":1,"path":"sprites/spr_gbj14_hud_item_shovel/spr_gbj14_hud_item_shovel.yy",},
+    {"name":"spr_gbj14_hud_item_sword","order":12,"path":"sprites/spr_gbj14_hud_item_sword/spr_gbj14_hud_item_sword.yy",},
     {"name":"spr_gbj14_hud_item_throw","order":11,"path":"sprites/spr_gbj14_hud_item_throw/spr_gbj14_hud_item_throw.yy",},
     {"name":"spr_gbj14_hud_paused","order":6,"path":"sprites/spr_gbj14_hud_paused/spr_gbj14_hud_paused.yy",},
     {"name":"spr_gbj14_hud_shop_bg","order":8,"path":"sprites/spr_gbj14_hud_shop_bg/spr_gbj14_hud_shop_bg.yy",},

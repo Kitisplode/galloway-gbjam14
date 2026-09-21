@@ -6,6 +6,9 @@ event_inherited();
 
 ds_list_destroy(list_items);
 
+if (attack_hitbox_id != noone && instance_exists(attack_hitbox_id))
+	instance_destroy(attack_hitbox_id);
+
 // If the player is destroyed due to HP being 0, spawn a corpse.
 if (global.player_hp <= 0)
 {

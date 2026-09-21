@@ -84,6 +84,19 @@ if (!paused)
 			can_move = false;
 			can_act = false;
 		}
+		// Attacking with the sword
+		if (action == 2)
+		{
+			can_move = false;
+			can_act = false;
+		}
+	}
+	
+	// Clean up the sword hitbox once the swing ends or is interrupted (e.g. by getting hurt).
+	if (action != 2 && attack_hitbox_id != noone)
+	{
+		if (instance_exists(attack_hitbox_id)) instance_destroy(attack_hitbox_id);
+		attack_hitbox_id = noone;
 	}
 
 	// Keep a short jump window after leaving the ground so jumps do not

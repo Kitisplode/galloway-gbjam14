@@ -56,7 +56,6 @@ scr_gbj14_player_Add_Item(self, {
 	show_cursor: "",
 	description: "Lift and carry objects."
 });
-
 item_throw = {
 	name: "Throw",
 	price: 0,
@@ -67,7 +66,18 @@ item_throw = {
 	show_cursor: "",
 	description: "Throw objects"
 };
+scr_gbj14_player_Add_Item(self, {
+	name: "Sword",
+	price: 0,
+	uses: -1,
+	sprite:  spr_gbj14_hud_item_sword,
+	sound:   snd_gbjam12_player_sword,
+	script: "scr_gbj14_player_Use_Item_Sword",
+	show_cursor: "",
+	description: "Slash foes and break brittle things."
+});
 damage = 1;
+attack_hitbox_id = noone;
 
 // Set up physics
 axis_max_speed = r3(120, 1200, 0);
