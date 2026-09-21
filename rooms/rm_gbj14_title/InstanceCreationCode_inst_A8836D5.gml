@@ -24,18 +24,28 @@ scr_scene_Add_Step(queue_steps, 0.5);
 scr_scene_Add_Step_Sprite_Add(queue_steps, "bg_galloway", spr_gbj14_splash_galloway, 0,0, 101, 0,0,
 								1);
 scr_scene_Add_Step(queue_steps, 3.5);
-scr_scene_Add_Step_Sprite_Remove(queue_steps, "bg_galloway", 1);
-
 
 scr_scene_Add_Step_Sprite_Add(queue_steps, "bg_title", spr_gbj14_splash_title, 0,0, 102, 0,0,
 								0);
+scr_scene_Add_Step_Sprite_Remove(queue_steps, "bg_galloway", 1);
 scr_scene_Add_Step_Play_Music(queue_steps, mus_gbj14_jopes_spanish_adventuring, 0);
-								
+scr_scene_Add_Step(queue_steps, 2.5);
+scr_scene_Add_Step_Play_Sound(queue_steps, snd_gbjam12_player_cap);
+scr_scene_Add_Step_Sprite_Alpha(queue_steps, "bg_title", 0.5, 1);
+scr_scene_Add_Step_Sprite_Add(queue_steps, "bg_name", spr_gbj14_splash_title_name, 0,0, 99, 80,-80,
+								0);
+scr_scene_Add_Step_Sprite_Move(queue_steps, "bg_name", 80, 2, 1, 0);
+
+scr_scene_Add_Step(queue_steps, 2.5);
+scr_scene_Add_Step_TextFade(queue_steps, 0,"Press @!", 80, 110, global.font_lexou, -1, -1);
+
+
 scr_scene_Add_Step_Pause_For_Input(queue_steps, ["a", "b", "start"]);
+scr_scene_Add_Step_Play_Sound(queue_steps, snd_gbj14_wind);
 scr_scene_Add_Step_Play_Music(queue_steps, -1, 1);
 scr_scene_Add_Step_RoomFade(queue_steps, rm_gbj14_map, 1, c_white);
 
-skip_to = 12;
+skip_to = 11;
 
 if (instance_exists(obj_camera))
 {
