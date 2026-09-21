@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+obeys_room = false;
+
 movement_collision = false;
 
 // The core is an invisible anchor the boss hovers around; it must never be

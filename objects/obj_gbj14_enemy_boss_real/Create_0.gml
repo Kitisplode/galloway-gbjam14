@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+obeys_room = false;
+
 movement_collision = false;
 
 cycle_x = 0;

@@ -2,8 +2,8 @@
     "activeFile": "gbjam14_map.tmx",
     "automapping.whileDrawing": false,
     "expandedProjectPaths": [
-        ".",
-        "tiled"
+        "tiled",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -42,7 +42,7 @@
             "scaleInEditor": 1
         },
         "gbjam14.tsx": {
-            "scaleInDock": 1.9474,
+            "scaleInDock": 1.8275,
             "scaleInEditor": 3.1054
         },
         "gbjam14_map.old.tmx": {
@@ -58,13 +58,14 @@
         },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
-                17
+                3,
+                7
             ],
-            "scale": 2.5555,
-            "selectedLayer": 1,
+            "scale": 2.5134,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 3711.993738994326,
-                "y": 3335.942085697515
+                "x": 3155.088724437018,
+                "y": 340.97238800031835
             }
         },
         "gbjam14_rules.tmx": {
@@ -104,11 +105,11 @@
     "project": "gbjam14.tiled-project",
     "property.type": "int",
     "recentFiles": [
+        "gbjam14.tsx",
+        "gbjam14_rules.tmx",
         "gbjam14_map.tmx",
         "gbjam14_map.old.tmx",
         "/home/lexou/Downloads/gbjam14_map.tmx",
-        "gbjam14.tsx",
-        "gbjam14_rules.tmx",
         "ts_gbj14.tsx",
         "gbjam14.old.tsx",
         "gbjam14.old.tmx",

@@ -1,4 +1,4 @@
-#macro CULL_MARGIN 64   // 4 tiles of active area around the screen
+#macro CULL_MARGIN 100   // 4 tiles of active area around the screen
 
 /// obj_camera - End Step: activation window culling (allow-list version)
 var _cam = view_get_camera(0);
