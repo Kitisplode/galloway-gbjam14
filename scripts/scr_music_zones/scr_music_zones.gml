@@ -45,8 +45,8 @@ function scr_music_zones_init()
 	global.music_avariccio_song = mus_gbj14_lexou_conquistador_loop;
 
 	// Fade times, in seconds
-	global.music_zone_fade     = 1.5; // crossing between zones
-	global.music_dialogue_fade = 0.5; // in/out of Avariccio dialogue
+	global.music_zone_fade     = 0.5; // crossing between zones
+	global.music_dialogue_fade = 0.2; // in/out of Avariccio dialogue
 }
 
 /// Call every Step
