@@ -18,3 +18,5 @@ for (var _i = 0; _i < 3; _i++)
 }
 
 ready = false;
+phase = 0;
+phase_timer = 0;
