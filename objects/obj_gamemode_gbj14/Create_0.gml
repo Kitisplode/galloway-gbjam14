@@ -7,3 +7,5 @@ depth = OBJECT_DEPTHS.HUD;
 event_inherited();
 
 paused_alpha = 0;
+
+death_alpha = 0;
