@@ -109,9 +109,9 @@
     {"$GMFolder":"","%Name":"gbjam12","folderPath":"folders/Sounds/Music/gbjam12.yy","name":"gbjam12","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gbjam14","folderPath":"folders/Sounds/Music/gbjam14.yy","name":"gbjam14","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"gbjam-old","folderPath":"folders/Sounds/Sounds/gbjam-old.yy","name":"gbjam-old","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gbjam12","folderPath":"folders/Sounds/Sounds/gbjam12.yy","name":"gbjam12","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gbjam14","folderPath":"folders/Sounds/Sounds/gbjam14.yy","name":"gbjam14","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"gbjam-old","folderPath":"folders/Sounds/Sounds/gbjam-old.yy","name":"gbjam-old","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"_Base","folderPath":"folders/Sprites/_Base.yy","name":"_Base","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Effects","folderPath":"folders/Sprites/_Base/Effects.yy","name":"Effects","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -156,7 +156,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"galloway-gbjam14",
   "resources":[
