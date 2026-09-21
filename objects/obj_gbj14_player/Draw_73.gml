@@ -75,4 +75,14 @@ else
 			scr_change_sprite(spr_gbj14_player_lift_idle);
 		}
 	}
+	else if (action == 2)
+	{
+		scr_change_sprite(spr_gbj14_player_sword);
+		anim_speed = 0.6;
+		if (anim_looped != 0)
+		{
+			action = 0;
+			scr_change_sprite(spr_gbj14_player_idle);
+		}
+	}
 }

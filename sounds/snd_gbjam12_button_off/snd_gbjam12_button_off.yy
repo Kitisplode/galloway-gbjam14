@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.19145125,
+  "duration":0.0,
   "exportDir":"",
   "name":"snd_gbjam12_button_off",
   "parent":{

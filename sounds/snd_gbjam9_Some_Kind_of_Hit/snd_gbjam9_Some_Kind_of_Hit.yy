@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_gbjam9_Some_Kind_of_Hit",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"snd_gbjam9_Some_Kind_of_Hit",
+  "parent":{
+    "name":"gbjam-old",
+    "path":"folders/Sounds/Sounds/gbjam-old.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_gbjam9_Some_Kind_of_Hit.wav",
+  "volume":1.0,
+}

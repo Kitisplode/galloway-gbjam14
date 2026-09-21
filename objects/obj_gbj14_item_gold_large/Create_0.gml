@@ -5,4 +5,4 @@
 event_inherited();
 
 collection_sound_pitch = 0.75;
-worth = 5;
+worth = 2;

@@ -14,3 +14,7 @@ cycle_y_speed = 5;
 shot_time = 2.5;
 shot_timer = shot_time;
 shot_count = 1;
+
+is_boss = true;
+hp_max = 5;
+hp = hp_max;
