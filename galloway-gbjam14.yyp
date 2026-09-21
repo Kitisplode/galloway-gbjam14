@@ -80,9 +80,9 @@
     {"$GMFolder":"","%Name":"gbjam14","folderPath":"folders/Objects/Game Objects/gbjam14.yy","name":"gbjam14","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"effects","folderPath":"folders/Objects/Game Objects/gbjam14/effects.yy","name":"effects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Objects/Game Objects/gbjam14/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"npc","folderPath":"folders/Objects/Game Objects/gbjam14/npc.yy","name":"npc","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"items","folderPath":"folders/Objects/Game Objects/gbjam14/items.yy","name":"items","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"level","folderPath":"folders/Objects/Game Objects/gbjam14/level.yy","name":"level","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"npc","folderPath":"folders/Objects/Game Objects/gbjam14/npc.yy","name":"npc","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"player","folderPath":"folders/Objects/Game Objects/gbjam14/player.yy","name":"player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Room Managers","folderPath":"folders/Objects/Room Managers.yy","name":"Room Managers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -157,7 +157,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -665,6 +665,7 @@
     {"id":{"name":"sh_gameboy","path":"shaders/sh_gameboy/sh_gameboy.yy",},},
     {"id":{"name":"sh_outline","path":"shaders/sh_outline/sh_outline.yy",},},
     {"id":{"name":"mus_gbj14_jopes_spanish_adventuring","path":"sounds/mus_gbj14_jopes_spanish_adventuring/mus_gbj14_jopes_spanish_adventuring.yy",},},
+    {"id":{"name":"mus_gbj14_jopes_spanish_death_2","path":"sounds/mus_gbj14_jopes_spanish_death_2/mus_gbj14_jopes_spanish_death_2.yy",},},
     {"id":{"name":"mus_gbj14_jopes_spanish_fly","path":"sounds/mus_gbj14_jopes_spanish_fly/mus_gbj14_jopes_spanish_fly.yy",},},
     {"id":{"name":"mus_gbj14_lexou_conquistador_intro","path":"sounds/mus_gbj14_lexou_conquistador_intro/mus_gbj14_lexou_conquistador_intro.yy",},},
     {"id":{"name":"mus_gbj14_lexou_conquistador_loop","path":"sounds/mus_gbj14_lexou_conquistador_loop/mus_gbj14_lexou_conquistador_loop.yy",},},
