@@ -1,3 +1,3 @@
-depth = 1050;
+depth = 1250;
 
 scr_bg_zones_init();
