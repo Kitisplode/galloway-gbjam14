@@ -12,5 +12,9 @@ anim_loop = false;
 
 depth = OBJECT_DEPTHS.TRANSITION - 10;
 
-text_time = 1;
+phase = 0;
+text_id = id;
+text_time = 2;
 text_timer = text_time;
+
+text_2_id = id;

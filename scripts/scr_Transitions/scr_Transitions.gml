@@ -64,3 +64,48 @@ function scr_transition_wrap(_target_x)
 	    }
 	});
 }
+
+function scr_transition_respawn(_target_x, _target_y, _color=c_white, _fade_time = 1)
+{
+	var _t = instance_create_depth(0,0, OBJECT_DEPTHS.TRANSITION, obj_transition_fade);
+	_t.fade_color = _color;
+	_t.fade_time = _fade_time;
+	_t.warp_target_x = _target_x;
+	_t.warp_target_y = _target_y;
+	_t.switch_action = method(_t, function()
+	{
+		if (!instance_exists(obj_gbj14_player))
+		{
+			var _player = instance_create_depth(warp_target_x, warp_target_y, OBJECT_DEPTHS.PLAYER, obj_gbj14_player);
+			obj_camera.follow = _player;
+		}
+		with (obj_gbj14_player)
+		{
+	        var _dx = other.warp_target_x - position[0];
+	        var _dy = other.warp_target_y - position[1];
+			
+			position[0] = other.warp_target_x;
+			position[1] = other.warp_target_y;
+			x = position[0];
+			y = position[1];
+			xprevious = x;
+			yprevious = y;
+	        r2_clone(position, last_safe_position);
+			
+			var _cam_dx = _dx;
+			var _cam_dy = _dy;
+	        with (obj_camera)
+	        {
+	            x += _cam_dx;
+	            target_x += _cam_dx;
+	            y += _cam_dy;
+	            target_y += _cam_dy;
+	            camera_set_view_pos(cam, x, y);
+	        }
+		}
+		if (instance_exists(obj_gbj14_player_corpse))
+		{
+			instance_destroy(obj_gbj14_player_corpse);
+		}
+	});
+}
