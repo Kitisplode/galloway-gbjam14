@@ -8,6 +8,11 @@ obeys_room = false;
 
 movement_collision = false;
 
+// Set by the core when it links up, so the boss hovers around the spot
+// the designer placed it at relative to the core.
+dom_base_offset_x = 0;
+dom_base_offset_y = 0;
+
 cycle_x = 0;
 cycle_x_speed = 1.5;
 cycle_y = 0;

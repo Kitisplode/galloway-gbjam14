@@ -1,4 +1,4 @@
 // Inherit the parent event
 event_inherited();
 
-spawn_boss_core(obj_gbj14_bosscore_anubis);
+// Guarded by obj_gbj14_bosscore_anubis, which links itself to this treasure.

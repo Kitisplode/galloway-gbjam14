@@ -7,6 +7,17 @@ if (global.gbj14_ending) exit;
 var _mat = scr_get_main_camera_matrix();
 matrix_set(matrix_world, _mat);
 
+// Full-screen flash, fading out over half a second.
+if (global.gbj14_flash > 0)
+{
+	draw_set_alpha(global.gbj14_flash);
+	draw_set_color(c_white);
+	draw_rectangle(-16, -16, 176, 160, false);
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	global.gbj14_flash = max(0, global.gbj14_flash - scr_get_tick_length() * 2);
+}
+
 // Inherit the parent event
 event_inherited();
 

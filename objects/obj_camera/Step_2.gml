@@ -15,3 +15,11 @@ instance_activate_region(_l, _t, _w, _h, true);
 instance_activate_object(obj_block_tileset);
 instance_activate_object(obj_base_player);
 instance_activate_object(obj_text);
+// The boss guardian system (treasure <-> core <-> boss) watches its members
+// with instance_exists(), which is false for sleeping instances, and the
+// core has no collision mask so the region wake-up can't find it. Keep all
+// three awake; their own far-away pause keeps them cheap when offscreen.
+instance_activate_object(obj_gbj14_item_treasure);
+instance_activate_object(obj_gbj14_enemy_boss_core_2);
+instance_activate_object(obj_gbj14_enemy_boss_real);
+instance_activate_object(obj_gbj14_elevator);

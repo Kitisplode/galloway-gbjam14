@@ -389,6 +389,39 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
 	return false;
 }
 
+/// Removes every collision tile (all obj_block_tileset layers) inside the
+/// pixel rectangle, with a scattering of crumb effects. Used to open the
+/// central passage once the three treasures are returned.
+function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
+{
+	var _l = floor(_x1 / 16), _r = ceil(_x2 / 16);
+	var _t = floor(_y1 / 16), _b = ceil(_y2 / 16);
+	var _cleared = 0;
+	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
+	{
+		var _id = ds_list_find_value(global.list_solids, _i);
+		if (!instance_exists(_id)) continue;
+		if (_id.object_index != obj_block_tileset) continue;
+		var _tilemap = _id.tilemap;
+		if (_tilemap <= -1) continue;
+		for (var _x = _l; _x < _r; _x++)
+		{
+			for (var _y = _t; _y < _b; _y++)
+			{
+				if (tilemap_get(_tilemap, _x,_y) > 0)
+				{
+					tilemap_set(_tilemap, 0, _x,_y);
+					terrain_update_region(_tilemap, _x,_y);
+					if (irandom(3) == 0) _scr_gbj14_Spawn_Crumbs(_x,_y);
+					_cleared++;
+				}
+			}
+		}
+	}
+	with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
+	return _cleared;
+}
+
 function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 {
 	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)

@@ -15,15 +15,14 @@ mask_index = msk_no_collision;
 // it must never be region-hidden separately from its boss.
 obeys_room = false;
 
-// Spawns the boss that this core carries around. The child cores call this
-// with their specific boss object instead of the generic placeholder.
-spawn_boss = function(_boss_object)
-{
-	boss_id = instance_create_depth(x, y, depth, _boss_object);
-	boss_id.dom_id = id;
-}
-if (object_index == obj_gbj14_enemy_boss_core_2)
-	spawn_boss(obj_gbj14_enemy_boss_real);
+// The boss and treasure this core links to are placed in the map by hand.
+// The child cores set these to their specific god's objects; the actual
+// linking happens on the first step (see Step), once all room instances
+// exist regardless of creation order.
+boss_object = obj_gbj14_enemy_boss_real;
+treasure_object = obj_gbj14_item_treasure;
+boss_id = noone;
+linked = false;
 
 // How far above the treasure the boss hovers. The god head sprites have
 // their origin at the bottom (they hang 38px ABOVE this point), and the
@@ -31,7 +30,8 @@ if (object_index == obj_gbj14_enemy_boss_core_2)
 // the boss floats just off the top of the screen.
 hover_height = 48;
 
-target_pos = r2_zero();
+// Rest where the designer placed the core until a treasure is linked.
+target_pos = r2(x, y);
 chase_id = id;
 dom_distance = 0;
 dom_distance_target = 64;

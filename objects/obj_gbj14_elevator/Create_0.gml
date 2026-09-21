@@ -6,17 +6,11 @@ event_inherited();
 
 movement_collision = false;
 
-treasure_spot[0] = instance_create_depth(x + 64, y + 24, depth, obj_gbj14_treasure_spot);
-treasure_spot[1] = instance_create_depth(x + 129, y + 24, depth, obj_gbj14_treasure_spot);
-treasure_spot[2] = instance_create_depth(x + 193, y + 24, depth, obj_gbj14_treasure_spot);
+// obj_block hides level blocks at create; the altar is a visible platform.
+visible = true;
 
-for (var _i = 0; _i < 3; _i++)
-{
-	treasure_spot[_i].dom_id = id;
-	treasure_spot[_i].dom_offset_x = treasure_spot[_i].x - x;
-	treasure_spot[_i].dom_offset_y = treasure_spot[_i].y - y;
-}
-
-ready = false;
-phase = 0;
-phase_timer = 0;
+// The altar is the visual pedestal. The deposit spots (obj_gbj14_treasure_spot)
+// can be placed by hand in the room, scaled to the size of each deposit area;
+// if none exist, the altar spawns three default ones on its slab on its first
+// step. The finale itself is run by the spots (see obj_gbj14_treasure_spot).
+spots_checked = false;

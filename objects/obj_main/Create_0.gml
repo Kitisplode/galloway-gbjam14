@@ -19,7 +19,7 @@ global.debug_can_pause = true;
 global.debug_player_invincible = false;
 global.debug_show_level_controllers = false;
 global.debug_show_level_blocks = false;
-global.debug_skip_intro = true;
+global.debug_skip_intro = false;
 global.debug_skip_intro_level = rm_gbj14_map;
 
 global.controls_debug_kill_enemies = ord("O");

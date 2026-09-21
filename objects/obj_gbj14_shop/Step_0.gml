@@ -1,4 +1,4 @@
-if (global.debug_global) global.in_shop = global.paused; // TODO remove this in release build
+global.in_shop = global.paused; // TODO remove this in release build
 
 if (global.in_shop && !global.cutscene_playing)
 {
