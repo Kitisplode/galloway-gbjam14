@@ -24,7 +24,7 @@ portrait_size = 64; // portraits sit just above the box, on the speaker's side
 
 font = spr_font_lexou;
 
-blip_sound = -1; // set to a sound asset to enable typewriter noise
+blip_sound = snd_gbjam9_Land_From_Jump; // set to a sound asset to enable typewriter noise
 blip_every = 2;
 blip_counter = 0;
 

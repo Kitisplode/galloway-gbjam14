@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_gbjam12_button_off",
+  "%Name":"snd_gbjam9_teleport",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,15 +12,15 @@
   "conversionMode":0,
   "duration":0.0,
   "exportDir":"",
-  "name":"snd_gbjam12_button_off",
+  "name":"snd_gbjam9_teleport",
   "parent":{
-    "name":"gbjam12",
-    "path":"folders/Sounds/Sounds/gbjam12.yy",
+    "name":"gbjam-old",
+    "path":"folders/Sounds/Sounds/gbjam-old.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_gbjam12_button_off.wav",
+  "soundFile":"snd_gbjam9_teleport.wav",
   "volume":1.0,
 }
