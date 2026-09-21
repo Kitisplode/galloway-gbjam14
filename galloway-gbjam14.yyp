@@ -80,6 +80,7 @@
     {"$GMFolder":"","%Name":"gbjam14","folderPath":"folders/Objects/Game Objects/gbjam14.yy","name":"gbjam14","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"effects","folderPath":"folders/Objects/Game Objects/gbjam14/effects.yy","name":"effects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Objects/Game Objects/gbjam14/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"npc","folderPath":"folders/Objects/Game Objects/gbjam14/npc.yy","name":"npc","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"items","folderPath":"folders/Objects/Game Objects/gbjam14/items.yy","name":"items","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"level","folderPath":"folders/Objects/Game Objects/gbjam14/level.yy","name":"level","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"player","folderPath":"folders/Objects/Game Objects/gbjam14/player.yy","name":"player","resourceType":"GMFolder","resourceVersion":"2.0",},
