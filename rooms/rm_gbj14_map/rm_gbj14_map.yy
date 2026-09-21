@@ -474,6 +474,7 @@
     {"name":"platform_213","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"platform_214","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
     {"name":"platform_215","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
+    {"name":"inst_BD38470","path":"rooms/rm_gbj14_map/rm_gbj14_map.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -484,6 +485,7 @@
     {"$GMRInstanceLayer":"","%Name":"Regions","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"Room","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Room","objectId":{"name":"obj_room_region","path":"objects/obj_room_region/obj_room_region.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":348.0,"scaleY":300.0,"x":16.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"BGs","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"BGs","objectId":{"name":"obj_bg_zones","path":"objects/obj_bg_zones/obj_bg_zones.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_BD38470","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_BD38470","objectId":{"name":"obj_music_director","path":"objects/obj_music_director/obj_music_director.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Regions","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRInstanceLayer":"","%Name":"Triggers","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"dialogue","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"dialogue","objectId":{"name":"obj_gbj14_dialogue_trigger","path":"objects/obj_gbj14_dialogue_trigger/obj_gbj14_dialogue_trigger.yy",},"properties":[
