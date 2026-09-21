@@ -342,3 +342,8 @@ if (carry_id != id)
 	else
 		carry_id = id;
 }
+
+if (global.debug_global && keyboard_key_press(ord("U")))
+{
+	global.player_hp--;
+}
