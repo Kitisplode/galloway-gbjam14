@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object name="enemy_god_seth" type="obj_gbj14_enemy_boss_real" width="32" height="48"/>
+ <object name="enemy_god_seth" type="obj_gbj14_boss_seth" width="32" height="48"/>
 </template>
