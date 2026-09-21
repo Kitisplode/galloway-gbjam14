@@ -212,6 +212,7 @@
     {"id":{"name":"obj_gbj14_gold_spawner","path":"objects/obj_gbj14_gold_spawner/obj_gbj14_gold_spawner.yy",},},
     {"id":{"name":"obj_gbj14_item_bomb","path":"objects/obj_gbj14_item_bomb/obj_gbj14_item_bomb.yy",},},
     {"id":{"name":"obj_gbj14_item_box","path":"objects/obj_gbj14_item_box/obj_gbj14_item_box.yy",},},
+    {"id":{"name":"obj_gbj14_item_gold_coin","path":"objects/obj_gbj14_item_gold_coin/obj_gbj14_item_gold_coin.yy",},},
     {"id":{"name":"obj_gbj14_item_gold_large","path":"objects/obj_gbj14_item_gold_large/obj_gbj14_item_gold_large.yy",},},
     {"id":{"name":"obj_gbj14_item_gold","path":"objects/obj_gbj14_item_gold/obj_gbj14_item_gold.yy",},},
     {"id":{"name":"obj_gbj14_item_treasure","path":"objects/obj_gbj14_item_treasure/obj_gbj14_item_treasure.yy",},},

@@ -5,4 +5,5 @@
 event_inherited();
 
 collection_sound_pitch = 0.75;
-worth = 2;
+worth = 5;
+image_speed = 1;

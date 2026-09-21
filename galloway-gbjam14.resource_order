@@ -96,6 +96,7 @@
     {"name":"obj_gbj14_enemy_spikepit","order":4,"path":"objects/obj_gbj14_enemy_spikepit/obj_gbj14_enemy_spikepit.yy",},
     {"name":"obj_gbj14_gold_spawner","order":3,"path":"objects/obj_gbj14_gold_spawner/obj_gbj14_gold_spawner.yy",},
     {"name":"obj_gbj14_item_box","order":6,"path":"objects/obj_gbj14_item_box/obj_gbj14_item_box.yy",},
+    {"name":"obj_gbj14_item_gold_coin","order":7,"path":"objects/obj_gbj14_item_gold_coin/obj_gbj14_item_gold_coin.yy",},
     {"name":"obj_gbj14_item_gold_large","order":2,"path":"objects/obj_gbj14_item_gold_large/obj_gbj14_item_gold_large.yy",},
     {"name":"obj_gbj14_item_gold","order":1,"path":"objects/obj_gbj14_item_gold/obj_gbj14_item_gold.yy",},
     {"name":"obj_gbj14_item_treasure","order":5,"path":"objects/obj_gbj14_item_treasure/obj_gbj14_item_treasure.yy",},
