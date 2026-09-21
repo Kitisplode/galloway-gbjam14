@@ -96,6 +96,17 @@ function scr_bg_zones_init()
 			],
 			c_black
 		),
+
+		new BgZone([
+				[2800, 3400, 3480, 4800],
+			],
+			[
+				new BgLayer(spr_gbj14_bg_ending_1, 0.05, 0.01),
+				new BgLayer(spr_gbj14_bg_ending_2, 0.10, 0.05),
+				new BgLayer(spr_gbj14_bg_ending_3, 0.20, 0.10),
+			],
+			c_black,
+		),
 	];
 }
 

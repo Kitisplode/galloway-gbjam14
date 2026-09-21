@@ -22,6 +22,12 @@ function scr_music_zones_init()
 		),
 		new MusicZone(
 			[
+				[2800, 3400, 3480, 4800],
+			],
+			-1
+		),
+		new MusicZone(
+			[
 				[   0, 0, 1940, 1770],
 				[4224, 0, 5600, 1600]
 			],

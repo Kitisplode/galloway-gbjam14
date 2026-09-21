@@ -2886,7 +2886,7 @@
   <object id="1357" template="enemy_ghost.tx" x="544" y="2224"/>
   <object id="1358" template="enemy_ghost.tx" x="656" y="2304"/>
   <object id="1359" template="enemy_ghost.tx" x="688" y="2144"/>
-  <object id="110" template="player.tx" type="obj_gbj14_player_spawner" x="54.9828" y="1371.5"/>
+  <object id="110" template="player.tx" type="obj_gbj14_player_spawner" x="3098.15" y="2130.5"/>
   <object id="111" name="collide_metal" type="obj_block_tileset" x="0" y="0">
    <properties>
     <property name="hasCreationCode" type="bool" value="true"/>
