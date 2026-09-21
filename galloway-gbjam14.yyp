@@ -158,7 +158,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -936,6 +936,7 @@
     {"id":{"name":"spr_gbj14_portrait_avariccio","path":"sprites/spr_gbj14_portrait_avariccio/spr_gbj14_portrait_avariccio.yy",},},
     {"id":{"name":"spr_gbj14_portrait_donbruto","path":"sprites/spr_gbj14_portrait_donbruto/spr_gbj14_portrait_donbruto.yy",},},
     {"id":{"name":"spr_gbj14_portrait_shopkeep","path":"sprites/spr_gbj14_portrait_shopkeep/spr_gbj14_portrait_shopkeep.yy",},},
+    {"id":{"name":"spr_gbj14_pressa","path":"sprites/spr_gbj14_pressa/spr_gbj14_pressa.yy",},},
     {"id":{"name":"spr_gbj14_splash_galloway","path":"sprites/spr_gbj14_splash_galloway/spr_gbj14_splash_galloway.yy",},},
     {"id":{"name":"spr_gbj14_splash_gbjam14","path":"sprites/spr_gbj14_splash_gbjam14/spr_gbj14_splash_gbjam14.yy",},},
     {"id":{"name":"spr_gbj14_splash_title_name","path":"sprites/spr_gbj14_splash_title_name/spr_gbj14_splash_title_name.yy",},},

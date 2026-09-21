@@ -93,11 +93,20 @@ if (has_ankh)
 }
 else
 {
+	if (text_timer > 0)
+	{
+		text_timer -= scr_get_tick_length();
+	}
+	if (text_timer <= 0)
+	{
+		text_id = instance_create_depth(position[0], position[1] - 64, depth - 1, par_animation);
+		text_id.sprite_index = spr_gbj14_pressa;
+	}
 	if (input_check_pressed(["a", "b", "start"]))
-		{
-			depth = OBJECT_DEPTHS.TRANSITION + 10;
-			scr_transition_respawn(288,1350, c_white);
-		}
+	{
+		scr_transition_respawn(288,1350, c_white);
+		if (instance_exists(text_id)) instance_destroy(text_id);
+	}
 	//if (phase == 0)
 	//{
 	//	if (text_timer > 0)

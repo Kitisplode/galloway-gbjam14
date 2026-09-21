@@ -67,7 +67,8 @@ function scr_transition_wrap(_target_x)
 
 function scr_transition_respawn(_target_x, _target_y, _color=c_white, _fade_time = 1)
 {
-	var _t = instance_create_depth(0,0, OBJECT_DEPTHS.TRANSITION, obj_transition_fade);
+    var _t = instance_create_depth(0, 0, OBJECT_DEPTHS.TRANSITION, obj_transition_fade);
+	
 	_t.fade_color = _color;
 	_t.fade_time = _fade_time;
 	_t.warp_target_x = _target_x;
