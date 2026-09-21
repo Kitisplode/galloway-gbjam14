@@ -222,6 +222,10 @@ function scr_gbj14_player_Use_Item_Ladder()
 			{
 				_valid = scr_Check_For_Solids(position, 1);
 				_one_way_plat = place_meeting(position[0],position[1], obj_block_oneway_up);
+				if (_i == _max_ladder_length - 1)
+				{
+					instance_create_depth(position[0] - 8, position[1]-16, depth, obj_block_oneway_up);
+				}
 			}
 			if (_valid)
 			{
