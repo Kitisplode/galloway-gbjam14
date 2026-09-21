@@ -81,6 +81,7 @@ function scr_transition_respawn(_target_x, _target_y, _color=c_white, _fade_time
 		}
 		with (obj_gbj14_player)
 		{
+			invuln_timer = invuln_time;
 	        var _dx = other.warp_target_x - position[0];
 	        var _dy = other.warp_target_y - position[1];
 			
