@@ -45,7 +45,8 @@ if (!paused)
 	
 	if (action == -1)
 	{
-		if (!place_meeting(position[0],position[1], obj_block_ladder))
+		if (!place_meeting(position[0],position[1], obj_block_ladder) &&
+			!place_meeting(position[0],position[1], obj_block_ladder_player))
 		{
 			action = 0;
 		}
@@ -233,7 +234,10 @@ if (!paused)
 		// If the player is colliding with a ladder and they press up or down, grab onto the ladder.
 		if (action != -1 && carry_id == id)
 		{
-			var _ladder = instance_place(position[0],position[1], obj_block_ladder);
+			var _ladder;
+				_ladder = instance_place(position[0],position[1], obj_block_ladder_player);
+			if (!instance_exists(_ladder))
+				_ladder = instance_place(position[0],position[1], obj_block_ladder);
 			if (instance_exists(_ladder) && (input_check("down") || input_check("up")))
 			{
 				position[0] = _ladder.position[0];

@@ -211,7 +211,9 @@ function scr_gbj14_player_Use_Item_Ladder()
 	var _max_ladder_length = 5;
 	for (var _i = 0; _i < _max_ladder_length; _i++)
 	{
-		var _ladder = instance_create_depth(position[0], floor(position[1] / 16) * 16 - _i * 16, depth + 1, obj_block_ladder);
+		var _ladder = instance_create_depth(
+			position[0], floor(position[1] / 16) * 16 - _i * 16,
+			depth + 1, obj_block_ladder_player);
 		if (instance_exists(_ladder))
 		{
 			var _valid = false;

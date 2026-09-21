@@ -1,6 +1,6 @@
 {
     "activeFile": "gbjam14_map.tmx",
-    "automapping.whileDrawing": true,
+    "automapping.whileDrawing": false,
     "expandedProjectPaths": [
         ".",
         "tiled"

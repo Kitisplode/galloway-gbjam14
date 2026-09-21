@@ -172,6 +172,7 @@
     {"id":{"name":"obj_bg_zones","path":"objects/obj_bg_zones/obj_bg_zones.yy",},},
     {"id":{"name":"obj_block_conveyor","path":"objects/obj_block_conveyor/obj_block_conveyor.yy",},},
     {"id":{"name":"obj_block_enemy_only","path":"objects/obj_block_enemy_only/obj_block_enemy_only.yy",},},
+    {"id":{"name":"obj_block_ladder_player","path":"objects/obj_block_ladder_player/obj_block_ladder_player.yy",},},
     {"id":{"name":"obj_block_ladder","path":"objects/obj_block_ladder/obj_block_ladder.yy",},},
     {"id":{"name":"obj_block_oneway_up","path":"objects/obj_block_oneway_up/obj_block_oneway_up.yy",},},
     {"id":{"name":"obj_block_pushable","path":"objects/obj_block_pushable/obj_block_pushable.yy",},},

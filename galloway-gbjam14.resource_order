@@ -67,6 +67,7 @@
     {"name":"obj_bg_zones","order":1,"path":"objects/obj_bg_zones/obj_bg_zones.yy",},
     {"name":"obj_block_conveyor","order":11,"path":"objects/obj_block_conveyor/obj_block_conveyor.yy",},
     {"name":"obj_block_enemy_only","order":1,"path":"objects/obj_block_enemy_only/obj_block_enemy_only.yy",},
+    {"name":"obj_block_ladder_player","order":15,"path":"objects/obj_block_ladder_player/obj_block_ladder_player.yy",},
     {"name":"obj_block_ladder","order":14,"path":"objects/obj_block_ladder/obj_block_ladder.yy",},
     {"name":"obj_block_pushable","order":12,"path":"objects/obj_block_pushable/obj_block_pushable.yy",},
     {"name":"obj_block_slope_000","order":7,"path":"objects/obj_block_slope_000/obj_block_slope_000.yy",},
