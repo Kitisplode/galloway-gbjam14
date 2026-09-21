@@ -18,6 +18,12 @@ if ((hp <= 0 || global.enemy_kill_signal) && death_effect_index > -1)
 	if (audio_exists(sound_dead)) play_sound(sound_dead, 1, false, 1, sound_pitch,0);
 }
 
+// Drop gold on death.
+if ((hp <= 0 || global.enemy_kill_signal) && gold_drop > 0)
+{
+	_scr_gbj14_spawn_gold(gold_drop, x, y, OBJECT_DEPTHS.PLAYER + 10);
+}
+
 if (global.enemy_kill_signal) dying = true;
 if (is_boss) global.enemy_kill_signal = true;
 if (death_next_enemy_index > -1)

@@ -20,6 +20,8 @@ damage_time = 0.1;
 damage_timer = 0;
 
 death_effect_index = -1;
+// Gold spawned when this enemy is killed (0 = none).
+gold_drop = 0;
 death_effect_size = 1;
 delayed_death_effect = false;
 

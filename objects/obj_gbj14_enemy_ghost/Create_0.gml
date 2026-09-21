@@ -17,3 +17,7 @@ axis_max_speed = r3(20, 20, 0);
 anim_speed = 0.15;
 
 apply_gravity_force = false;
+
+// Death poof and gold reward.
+death_effect_index = spr_effect_ring_large;
+gold_drop = 5;
