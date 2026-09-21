@@ -156,7 +156,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -216,6 +216,7 @@
     {"id":{"name":"obj_gbj14_item_gold_large","path":"objects/obj_gbj14_item_gold_large/obj_gbj14_item_gold_large.yy",},},
     {"id":{"name":"obj_gbj14_item_gold","path":"objects/obj_gbj14_item_gold/obj_gbj14_item_gold.yy",},},
     {"id":{"name":"obj_gbj14_item_treasure","path":"objects/obj_gbj14_item_treasure/obj_gbj14_item_treasure.yy",},},
+    {"id":{"name":"obj_gbj14_npc_avariccio","path":"objects/obj_gbj14_npc_avariccio/obj_gbj14_npc_avariccio.yy",},},
     {"id":{"name":"obj_gbj14_player_corpse","path":"objects/obj_gbj14_player_corpse/obj_gbj14_player_corpse.yy",},},
     {"id":{"name":"obj_gbj14_player_spawner","path":"objects/obj_gbj14_player_spawner/obj_gbj14_player_spawner.yy",},},
     {"id":{"name":"obj_gbj14_player","path":"objects/obj_gbj14_player/obj_gbj14_player.yy",},},
@@ -907,6 +908,7 @@
     {"id":{"name":"spr_gbj14_splash_gbjam14","path":"sprites/spr_gbj14_splash_gbjam14/spr_gbj14_splash_gbjam14.yy",},},
     {"id":{"name":"spr_gbj14_splash_title","path":"sprites/spr_gbj14_splash_title/spr_gbj14_splash_title.yy",},},
     {"id":{"name":"spr_gbj14_tiles","path":"sprites/spr_gbj14_tiles/spr_gbj14_tiles.yy",},},
+    {"id":{"name":"spr_gbjam14_avariccio","path":"sprites/spr_gbjam14_avariccio/spr_gbjam14_avariccio.yy",},},
     {"id":{"name":"spr_room_portal","path":"sprites/spr_room_portal/spr_room_portal.yy",},},
     {"id":{"name":"spr_room_region","path":"sprites/spr_room_region/spr_room_region.yy",},},
     {"id":{"name":"spr_room_transition","path":"sprites/spr_room_transition/spr_room_transition.yy",},},
