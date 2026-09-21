@@ -1,0 +1,172 @@
+diff --git a/objects/obj_gamemode_gbj14/Create_0.gml b/objects/obj_gamemode_gbj14/Create_0.gml
+index 1512dc6..f20f6d6 100644
+--- a/objects/obj_gamemode_gbj14/Create_0.gml
++++ b/objects/obj_gamemode_gbj14/Create_0.gml
+@@ -5,6 +5,8 @@ depth = OBJECT_DEPTHS.HUD;
+ 
+ // Reset the ending flag whenever the gamemode (re)starts.
+ global.gbj14_ending = false;
++// Full-screen white flash alpha (set to 1 by events like the gate opening).
++global.gbj14_flash = 0;
+ 
+ // Inherit the parent event
+ event_inherited();
+diff --git a/objects/obj_gamemode_gbj14/Draw_0.gml b/objects/obj_gamemode_gbj14/Draw_0.gml
+index aa63caa..148d16a 100644
+--- a/objects/obj_gamemode_gbj14/Draw_0.gml
++++ b/objects/obj_gamemode_gbj14/Draw_0.gml
+@@ -7,6 +7,17 @@ if (global.gbj14_ending) exit;
+ var _mat = scr_get_main_camera_matrix();
+ matrix_set(matrix_world, _mat);
+ 
++// Full-screen flash, fading out over half a second.
++if (global.gbj14_flash > 0)
++{
++	draw_set_alpha(global.gbj14_flash);
++	draw_set_color(c_white);
++	draw_rectangle(-16, -16, 176, 160, false);
++	draw_set_alpha(1);
++	draw_set_color(c_white);
++	global.gbj14_flash = max(0, global.gbj14_flash - scr_get_tick_length() * 2);
++}
++
+ // Inherit the parent event
+ event_inherited();
+ 
+diff --git a/objects/obj_gbj14_elevator/Create_0.gml b/objects/obj_gbj14_elevator/Create_0.gml
+index 592814c..9a34393 100644
+--- a/objects/obj_gbj14_elevator/Create_0.gml
++++ b/objects/obj_gbj14_elevator/Create_0.gml
+@@ -17,6 +17,14 @@ for (var _i = 0; _i < 3; _i++)
+ 	treasure_spot[_i].dom_offset_y = treasure_spot[_i].y - y;
+ }
+ 
++// obj_block hides level blocks at create; the altar is a visible platform.
++visible = true;
++
++// Once all three treasures are deposited, the altar rumbles, flashes and
++// blows open the central passage: every collision tile inside this
++// pixel rectangle [x1, y1, x2, y2] is removed.
++gate_rect = [2992, 1872, 3248, 2016];
++
+ ready = false;
+ phase = 0;
+ phase_timer = 0;
+\ No newline at end of file
+diff --git a/objects/obj_gbj14_elevator/Step_0.gml b/objects/obj_gbj14_elevator/Step_0.gml
+index 6171c7b..81005b1 100644
+--- a/objects/obj_gbj14_elevator/Step_0.gml
++++ b/objects/obj_gbj14_elevator/Step_0.gml
+@@ -19,43 +19,38 @@ if (!paused)
+ 	else
+ 	{
+ 		if (phase_timer > 0) phase_timer -= scr_get_tick_length();
++		
++		// Phase 1: the ground starts to rumble (after the deposit jingle).
+ 		if (phase == 0 && phase_timer <= 0)
+ 		{
+ 			phase = 1;
+-			shake[0] = random_range(-5,5);
+-			shake[1] = random_range(-5,5);
+-			phase_timer = 3;
+-			play_sound(snd_gbjam9_boss_hit, 2, 0, 1, 1, 1);
++			phase_timer = 1.5;
++			if (instance_exists(obj_camera))
++			{
++				obj_camera.shake_remain = 3;
++				obj_camera.shake_magnitude = 3;
++				obj_camera.shake_length = 90;
++			}
++			play_sound(snd_gbj14_wind, 2, 0, 1, 1, 0);
+ 		}
++		// Phase 2: flash, big shake, and the central gate blows open.
+ 		else if (phase == 1 && phase_timer <= 0)
+ 		{
+ 			phase = 2;
+-			shake[0] = random_range(-5,5);
+-			shake[1] = random_range(-5,5);
+-			phase_timer = 0.5;
+-			play_sound(snd_gbjam9_boss_hit, 2, 0, 1, 1, 1);
+-		}
+-		else if (phase == 2 && phase_timer <= 0)
+-		{
+-			phase = 3;
+-			shake[0] = random_range(-5,5);
+-			shake[1] = random_range(-5,5);
+-			phase_timer = 5;
+-			play_sound(snd_gbjam9_boss_hit, 2, 0, 1, 1, 1);
+-		}
+-		else if (phase == 3 && phase_timer <= 0)
+-		{
+-			phase = 4;
+-			velocity[1] = 50;
+-			phase_timer = random_range(1,5);
+-			play_sound(snd_gbj14_wind, 2, 0, 1, 1, 1);
+-		}
+-		else if (phase == 4 && phase_timer <= 0)
+-		{
+-			phase_timer = random_range(1,5);
+-			shake[0] = random_range(-5,5);
+-			shake[1] = random_range(-5,5);
+-			play_sound(snd_gbjam9_boss_hit, 2, 0, 1, 1, 1);
++			global.gbj14_flash = 1;
++			if (instance_exists(obj_camera))
++			{
++				obj_camera.shake_remain = 6;
++				obj_camera.shake_magnitude = 6;
++				obj_camera.shake_length = 45;
++			}
++			_scr_gbj14_Open_Gate(gate_rect[0], gate_rect[1], gate_rect[2], gate_rect[3]);
++			play_sound(snd_gbjam9_boss_hit, 2, 0, 1, 1, 0);
++			for (var _i = 1; _i <= 3; _i++)
++			{
++				var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(irandom_range(1,5)));
++				if (audio_exists(_sound)) play_sound(_sound, 1, 0, 1, random_range(0.8,1.2), 0.2);
++			}
+ 		}
+ 	}
+ }
+diff --git a/scripts/scr_gbjam14_player/scr_gbjam14_player.gml b/scripts/scr_gbjam14_player/scr_gbjam14_player.gml
+index 711e3ff..76b017a 100644
+--- a/scripts/scr_gbjam14_player/scr_gbjam14_player.gml
++++ b/scripts/scr_gbjam14_player/scr_gbjam14_player.gml
+@@ -389,6 +389,39 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
+ 	return false;
+ }
+ 
++/// Removes every collision tile (all obj_block_tileset layers) inside the
++/// pixel rectangle, with a scattering of crumb effects. Used to open the
++/// central passage once the three treasures are returned.
++function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
++{
++	var _l = floor(_x1 / 16), _r = ceil(_x2 / 16);
++	var _t = floor(_y1 / 16), _b = ceil(_y2 / 16);
++	var _cleared = 0;
++	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
++	{
++		var _id = ds_list_find_value(global.list_solids, _i);
++		if (!instance_exists(_id)) continue;
++		if (_id.object_index != obj_block_tileset) continue;
++		var _tilemap = _id.tilemap;
++		if (_tilemap <= -1) continue;
++		for (var _x = _l; _x < _r; _x++)
++		{
++			for (var _y = _t; _y < _b; _y++)
++			{
++				if (tilemap_get(_tilemap, _x,_y) > 0)
++				{
++					tilemap_set(_tilemap, 0, _x,_y);
++					terrain_update_region(_tilemap, _x,_y);
++					if (irandom(3) == 0) _scr_gbj14_Spawn_Crumbs(_x,_y);
++					_cleared++;
++				}
++			}
++		}
++	}
++	with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
++	return _cleared;
++}
++
+ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
+ {
+ 	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)

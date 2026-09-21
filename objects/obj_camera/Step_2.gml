@@ -22,3 +22,4 @@ instance_activate_object(obj_text);
 instance_activate_object(obj_gbj14_item_treasure);
 instance_activate_object(obj_gbj14_enemy_boss_core_2);
 instance_activate_object(obj_gbj14_enemy_boss_real);
+instance_activate_object(obj_gbj14_elevator);
