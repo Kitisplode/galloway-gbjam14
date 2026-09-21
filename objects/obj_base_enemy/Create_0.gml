@@ -10,6 +10,7 @@ creator_ID = -1;
 creator_id = -1;
 
 is_boss = false;
+raises_kill_signal = true;
 hp_max = 1;
 hp = hp_max;
 

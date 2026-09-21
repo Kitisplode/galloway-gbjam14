@@ -18,6 +18,7 @@ shot_count = 1;
 is_boss = true;
 hp_max = 5;
 hp = hp_max;
+raises_kill_signal = false;
 
 // Death poof and gold reward: bigger poof and a big payout for bosses.
 death_effect_index = spr_effect_ring_large;

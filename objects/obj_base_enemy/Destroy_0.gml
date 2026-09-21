@@ -25,7 +25,7 @@ if ((hp <= 0 || global.enemy_kill_signal) && gold_drop > 0)
 }
 
 if (global.enemy_kill_signal) dying = true;
-if (is_boss) global.enemy_kill_signal = true;
+if (is_boss && raises_kill_signal) global.enemy_kill_signal = true;
 if (death_next_enemy_index > -1)
 {
 	if (hp <= 0 || debug_killed)
