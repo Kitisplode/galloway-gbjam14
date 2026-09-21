@@ -43,11 +43,11 @@ if (instance_exists(obj_gbj14_player))
 	{
 		if (global.paused)
 		{
-			paused_alpha = lerp(paused_alpha, 1, 0.2);
+			paused_alpha = lerp(paused_alpha, 1, 0.1);
 		}
 		else
 		{
-			paused_alpha = lerp(paused_alpha, 0, 0.2);
+			paused_alpha = lerp(paused_alpha, 0, 0.1);
 		}
 		scr_draw_rectangle_color_alpha(0,0, 160,144, c_white, paused_alpha / 4);
 		draw_sprite_ext(spr_gbj14_hud_paused, 0, 80 -16, 72, 1,1, 0, c_white, paused_alpha);

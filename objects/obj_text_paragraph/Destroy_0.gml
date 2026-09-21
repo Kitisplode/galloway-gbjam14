@@ -9,6 +9,7 @@ while (ds_list_size(string_obj_list) > 0)
 	{
 		temp_string_obj.destroy_timer = 0;
 		temp_string_obj.fade_rate = fade_rate;
+		if (fade_rate <= 0) instance_destroy(temp_string_obj);
 	}
 	ds_list_delete(string_obj_list, 0);
 }

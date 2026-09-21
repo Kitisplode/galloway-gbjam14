@@ -87,5 +87,6 @@ function scr_music_director()
 			}
 		}
 	}
-	scr_audio_play_song_fade(_want, _fade);
+	if (!instance_exists(obj_gbj14_player_corpse))
+		scr_audio_play_song_fade(_want, _fade);
 }

@@ -158,7 +158,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -233,6 +233,7 @@
     {"id":{"name":"obj_gbj14_player","path":"objects/obj_gbj14_player/obj_gbj14_player.yy",},},
     {"id":{"name":"obj_gbj14_proj_bomb","path":"objects/obj_gbj14_proj_bomb/obj_gbj14_proj_bomb.yy",},},
     {"id":{"name":"obj_gbj14_shop","path":"objects/obj_gbj14_shop/obj_gbj14_shop.yy",},},
+    {"id":{"name":"obj_gbj14_treasure_spot","path":"objects/obj_gbj14_treasure_spot/obj_gbj14_treasure_spot.yy",},},
     {"id":{"name":"obj_gbjam12_cap__base","path":"objects/obj_gbjam12_cap__base/obj_gbjam12_cap__base.yy",},},
     {"id":{"name":"obj_gbjam12_cap_alien","path":"objects/obj_gbjam12_cap_alien/obj_gbjam12_cap_alien.yy",},},
     {"id":{"name":"obj_gbjam12_cap_candle","path":"objects/obj_gbjam12_cap_candle/obj_gbjam12_cap_candle.yy",},},
@@ -674,6 +675,7 @@
     {"id":{"name":"sh_outline","path":"shaders/sh_outline/sh_outline.yy",},},
     {"id":{"name":"mus_gbj14_jopes_spanish_adventuring","path":"sounds/mus_gbj14_jopes_spanish_adventuring/mus_gbj14_jopes_spanish_adventuring.yy",},},
     {"id":{"name":"mus_gbj14_jopes_spanish_alien","path":"sounds/mus_gbj14_jopes_spanish_alien/mus_gbj14_jopes_spanish_alien.yy",},},
+    {"id":{"name":"mus_gbj14_jopes_spanish_death_2","path":"sounds/mus_gbj14_jopes_spanish_death_2/mus_gbj14_jopes_spanish_death_2.yy",},},
     {"id":{"name":"mus_gbj14_jopes_spanish_fly","path":"sounds/mus_gbj14_jopes_spanish_fly/mus_gbj14_jopes_spanish_fly.yy",},},
     {"id":{"name":"mus_gbj14_lexou_conquistador_intro","path":"sounds/mus_gbj14_lexou_conquistador_intro/mus_gbj14_lexou_conquistador_intro.yy",},},
     {"id":{"name":"mus_gbj14_lexou_conquistador_loop","path":"sounds/mus_gbj14_lexou_conquistador_loop/mus_gbj14_lexou_conquistador_loop.yy",},},
