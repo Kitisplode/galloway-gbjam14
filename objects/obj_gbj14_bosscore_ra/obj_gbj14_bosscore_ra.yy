@@ -37,5 +37,5 @@
     "path":"sprites/spr_base_circle_16/spr_base_circle_16.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

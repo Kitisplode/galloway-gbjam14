@@ -4,10 +4,10 @@
 if (!paused)
 {
 	cycle_x = (cycle_x + cycle_x_speed) mod 360;
-	dom_offset_x = -sin(degtorad(cycle_x)) * 48;
+	dom_offset_x = dom_base_offset_x - sin(degtorad(cycle_x)) * 48;
 	
 	cycle_y = (cycle_y + cycle_y_speed) mod 360;
-	dom_offset_y = -sin(degtorad(cycle_y)) * 8;
+	dom_offset_y = dom_base_offset_y - sin(degtorad(cycle_y)) * 8;
 	
 	if (image_alpha >= 0.9 && instance_exists(obj_base_player))
 	{
