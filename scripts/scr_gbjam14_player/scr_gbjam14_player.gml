@@ -437,3 +437,36 @@ function _scr_gbj14_Spawn_Crumbs(_x,_y)
 			}
 		}
 }
+
+
+// ---------------------------------------------------------------------------
+// Ending sequence, started after the final cutscene (5): the player loses
+// control, the golden transformation animation plays once and holds on its
+// last frame, then after a short wait the game fades out to the title.
+global.gbj14_ending = false;
+
+function scr_gbj14_ending_start()
+{
+	global.gbj14_ending = true;
+	with (obj_gbj14_player)
+	{
+		// Drop anything being carried so the animation reads cleanly.
+		if (carry_id != id)
+		{
+			_scr_gbj14_player_Use_Item_Throw(r3_zero());
+			if (ds_list_size(list_items) > 0)
+			{
+				var _item = ds_list_find_value(list_items, 0);
+				if (_item.name == "Throw") ds_list_delete(list_items, 0);
+			}
+		}
+		velocity[0] = 0;
+		direction_facing = 0;
+		action = 3;
+		ending_anim_done = false;
+		ending_timer = ending_wait_time;
+		ending_fade_started = false;
+		scr_change_sprite(spr_gbj14_player_ending);
+		anim_speed = 0.2;
+	}
+}

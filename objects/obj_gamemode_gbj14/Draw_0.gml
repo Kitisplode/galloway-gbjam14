@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Hide the HUD during the ending sequence.
+if (global.gbj14_ending) exit;
+
 var _mat = scr_get_main_camera_matrix();
 matrix_set(matrix_world, _mat);
 

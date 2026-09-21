@@ -79,6 +79,12 @@ scr_gbj14_player_Add_Item(self, {
 damage = 1;
 attack_hitbox_id = noone;
 
+// Ending sequence state (action == 3).
+ending_wait_time = 2;
+ending_timer = ending_wait_time;
+ending_anim_done = false;
+ending_fade_started = false;
+
 // Set up physics
 axis_max_speed = r3(120, 1200, 0);
 up_vector = r3(0,-1,0);

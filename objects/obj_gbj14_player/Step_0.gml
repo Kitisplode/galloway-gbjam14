@@ -91,6 +91,22 @@ if (!paused)
 			can_move = false;
 			can_act = false;
 		}
+		// Playing the ending animation.
+		if (action == 3)
+		{
+			can_move = false;
+			can_act = false;
+			velocity[0] = 0;
+			if (ending_anim_done && !ending_fade_started)
+			{
+				ending_timer -= scr_get_tick_length();
+				if (ending_timer <= 0)
+				{
+					ending_fade_started = true;
+					scr_transition_fade_to_color(rm_gbj14_title, 2, c_black);
+				}
+			}
+		}
 	}
 	
 	// Clean up the sword hitbox once the swing ends or is interrupted (e.g. by getting hurt).

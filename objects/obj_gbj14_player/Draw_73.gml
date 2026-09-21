@@ -85,4 +85,15 @@ else
 			scr_change_sprite(spr_gbj14_player_idle);
 		}
 	}
+	else if (action == 3)
+	{
+		scr_change_sprite(spr_gbj14_player_ending);
+		if (anim_looped != 0)
+		{
+			// Hold on the final frame until the fade out.
+			anim_speed = 0;
+			anim_frame = sprite_get_number(spr_gbj14_player_ending) - 1;
+			ending_anim_done = true;
+		}
+	}
 }

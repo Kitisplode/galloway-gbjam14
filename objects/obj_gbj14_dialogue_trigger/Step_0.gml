@@ -11,7 +11,10 @@ if (instance_exists(obj_gbj14_player))
 		if (!global.cutscene_played[cutscene_id])
 		{
 			//show_debug_message("cutscene trigger hit: {0}", cutscene_id);
-			scr_cutscene_play(cutscene_id);
+			// The final cutscene flows straight into the ending sequence.
+			var _on_finish = undefined;
+			if (cutscene_id == 5) _on_finish = scr_gbj14_ending_start;
+			scr_cutscene_play(cutscene_id, _on_finish);
 			instance_destroy();
 		}
     }

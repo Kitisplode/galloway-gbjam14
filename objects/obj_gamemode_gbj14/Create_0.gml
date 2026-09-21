@@ -3,6 +3,9 @@
 
 depth = OBJECT_DEPTHS.HUD;
 
+// Reset the ending flag whenever the gamemode (re)starts.
+global.gbj14_ending = false;
+
 // Inherit the parent event
 event_inherited();
 
