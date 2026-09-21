@@ -158,7 +158,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"galloway-gbjam14",
   "resources":[
@@ -712,6 +712,7 @@
     {"id":{"name":"snd_gbj14_rock_break_03","path":"sounds/snd_gbj14_rock_break_03/snd_gbj14_rock_break_03.yy",},},
     {"id":{"name":"snd_gbj14_rock_break_04","path":"sounds/snd_gbj14_rock_break_04/snd_gbj14_rock_break_04.yy",},},
     {"id":{"name":"snd_gbj14_rock_break_05","path":"sounds/snd_gbj14_rock_break_05/snd_gbj14_rock_break_05.yy",},},
+    {"id":{"name":"snd_gbj14_sparkle","path":"sounds/snd_gbj14_sparkle/snd_gbj14_sparkle.yy",},},
     {"id":{"name":"snd_gbj14_wind","path":"sounds/snd_gbj14_wind/snd_gbj14_wind.yy",},},
     {"id":{"name":"snd_gbjam12_button_off","path":"sounds/snd_gbjam12_button_off/snd_gbjam12_button_off.yy",},},
     {"id":{"name":"snd_gbjam12_button_on","path":"sounds/snd_gbjam12_button_on/snd_gbjam12_button_on.yy",},},
@@ -927,6 +928,7 @@
     {"id":{"name":"spr_gbj14_player_jump","path":"sprites/spr_gbj14_player_jump/spr_gbj14_player_jump.yy",},},
     {"id":{"name":"spr_gbj14_player_lift_idle","path":"sprites/spr_gbj14_player_lift_idle/spr_gbj14_player_lift_idle.yy",},},
     {"id":{"name":"spr_gbj14_player_lift","path":"sprites/spr_gbj14_player_lift/spr_gbj14_player_lift.yy",},},
+    {"id":{"name":"spr_gbj14_player_live","path":"sprites/spr_gbj14_player_live/spr_gbj14_player_live.yy",},},
     {"id":{"name":"spr_gbj14_player_sword","path":"sprites/spr_gbj14_player_sword/spr_gbj14_player_sword.yy",},},
     {"id":{"name":"spr_gbj14_player_walk","path":"sprites/spr_gbj14_player_walk/spr_gbj14_player_walk.yy",},},
     {"id":{"name":"spr_gbj14_portrait_alien","path":"sprites/spr_gbj14_portrait_alien/spr_gbj14_portrait_alien.yy",},},

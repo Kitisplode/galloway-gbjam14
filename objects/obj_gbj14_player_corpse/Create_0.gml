@@ -20,3 +20,8 @@ text_time = 2;
 text_timer = text_time;
 
 text_2_id = id;
+
+has_ankh = false;
+direction_facing = 0;
+
+list_item = ds_list_create();
