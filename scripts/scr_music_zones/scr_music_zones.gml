@@ -16,6 +16,12 @@ function scr_music_zones_init()
 		),
 		new MusicZone(
 			[
+				[5100, 4400, 5600, 4800],
+			],
+			mus_gbj14_jopes_spanish_alien
+		),
+		new MusicZone(
+			[
 				[   0, 0, 1940, 1770],
 				[4224, 0, 5600, 1600]
 			],

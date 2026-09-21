@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mus_gbj14_jopes_spanish_alien",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"mus_gbj14_jopes_spanish_alien",
+  "parent":{
+    "name":"gbjam14",
+    "path":"folders/Sounds/Music/gbjam14.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_gbj14_jopes_spanish_alien.wav",
+  "volume":1.0,
+}

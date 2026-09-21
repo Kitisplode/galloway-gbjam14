@@ -4,7 +4,7 @@ enum Characters
 	DON_BRUTO,
 	AVARICCIO,
 	SHOPKEEPER,
-	CONQUISTADOR,
+	ALIEN,
 }
 
 /// @desc Small constructor for one line of dialogue.
@@ -36,9 +36,9 @@ function scr_character_info(_char)
 			portrait: asset_get_index("spr_gbj14_portrait_shopkeep"),
 			side: 1,
 		};
-		_db[Characters.CONQUISTADOR] = {
-			name: "CONQUISTADOR",
-			portrait: asset_get_index("spr_gbj14_portrait_conquistador"),
+		_db[Characters.ALIEN] = {
+			name: "ALIEN",
+			portrait: asset_get_index("spr_gbj14_portrait_alien"),
 			side: 1,
 		};
 	}
@@ -100,6 +100,10 @@ global.cutscenes[5] = [ // Near the end
 	scr_line(Characters.DON_BRUTO,  "Maravilloso!\n" + "I'll be rich, filthy rich!\n" + "If only Avariccio were here to see my fortune!"),
 	scr_line(Characters.DON_BRUTO,  "Avariccio, there you are! Ah!- Avariccio?\n" + "...Is that you?"),
 	scr_line(Characters.DON_BRUTO,  "..."),
+];
+global.cutscenes[6] = [ // Easter egg
+	scr_line(Characters.ALIEN,      "Hey man what's up.\n" + "Did you know I created all these pyramids myself?"),
+	scr_line(Characters.DON_BRUTO,  "Que carajo?!?"),
 ];
 
 
