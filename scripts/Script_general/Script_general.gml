@@ -196,8 +196,9 @@ function scr_text_draw()
 	draw_set_font(font);
 	draw_set_halign(halign);
 	draw_set_valign(valign);
-	draw_text_transformed_color(x,y, text, scale,scale, image_angle,
-								image_blend,image_blend,image_blend,image_blend, temp_alpha);
+	draw_bitmap_text(spr_font_lexou, x, y, text, 128);
+	//draw_text_transformed_color(x,y, text, scale,scale, image_angle,
+	//							image_blend,image_blend,image_blend,image_blend, temp_alpha);
 	if (view_locked)
 		matrix_set(matrix_world, matrix_build_identity());
 }

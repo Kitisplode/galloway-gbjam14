@@ -13,7 +13,7 @@ if (instance_number(obj_main) > 1)
 
 // ------------------------------------
 // Debug settings.
-global.debug_global = true;
+global.debug_global = false;
 global.debug_can_restart_level = true;
 global.debug_can_pause = true;
 global.debug_player_invincible = false;

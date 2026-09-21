@@ -37,7 +37,7 @@ scr_scene_Add_Step_Sprite_Add(queue_steps, "bg_name", spr_gbj14_splash_title_nam
 scr_scene_Add_Step_Sprite_Move(queue_steps, "bg_name", 80, 2, 1, 0);
 
 scr_scene_Add_Step(queue_steps, 2.5);
-scr_scene_Add_Step_TextFade(queue_steps, 0,"Press @!", 80, 110, global.font_lexou, -1, -1);
+//scr_scene_Add_Step_TextFade(queue_steps, 0,"Press A!", 80, 110, global.font_lexou, -1, -1);
 
 
 scr_scene_Add_Step_Pause_For_Input(queue_steps, ["a", "b", "start"]);
