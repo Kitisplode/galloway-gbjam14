@@ -4,6 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-collection_sound_pitch = 0.75;
+collection_sound_pitch = 0.5;
 worth = 5;
-image_speed = 1;
+anim_speed = 0.3;
