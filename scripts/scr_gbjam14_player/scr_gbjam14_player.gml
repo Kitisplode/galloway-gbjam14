@@ -469,16 +469,22 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 		if (_id.object_index != obj_block_tileset) continue;
 		if (_id.layer_name != _layer_name) continue;
 		var _tilemap = _id.tilemap;
+		var _total = 0;
 		for (var _x = _corners._l; _x < _corners._r; _x++)
 		{
 			for (var _y = _corners._t; _y < _corners._b; _y++)
 			{
 				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name))
 				{
-					var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(round(random_range(1,5))));
-					if (audio_exists(_sound)) play_sound(_sound, 1, 0, 1, 1,0.5);
+					_total++;
 				}
 			}
+		}
+		if (_total > 0)
+		{
+			var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(round(random_range(1,5))));
+			if (audio_exists(_sound))
+				play_sound(_sound, 1, 0, 1, 1, 0.5);
 		}
 		break;
 	}
