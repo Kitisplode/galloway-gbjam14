@@ -11,5 +11,15 @@ if (!paused)
 	{
 		velocity[0] *= friction_ground;
 		velocity[1] *= friction_ground;
+        if (!settled &&
+			abs(velocity[0]) < 2 &&
+			abs(velocity[1]) < 2)
+        {
+            velocity[0] = 0;
+            velocity[1] = 0;
+            movement_enabled = false;
+            apply_gravity_force = false;
+            settled = true;
+        }
 	}
 }

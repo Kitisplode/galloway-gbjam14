@@ -390,6 +390,17 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
 		tilemap_set(_tilemap, 0, _x,_y);
 		terrain_update_region(_tilemap, _x, _y);
 		with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
+		var _cx = _x * 16 + 8;
+		var _cy = _y * 16 + 8;
+		with (obj_gbj14_item_gold)
+		{
+		    if (settled && point_distance(x, y, _cx, _cy) <= 40)
+		    {
+		        settled = false;
+		        movement_enabled = true;
+		        apply_gravity_force = true;
+		    }
+		}
 		_scr_gbj14_Spawn_Crumbs(_x,_y);
 		// spawn gold depending on terrain
 		if (_layer_name == "tilemap_break")
@@ -419,9 +430,6 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
 	return false;
 }
 
-/// Removes every collision tile (all obj_block_tileset layers) inside the
-/// pixel rectangle, with a scattering of crumb effects. Used to open the
-/// central passage once the three treasures are returned.
 function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
 {
 	var _l = floor(_x1 / 16), _r = ceil(_x2 / 16);

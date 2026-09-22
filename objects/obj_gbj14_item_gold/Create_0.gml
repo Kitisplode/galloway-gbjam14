@@ -18,3 +18,5 @@ collection_timer = 1;
 
 sparkle_index = spr_gbj14_fx_sparkle;
 sparkle_anim_speed = 0.25;
+
+settled = false;
