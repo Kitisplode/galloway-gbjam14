@@ -34,18 +34,18 @@ function _scr_tilemap_find_corner_cells(_position, _tilemap)
 		_b: 0
 	};
 	
-	var _left_cell_x = _position[0] + bbox_left - x;
-	var _right_cell_x = _position[0] + bbox_right - x;
-	var _top_cell_y = _position[1] + bbox_top - y + 1;
-	var _bottom_cell_y = _position[1] + bbox_bottom - y - 1;
-	var _left_cell = floor((_left_cell_x - _x) / 16);
-	var _right_cell = floor((_right_cell_x - _x) / 16);
-	var _top_cell = floor((_top_cell_y - _y) / 16);
-	var _bottom_cell = floor((_bottom_cell_y - _y) / 16);
-	_result._l = _left_cell;
-	_result._r = _right_cell;
-	_result._t = _top_cell;
-	_result._b = _bottom_cell;
+	var _l_cell_x = _position[0] + bbox_left   - x;
+	var _r_cell_x = _position[0] + bbox_right  - x;
+	var _t_cell_y = _position[1] + bbox_top    - y + 1;
+	var _b_cell_y = _position[1] + bbox_bottom - y - 1;
+	var _l_cell = floor((_l_cell_x - _x) / 16);
+	var _r_cell =  ceil((_r_cell_x - _x) / 16);
+	var _t_cell = floor((_t_cell_y - _y) / 16);
+	var _b_cell =  ceil((_b_cell_y - _y) / 16);
+	_result._l = _l_cell;
+	_result._r = _r_cell;
+	_result._t = _t_cell;
+	_result._b = _b_cell;
 	
 	return _result;
 }
