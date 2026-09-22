@@ -130,6 +130,7 @@ function _scr_gbj14_player_Use_Item_Throw(_velocity)
 			carry_id.anim_angle = 180;
 			carry_id.image_angle_matching_visual = false;
 		}
+		with (carry_id) { scr_Unstick_From_Solids(); }
 		carry_id.axis_max_speed[0] = _throw_speed;
 		//carry_id.velocity[0] = cos(degtorad(direction_facing)) * _throw_speed;
 		//carry_id.velocity[1] = -80;
@@ -476,10 +477,7 @@ function _scr_gbj14_Spawn_Crumbs(_x,_y)
 }
 
 
-// ---------------------------------------------------------------------------
-// Ending sequence, started after the final cutscene (5): the player loses
-// control, the golden transformation animation plays once and holds on its
-// last frame, then after a short wait the game fades out to the title.
+// Ending sequence: the player loses control, the golden transformation anim plays once
 global.gbj14_ending = false;
 
 function scr_gbj14_ending_start()

@@ -419,7 +419,7 @@ function terrain_update_region(_tilemap, _x, _y)
 
 
 /// function to fix things getting stuck when terrain changes under them
-function scr_Unstick_From_Solids(_max_push = 12)
+function scr_Unstick_From_Solids(_max_push = 16)
 {
     if (!scr_Check_For_Solids(position, false))
 		return true;
