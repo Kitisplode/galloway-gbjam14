@@ -91,3 +91,6 @@ constrain_vel_multiplier = r3(-1,-1,-1);
 
 // An additional scale applied to all movement to allow easily changing the screen scale
 movement_scale = 1;
+
+// If false, a simple tilemap_get call is used instead of place_meeting
+precise_tile_collision = true;
