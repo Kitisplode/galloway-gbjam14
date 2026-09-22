@@ -129,21 +129,21 @@ function scr_bg_zones_draw()
 		var _zone = global.bg_zones[_z];
 		var _rect_count = array_length(_zone.rects);
 
-		for (var _r = 0; _r < _rect_count; _r++)
+		for (var _rect_i = 0; _rect_i < _rect_count; _rect_i++)
 		{
-			var _rect = _zone.rects[_r];
+			var _rect = _zone.rects[_rect_i];
 
-			// World-space clip: intersection of this rect with the view.
+			// intersection of this rect with the view.
 			var _l = max(_rect[0], _cx);
 			var _t = max(_rect[1], _cy);
-			var _rgt = min(_rect[2], _cx2);
-			var _btm = min(_rect[3], _cy2);
-			if (_rgt <= _l || _btm <= _t) continue; // not on screen
+			var _r = min(_rect[2], _cx2);
+			var _b = min(_rect[3], _cy2);
+			if (_r <= _l || _b <= _t) continue; // not on screen
 
 			if (_zone.fill != -1)
 			{
 				draw_set_color(_zone.fill);
-				draw_rectangle(_l, _t, _rgt - 1, _btm - 1, false);
+				draw_rectangle(_l, _t, _r - 1, _b - 1, false);
 				draw_set_color(c_white);
 			}
 
@@ -152,21 +152,18 @@ function scr_bg_zones_draw()
 			{
 				var _lay = _zone.layers[_i];
 
-				// Parallax-space origin, anchored to the zone anchor:
-				// px = 0 -> origin rides with the camera (never scrolls),
-				// px = 1 -> origin fixed in the world (scrolls like tiles).
+				// Parallax-space origin point
 				var _ox = lerp(_cx, _zone.anchor_x, _lay.px) + _lay.xoff;
 				var _oy = lerp(_cy, _zone.anchor_y, _lay.py) + _lay.yoff;
 
 				__bg_draw_clipped_tiled(_lay.sprite, _ox, _oy,
-					_l, _t, _rgt, _btm, _lay.tile_h, _lay.tile_v);
+					_l, _t, _r, _b, _lay.tile_h, _lay.tile_v);
 			}
 		}
 	}
 }
 
-/// Tiles a sprite from origin (_ox,_oy), drawing only the parts inside
-/// the clip rect [_cx1,_cy1)-[_cx2,_cy2). All coordinates are world space.
+/// Tiles a sprite from origin (_ox,_oy), drawing only the parts inside the clip rect [_cx1,_cy1,_cx2,_cy2]
 function __bg_draw_clipped_tiled(_spr, _ox, _oy, _cx1, _cy1, _cx2, _cy2, _tile_h, _tile_v)
 {
 	var _w = sprite_get_width(_spr);
@@ -189,9 +186,9 @@ function __bg_draw_clipped_tiled(_spr, _ox, _oy, _cx1, _cy1, _cx2, _cy2, _tile_h
 			if (_pr > _pl && _pb > _pt)
 			{
 				draw_sprite_part(_spr, 0,
-					_pl - _x, _pt - _y,   // source offset inside the sprite
+					_pl - _x, _pt - _y, // source offset inside the sprite
 					_pr - _pl, _pb - _pt, // source size
-					_pl, _pt);            // world position
+					_pl, _pt); // world position
 			}
 			_x += _w;
 		}
