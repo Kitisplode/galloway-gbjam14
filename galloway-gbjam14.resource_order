@@ -114,7 +114,7 @@
     {"name":"obj_gbj14_npc_nun","order":2,"path":"objects/obj_gbj14_npc_nun/obj_gbj14_npc_nun.yy",},
     {"name":"obj_gbj14_player_corpse","order":2,"path":"objects/obj_gbj14_player_corpse/obj_gbj14_player_corpse.yy",},
     {"name":"obj_gbj14_player_spawner","order":1,"path":"objects/obj_gbj14_player_spawner/obj_gbj14_player_spawner.yy",},
-    {"name":"obj_gbj14_proj_bomb","order":4,"path":"objects/obj_gbj14_proj_bomb/obj_gbj14_proj_bomb.yy",},
+    {"name":"obj_gbj14_proj_bomb","order":1,"path":"objects/obj_gbj14_proj_bomb/obj_gbj14_proj_bomb.yy",},
     {"name":"obj_gbj14_shop","order":4,"path":"objects/obj_gbj14_shop/obj_gbj14_shop.yy",},
     {"name":"obj_gbj14_treasure_spot","order":3,"path":"objects/obj_gbj14_treasure_spot/obj_gbj14_treasure_spot.yy",},
     {"name":"obj_gbjam12_cap_alien","order":3,"path":"objects/obj_gbjam12_cap_alien/obj_gbjam12_cap_alien.yy",},

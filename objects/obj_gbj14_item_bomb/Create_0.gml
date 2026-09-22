@@ -8,6 +8,10 @@ friction_ground = 0.8;
 walk_from_walls_multiplier[0] = -0.25;
 walk_from_walls_multiplier[1] = -0.25;
 
-bomb_timer = 5;
+anim_speed = 1;
+bomb_timer_max = 5;
+bomb_timer = bomb_timer_max;
+show_flashing = false;
+flash_counter = 0;
 
-damage = 10;
+damage = 5;

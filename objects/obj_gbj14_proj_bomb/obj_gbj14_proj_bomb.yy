@@ -10,8 +10,8 @@
   "name":"obj_gbj14_proj_bomb",
   "overriddenProperties":[],
   "parent":{
-    "name":"items",
-    "path":"folders/Objects/Game Objects/gbjam14/items.yy",
+    "name":"effects",
+    "path":"folders/Objects/Game Objects/gbjam14/effects.yy",
   },
   "parentObjectId":{
     "name":"obj_shot_player",

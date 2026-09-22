@@ -6,4 +6,5 @@
 // Inherit the parent event
 event_inherited();
 
-if (dies_offscreen && scr_check_off_screen_self(-5)) instance_destroy();
+if (dies_offscreen && scr_check_off_screen_self(-5))
+	instance_destroy();

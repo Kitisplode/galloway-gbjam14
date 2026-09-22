@@ -20,4 +20,18 @@ if (!paused)
 		_boom.damage = damage;
 		instance_destroy();
 	}
+	
+	// bomb flashing
+	var _min_interval = 2;
+	var _max_interval = 30;
+	var _current_interval = lerp(
+		_min_interval,
+		_max_interval,
+		bomb_timer / bomb_timer_max);
+	flash_counter += 1;
+	if (flash_counter >= _current_interval)
+	{
+		show_flashing = !show_flashing;
+		flash_counter = 0;
+	}
 }
