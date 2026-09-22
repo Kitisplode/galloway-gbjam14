@@ -413,7 +413,7 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
 		else if (_layer_name == "tilemap_earth")
 		{
 			if (random_range(0,100) < 50)
-				_scr_gbj14_spawn_gold(random_range(0,5),
+				_scr_gbj14_spawn_gold(random_range(0,3),
 					_x * 16 + 8,
 					_y * 16 + 12,
 					OBJECT_DEPTHS.PLAYER + 10);

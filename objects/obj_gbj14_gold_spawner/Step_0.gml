@@ -7,8 +7,8 @@ if (!paused)
 	{
 		var _index = obj_gbj14_item_gold;
 		var _value = 1;
-		if (spawn_count >= 2) { if (random_range(0,100) < 50) { _index = obj_gbj14_item_gold_large; _value = 2; } }
-		if (spawn_count >= 5) { if (random_range(0,100) < 50) { _index = obj_gbj14_item_gold_coin;  _value = 5; } }
+		if (spawn_count >= 2) { _index = obj_gbj14_item_gold_large; _value = 2; }
+		if (spawn_count >= 5) { _index = obj_gbj14_item_gold_coin;  _value = 5; }
 		var _gold = instance_create_depth(position[0],position[1], depth, _index);
 		if (instance_exists(_gold))
 		{
