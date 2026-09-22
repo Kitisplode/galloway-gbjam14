@@ -9,3 +9,4 @@ pushes_others = false;
 solid = false;
 normal_vector = r3(0,-1,0);
 visible = true;
+depth = 250;

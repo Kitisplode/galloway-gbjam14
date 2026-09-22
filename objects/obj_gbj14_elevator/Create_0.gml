@@ -15,3 +15,5 @@ visible = true;
 // if none exist, the altar spawns three default ones on its slab on its first
 // step. The finale itself is run by the spots (see obj_gbj14_treasure_spot).
 spots_checked = false;
+
+depth = 350;
