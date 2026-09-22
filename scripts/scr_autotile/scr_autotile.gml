@@ -301,6 +301,22 @@ terrain_build_lookup();
 
 
 
+global.terrain_type_by_tile = array_create(1024, Terrain.NONE);
+for (var _type = 0; _type < Terrain.length; _type++)
+{
+    var _arr = global.terrains[_type];
+    for (var _i = 0; _i < array_length(_arr); _i++)
+        global.terrain_type_by_tile[_arr[_i]] = _type;
+}
+
+function terrain_get_type(_tile)
+{
+    if (_tile < 0 || _tile >= 1024) return Terrain.NONE;
+    return global.terrain_type_by_tile[_tile];
+}
+
+
+
 function terrain_is_slope(_tile)
 {
     return (_tile == 231 || _tile == 233 ||
@@ -318,16 +334,6 @@ function terrain_is_type(_tilemap, _x, _y, _type)
         return false;
     var _tile = tilemap_get(_tilemap, _x, _y);
     return (terrain_get_type(_tile) == _type);
-}
-
-function terrain_get_type(_tile)
-{
-    for (var _type = Terrain.NONE; _type < Terrain.length; ++_type)
-    {
-        if (array_contains(global.terrains[_type], _tile))
-            return _type;
-    }
-    return Terrain.NONE;
 }
 
 function terrain_get_mask(_tilemap, _x, _y, _type)
