@@ -20,7 +20,7 @@ box_y = 98;
 box_w = 156;
 box_h = 44;
 text_pad = 4;
-portrait_size = 64; // portraits sit just above the box, on the speaker's side
+portrait_size = 40;
 
 font = spr_font_lexou;
 

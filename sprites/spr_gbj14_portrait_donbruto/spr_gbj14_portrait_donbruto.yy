@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_gbj14_portrait_donbruto",
   "bboxMode":0,
-  "bbox_bottom":63,
+  "bbox_bottom":39,
   "bbox_left":0,
-  "bbox_right":63,
+  "bbox_right":40,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"5eedafca-9d86-4aa4-8c86-aad22678fc8e","name":"5eedafca-9d86-4aa4-8c86-aad22678fc8e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"95de1350-8fb1-4e94-8a68-fdc1dd7fd416","name":"95de1350-8fb1-4e94-8a68-fdc1dd7fd416","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":40,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a2858a73-b169-498b-a20e-e0260d29541f","blendMode":0,"displayName":"default","isLocked":false,"name":"a2858a73-b169-498b-a20e-e0260d29541f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"4a298275-9630-478e-b9fe-0f18c014d763","blendMode":0,"displayName":"default","isLocked":false,"name":"4a298275-9630-478e-b9fe-0f18c014d763","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_gbj14_portrait_donbruto",
   "nineSlice":{
@@ -88,8 +88,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5eedafca-9d86-4aa4-8c86-aad22678fc8e","path":"sprites/spr_gbj14_portrait_donbruto/spr_gbj14_portrait_donbruto.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0e1fe3fe-ea85-4941-8afe-be10f7267d2f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"95de1350-8fb1-4e94-8a68-fdc1dd7fd416","path":"sprites/spr_gbj14_portrait_donbruto/spr_gbj14_portrait_donbruto.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7c5e0fcd-4230-445d-9ae8-86d4f81fd636","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":41,
 }

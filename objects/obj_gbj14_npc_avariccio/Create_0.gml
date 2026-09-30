@@ -6,6 +6,7 @@ if (cutscene_id < array_length(global.cutscene_played) &&
 	exit;
 }
 
+image_speed = 0.3;
 face_player = true;
 vanishing = false;
 vanish_fade_time = 0.4;

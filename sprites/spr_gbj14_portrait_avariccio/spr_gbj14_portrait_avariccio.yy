@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_gbj14_portrait_avariccio",
   "bboxMode":0,
-  "bbox_bottom":63,
+  "bbox_bottom":39,
   "bbox_left":0,
-  "bbox_right":63,
+  "bbox_right":40,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"7640d8fd-6dd3-47ca-a71c-3bae0a90abdf","name":"7640d8fd-6dd3-47ca-a71c-3bae0a90abdf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6737c53a-4e21-4a0f-95e7-c43d2b80e5fb","name":"6737c53a-4e21-4a0f-95e7-c43d2b80e5fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":40,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"5f0f2fab-da2d-4d40-980a-97c6bd756b8b","blendMode":0,"displayName":"default","isLocked":false,"name":"5f0f2fab-da2d-4d40-980a-97c6bd756b8b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6251d70e-c01f-479b-8f46-0f9c3878dad4","blendMode":0,"displayName":"default","isLocked":false,"name":"6251d70e-c01f-479b-8f46-0f9c3878dad4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_gbj14_portrait_avariccio",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7640d8fd-6dd3-47ca-a71c-3bae0a90abdf","path":"sprites/spr_gbj14_portrait_avariccio/spr_gbj14_portrait_avariccio.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7237a187-87a7-48b9-8bcc-e86fea8e615f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6737c53a-4e21-4a0f-95e7-c43d2b80e5fb","path":"sprites/spr_gbj14_portrait_avariccio/spr_gbj14_portrait_avariccio.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4a8fe8cf-4ea3-4af3-a2be-2f3d140b4978","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":41,
 }

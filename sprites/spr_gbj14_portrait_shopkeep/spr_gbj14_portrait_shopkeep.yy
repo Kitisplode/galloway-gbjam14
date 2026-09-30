@@ -2,24 +2,24 @@
   "$GMSprite":"v2",
   "%Name":"spr_gbj14_portrait_shopkeep",
   "bboxMode":0,
-  "bbox_bottom":63,
+  "bbox_bottom":39,
   "bbox_left":0,
-  "bbox_right":63,
-  "bbox_top":13,
+  "bbox_right":40,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"e1f9ee93-88d9-42b2-bf2c-8bc50587c35a","name":"e1f9ee93-88d9-42b2-bf2c-8bc50587c35a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5a6b45c1-9ca5-4bac-9998-a997a8a40386","name":"5a6b45c1-9ca5-4bac-9998-a997a8a40386","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":40,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"55fff858-a7cf-44e4-a63b-2adeef62fdac","blendMode":0,"displayName":"default","isLocked":false,"name":"55fff858-a7cf-44e4-a63b-2adeef62fdac","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"52e7181e-def4-42f7-8ad1-aa13624f1fb8","blendMode":0,"displayName":"default","isLocked":false,"name":"52e7181e-def4-42f7-8ad1-aa13624f1fb8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_gbj14_portrait_shopkeep",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e1f9ee93-88d9-42b2-bf2c-8bc50587c35a","path":"sprites/spr_gbj14_portrait_shopkeep/spr_gbj14_portrait_shopkeep.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ad245c41-9037-4349-926d-817505f17ec1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5a6b45c1-9ca5-4bac-9998-a997a8a40386","path":"sprites/spr_gbj14_portrait_shopkeep/spr_gbj14_portrait_shopkeep.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"66f51999-3d60-437d-bb75-845e827c7d6b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":41,
 }

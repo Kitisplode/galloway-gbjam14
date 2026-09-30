@@ -10,32 +10,28 @@ if (speaker >= 0)
 	var _info = scr_character_info(speaker);
 	if (_info != undefined)
 	{
+		// draw portrait
 		var _has_portrait = (_info.portrait != -1 && sprite_exists(_info.portrait));
 		var _ps = portrait_size;
 		var _px = (_info.side == 0) ? box_x : box_x + box_w - _ps;
 		var _py = box_y - _ps - 2;
-
 		if (_has_portrait)
 		{
-			// Backing frame so the portrait reads on any background.
-			draw_set_color(c_black);
-			draw_rectangle(_px - 1, _py - 1, _px + _ps + 1, _py + _ps + 1, false);
-			draw_set_color(c_white);
-			draw_rectangle(_px - 1, _py - 1, _px + _ps, _py + _ps, true);
-			// NOTE: portrait sprites should have their origin at top-left.
 			draw_sprite(_info.portrait, 0, _px, _py);
 		}
 
-		// Name tag next to the portrait
-		var _name_w = string_length(_info.name) * 8 + 4;
+		// draw name next to the portrait
+		var _nw = string_length(_info.name) * 8;
+		var _nh = 8;
 		var _nx;
-		if (!_has_portrait)      _nx = (_info.side == 0) ? box_x : box_x + box_w - _name_w;
-		else if (_info.side == 0) _nx = _px + _ps + 3;
-		else                      _nx = _px - _name_w - 3;
 		var _ny = box_y - 12;
+		if (!_has_portrait)       _nx = (_info.side == 0) ? box_x : box_x + box_w - _nw;
+		else if (_info.side == 0) _nx = _px + _ps + 4;
+		else                      _nx = _px - _nw - 4;
 
-		//scr_draw_rectangle_color_alpha(_nx, _ny, _nx + _name_w, _ny + 11, c_black, 1);
-		draw_bitmap_text_line(font, _nx + 2, _ny + 2, _info.name);
+		draw_set_color(c_black); draw_rectangle(_nx - 2, _ny - 2, _nx + _nw, _ny + _nh, false);
+		draw_set_color(c_white); draw_rectangle(_nx - 2, _ny - 2, _nx + _nw, _ny + _nh, true);
+		draw_bitmap_text_line(font, _nx, _ny, _info.name);
 	}
 }
 
