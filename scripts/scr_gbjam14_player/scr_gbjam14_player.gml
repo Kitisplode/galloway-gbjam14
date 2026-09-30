@@ -219,7 +219,7 @@ function scr_gbj14_player_Use_Item_Lift()
 	{		
 		if (input_check("down"))
 		{
-			carry_id.position[0] = position[0] + cos(degtorad(direction_facing)) * 16;
+			carry_id.position[0] = position[0] + cos(degtorad(direction_facing)) * TILE;
 			_scr_gbj14_player_Use_Item_Throw(r3_zero());
 		}
 		else
@@ -238,7 +238,7 @@ function scr_gbj14_player_Use_Item_Ladder()
 	for (var _i = 0; _i < _max_ladder_length; _i++)
 	{
 		var _ladder = instance_create_depth(
-			position[0], floor(position[1] / 16) * 16 - _i * 16,
+			position[0], floor(position[1] / TILE) * TILE - _i * TILE,
 			depth + 1, obj_block_ladder_player);
 		if (instance_exists(_ladder))
 		{
@@ -250,7 +250,10 @@ function scr_gbj14_player_Use_Item_Ladder()
 				_one_way_plat = place_meeting(position[0],position[1], obj_block_oneway_up);
 				if (_i == _max_ladder_length - 1)
 				{
-					instance_create_depth(position[0] - 8, position[1]-16, depth, obj_block_oneway_up);
+					instance_create_depth(
+						position[0] - TILE/2,
+						position[1] - TILE,
+						depth, obj_block_oneway_up);
 				}
 			}
 			if (_valid)
@@ -328,10 +331,10 @@ function scr_gbj14_player_Use_Item_Sword()
 	var _top    = position[1] - 24;
 	var _bottom = position[1];
 	var _corners = {
-		_l: floor(_left   / 16),
-		_r: floor(_right  / 16) + 1,
-		_t: floor(_top    / 16),
-		_b: floor(_bottom / 16) + 1
+		_l: floor(_left   / TILE),
+		_r: floor(_right  / TILE) + 1,
+		_t: floor(_top    / TILE),
+		_b: floor(_bottom / TILE) + 1
 	};
 	_scr_gbj14_Destroy_Tilemap_Area(_corners, "tilemap_break");
 	
@@ -341,8 +344,8 @@ function scr_gbj14_player_Use_Item_Shovel()
 {
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	var _pos = scr_gbj14_player_Cursor_Tool();
-	var _x = floor(_pos[0]/16);
-	var _y = floor(_pos[1]/16);
+	var _x = floor(_pos[0] / TILE);
+	var _y = floor(_pos[1] / TILE);
 	var _dug = false;
 	if (_scr_gbj14_player_Use_Item_Dig(_x,_y, "tilemap_break"))	_dug = _dug;
 	if (_scr_gbj14_player_Use_Item_Dig(_x,_y, "tilemap_earth"))	_dug = true;
@@ -352,8 +355,8 @@ function scr_gbj14_player_Use_Item_Pick()
 {
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	var _pos = scr_gbj14_player_Cursor_Tool();
-	var _x = floor(_pos[0]/16);
-	var _y = floor(_pos[1]/16);
+	var _x = floor(_pos[0] / TILE);
+	var _y = floor(_pos[1] / TILE);
 	var _dug = false;
 	if (_scr_gbj14_player_Use_Item_Dig(_x,_y, "tilemap_break"))	_dug = _dug;
 	if (_scr_gbj14_player_Use_Item_Dig(_x,_y, "tilemap_stone"))	_dug = true;
@@ -391,8 +394,8 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _au
 		if (_autotile)
 			terrain_update_region(_tilemap, _x, _y);
 		with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
-		var _cx = _x * 16 + 8;
-		var _cy = _y * 16 + 8;
+		var _cx = _x * TILE + TILE/2;
+		var _cy = _y * TILE + TILE/2;
 		with (obj_gbj14_item_gold)
 		{
 		    if (settled && point_distance(x, y, _cx, _cy) <= 40)
@@ -408,8 +411,8 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _au
 		if (_amount > 0)
 		{
 			_scr_gbj14_spawn_gold(_amount,
-				_x * 16 + 8,
-				_y * 16 + 12);
+				_x * TILE + TILE/2,
+				_y * TILE + TILE-TILE/4);
 		}
 		return true;
 	}
@@ -444,10 +447,10 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 			terrain_update_area(_tilemap, _corners._l, _corners._t, _corners._r, _corners._b);
 			// spawn gold depending on terrain
 			var _area = {
-				_l: _corners._l * 16,
-				_r: _corners._r * 16,
-				_t: _corners._t * 16,
-				_b: _corners._b * 16,
+				_l: _corners._l * TILE,
+				_r: _corners._r * TILE,
+				_t: _corners._t * TILE,
+				_b: _corners._b * TILE,
 			};
 			var _x = (_area._l + _area._r) / 2;
 			var _y = (_area._t + _area._b) / 2;
@@ -504,12 +507,14 @@ function _scr_gbj14_Spawn_Crumbs(_x,_y, _amount = 4)
 	for (var _j = 0; _j < _amount; _j++)
 		{
 			var _angle = degtorad(45 + _j * 90);
-			var _pos = r2(_x * 16 + 8 + cos(_angle) * 8, _y * 16 + 8 -sin(_angle) * 8);
+			var _pos = r2(
+				_x * TILE + TILE/2 + cos(_angle) * 8,
+				_y * TILE + TILE/2 - sin(_angle) * 8);
 			var _crumb = instance_create_depth(_pos[0],_pos[1], OBJECT_DEPTHS.EFFECT, obj_gbj14_block_crumb);
 			if (instance_exists(_crumb))
 			{
-				_crumb.velocity[0] = (_pos[0] - _x * 16 - 8) * random_range(1,5) * 10;
-				_crumb.velocity[1] = (_pos[1] - _y * 16 - 8) * random_range(1,5) * 10;
+				_crumb.velocity[0] = (_pos[0] - _x * TILE - TILE/2) * random_range(1,5) * 10;
+				_crumb.velocity[1] = (_pos[1] - _y * TILE - TILE/2) * random_range(1,5) * 10;
 			}
 		}
 }
@@ -518,8 +523,8 @@ function _scr_gbj14_Spawn_Crumbs(_x,_y, _amount = 4)
 
 function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
 {
-	var _l = floor(_x1 / 16), _r = ceil(_x2 / 16);
-	var _t = floor(_y1 / 16), _b = ceil(_y2 / 16);
+	var _l = floor(_x1 / TILE), _r = ceil(_x2 / TILE);
+	var _t = floor(_y1 / TILE), _b = ceil(_y2 / TILE);
 	var _cleared = 0;
 	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
 	{

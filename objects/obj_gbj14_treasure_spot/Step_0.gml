@@ -4,12 +4,15 @@ if (!paused)
 {
 	if (!ready)
 	{
-		// A treasure set down anywhere over this spot's area counts. The area
-		// is the spot's own (possibly scaled) sprite box plus a small margin;
-		// a carried treasure has no collision mask, so it only registers once
-		// it has been dropped.
-		var _treasure = collision_rectangle(bbox_left - 8, bbox_top - 16, bbox_right + 8, bbox_bottom + 8,
-		                                    obj_gbj14_item_treasure, false, true);
+		// A treasure set down anywhere over this spot's area counts.
+		// The area is the spot's own (possibly scaled) sprite box plus a small margin;
+		// a carried treasure has no collision mask, so it only registers once it has been dropped.
+		var _treasure = collision_rectangle(
+			bbox_left   - TILE/2,
+			bbox_top    - TILE,
+			bbox_right  + TILE/2,
+			bbox_bottom + TILE/2,
+		    obj_gbj14_item_treasure, false, true);
 		if (_treasure != noone)
 		{
 			var _new_treasure = instance_create_depth(x, bbox_top + 8, OBJECT_DEPTHS.PLAYER + 10, par_animation);

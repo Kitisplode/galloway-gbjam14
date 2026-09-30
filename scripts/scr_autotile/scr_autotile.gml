@@ -327,8 +327,8 @@ function terrain_is_slope(_tile)
 
 function terrain_is_type(_tilemap, _x, _y, _type)
 {
-    var _terrain_w = room_width  / 16;
-    var _terrain_h = room_height / 16;
+    var _terrain_w = room_width  / TILE;
+    var _terrain_h = room_height / TILE;
     if (_x < 0 || _x >= _terrain_w ||
         _y < 0 || _y >= _terrain_h)
         return false;
@@ -397,8 +397,8 @@ function terrain_get_tile(_tilemap, _x, _y)
 
 function terrain_update_tile(_tilemap, _x, _y)
 {
-    var _terrain_w = room_width  / 16;
-    var _terrain_h = room_height / 16;
+    var _terrain_w = room_width  / TILE;
+    var _terrain_h = room_height / TILE;
     if (_x < 0 || _x >= _terrain_w ||
         _y < 0 || _y >= _terrain_h)
         return;
@@ -432,7 +432,7 @@ function terrain_update_region(_tilemap, _x, _y)
 
 
 /// function to fix things getting stuck when terrain changes under them
-function scr_Unstick_From_Solids(_max_push = 16)
+function scr_Unstick_From_Solids(_max_push = TILE)
 {
     if (!scr_Check_For_Solids(position, false))
 		return true;

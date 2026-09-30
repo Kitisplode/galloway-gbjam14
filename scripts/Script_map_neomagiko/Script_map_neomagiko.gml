@@ -39,10 +39,12 @@ function scr_nm_map_setup()
 	}
 	if (!global.enemy_done[9999])
 	{
-		var _temp_enemy_id = instance_create_depth(irandom_range(16, room_width - 16),irandom_range(16, room_height * 0.75),
-													OBJECT_DEPTHS.ENEMY - 1, obj_nm_map_enemy);
-			_temp_enemy_id.sprite_index = spr_effect_sparkle_small;
-			_temp_enemy_id.enemy_type = 9999;
-			_temp_enemy_id.image_alpha = 0.4;
+		var _temp_enemy_id = instance_create_depth(
+			irandom_range(TILE, room_width - TILE),
+			irandom_range(TILE, room_height * 0.75),
+			OBJECT_DEPTHS.ENEMY - 1, obj_nm_map_enemy);
+		_temp_enemy_id.sprite_index = spr_effect_sparkle_small;
+		_temp_enemy_id.enemy_type = 9999;
+		_temp_enemy_id.image_alpha = 0.4;
 	}
 }

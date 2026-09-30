@@ -11,6 +11,8 @@ if (ds_list_size(list_items) > 0 && can_act)
 	if (script_exists(_script))
 	{
 		var _pos = script_execute(_script);
-		draw_sprite(spr_gbj14_player_cursor,0, floor(_pos[0] / 16) * 16,floor(_pos[1] / 16) * 16);
+		draw_sprite(spr_gbj14_player_cursor,0,
+			floor(_pos[0] / TILE) * TILE,
+			floor(_pos[1] / TILE) * TILE);
 	}
 }

@@ -241,8 +241,8 @@ function scr_khep_player_Behavior_In_Water()
 			{
 				if (instance_exists(id_holding))
 				{
-					var _x = position[0] + cos(degtorad(direction_aiming)) * 16;
-					var _y = position[1] - sin(degtorad(direction_aiming)) * 16;
+					var _x = position[0] + cos(degtorad(direction_aiming)) * TILE;
+					var _y = position[1] - sin(degtorad(direction_aiming)) * TILE;
 					var _id_new_ball = instance_create_depth(position[0],position[1], id_holding.depth, obj_khep_ball);
 					
 					_id_new_ball.movement_enabled = true;

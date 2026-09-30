@@ -32,10 +32,10 @@ function _scr_tilemap_find_corner_cells(_position, _tilemap)
 	var _t_cell_y = _position[1] + bbox_top    - y + 1;
 	var _b_cell_y = _position[1] + bbox_bottom - y - 1;
 	return {
-		_l: floor((_l_cell_x - _x) / 16),
-		_r:  ceil((_r_cell_x - _x) / 16),
-		_t: floor((_t_cell_y - _y) / 16),
-		_b:  ceil((_b_cell_y - _y) / 16),
+		_l: floor((_l_cell_x - _x) / TILE),
+		_r:  ceil((_r_cell_x - _x) / TILE),
+		_t: floor((_t_cell_y - _y) / TILE),
+		_b:  ceil((_b_cell_y - _y) / TILE),
 	};
 }
 
@@ -65,9 +65,10 @@ function scr_Place_Meeting_Tilemap(_position, _other, _precise_collision=true)
 				var _tile = tilemap_get(_other.tilemap, _x,_y);
 				if (_tile <= 0) continue;
 				_other.mask_index = spr_block_16;
-				if (_tile == 231 || _tile == 599 || _tile == 645) _other.mask_index = spr_block_slope_135;
+				     if (_tile == 231 || _tile == 599 || _tile == 645) _other.mask_index = spr_block_slope_135;
 				else if (_tile == 233 || _tile == 602 || _tile == 650) _other.mask_index = spr_block_slope_045;
-				_other.x = _x * 16; _other.y = _y * 16;
+				_other.x = _x * TILE;
+				_other.y = _y * TILE;
 				if (place_meeting(_position[0], _position[1], _other))
 				{
 					_result = true;
