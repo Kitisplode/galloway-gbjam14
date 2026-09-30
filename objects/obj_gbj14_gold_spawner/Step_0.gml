@@ -9,17 +9,22 @@ if (!paused)
 		var _value = 1;
 		if (spawn_count >= 2) { _index = obj_gbj14_item_gold_large; _value = 2; }
 		if (spawn_count >= 5) { _index = obj_gbj14_item_gold_coin;  _value = 5; }
-		var _gold = instance_create_depth(position[0],position[1], depth, _index);
+		var _x = position[0] + random_range(-spawn_area_size/2, +spawn_area_size/2);
+		var _y = position[1] + random_range(-spawn_area_size/2, +spawn_area_size/2);
+		var _gold = instance_create_depth(_x,_y, depth, _index);
 		if (instance_exists(_gold))
 		{
 			_gold.velocity[0] = random_range(-100, 100);
 			_gold.velocity[1] = -random_range(150, 200);
 			_gold.movement_enabled = true;
 			_gold.apply_gravity_force = true;
+			with (_gold) { scr_Unstick_From_Solids(); }
+			
 		}
 		spawn_timer = spawn_time;
 		spawn_count -= _value;
-		if (spawn_count <= 0) instance_destroy();
+		if (spawn_count <= 0)
+			instance_destroy();
 	}
 }
 

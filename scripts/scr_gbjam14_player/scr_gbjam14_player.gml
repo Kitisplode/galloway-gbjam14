@@ -404,27 +404,12 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _au
 		}
 		_scr_gbj14_Spawn_Crumbs(_x,_y, _crumbs);
 		// spawn gold depending on terrain
-		if (_layer_name == "tilemap_break")
+		var _amount = _scr_gbj14_get_gold_amount(_layer_name);
+		if (_amount > 0)
 		{
-			_scr_gbj14_spawn_gold(random_range(5,10),
+			_scr_gbj14_spawn_gold(_amount,
 				_x * 16 + 8,
-				_y * 16 + 12,
-				OBJECT_DEPTHS.PLAYER + 10);
-		}
-		else if (_layer_name == "tilemap_earth")
-		{
-			if (random_range(0,100) < 50)
-				_scr_gbj14_spawn_gold(random_range(0,3),
-					_x * 16 + 8,
-					_y * 16 + 12,
-					OBJECT_DEPTHS.PLAYER + 10);
-		}
-		else if (_layer_name == "tilemap_stone")
-		{
-			_scr_gbj14_spawn_gold(random_range(1,5),
-				_x * 16 + 8,
-				_y * 16 + 12,
-				OBJECT_DEPTHS.PLAYER + 10);
+				_y * 16 + 12);
 		}
 		return true;
 	}
@@ -445,7 +430,7 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 		{
 			for (var _y = _corners._t; _y < _corners._b; _y++)
 			{
-				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name, false, 1))
+				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, "", false, 1))
 				{
 					_total++;
 				}
@@ -457,22 +442,64 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 			if (audio_exists(_sound))
 				play_sound(_sound, 1, 0, 1, 1, 0.5);
 			terrain_update_area(_tilemap, _corners._l, _corners._t, _corners._r, _corners._b);
+			// spawn gold depending on terrain
+			var _area = {
+				_l: _corners._l * 16,
+				_r: _corners._r * 16,
+				_t: _corners._t * 16,
+				_b: _corners._b * 16,
+			};
+			var _x = (_area._l + _area._r) / 2;
+			var _y = (_area._t + _area._b) / 2;
+			var _size = abs(_area._b - _area._t);
+			if (_size < abs(_area._r - _area._l))
+				_size = abs(_area._r - _area._l);
+			var _amount = _scr_gbj14_get_gold_amount(_layer_name, _total);
+			if (_amount > 0)
+			{
+				_scr_gbj14_spawn_gold(_amount, _x,_y, _size, 0.0);
+			}
 		}
 		break;
 	}
 }
 
-function _scr_gbj14_spawn_gold(_count, _x,_y, _depth)
+function _scr_gbj14_get_gold_amount(_layer_name, _blockcount = 1)
 {
+	var _amount = 0;
+	for (var _i = 0; _i < _blockcount; _i++)
+	{
+		if (_layer_name == "tilemap_break")
+		{
+			_amount += random_range(5,10);
+		}
+		else if (_layer_name == "tilemap_earth")
+		{
+			if (random_range(0,100) < 50)
+				_amount += random_range(0,3);
+		}
+		else if (_layer_name == "tilemap_stone")
+		{
+			_amount += random_range(1,5);
+		}
+	}
+	return _amount;
+}
+
+function _scr_gbj14_spawn_gold(_count, _x,_y, _areasize = 0, _speed = 0.1)
+{
+	var _depth = OBJECT_DEPTHS.PLAYER + 10;
 	var _gold_spawner = instance_create_depth(_x,_y, _depth, obj_gbj14_gold_spawner);
 	if (instance_exists(_gold_spawner))
 	{
 		_gold_spawner.spawn_count = _count;
+		_gold_spawner.spawn_time = _speed;
+		_gold_spawner.spawn_area_size = _areasize;
 	}
 	return _gold_spawner;
 }
 
-function _scr_gbj14_Spawn_Crumbs(_x,_y, _amount)
+function _scr_gbj14_Spawn_Crumbs(_x,_y, _amount = 4)
 {
 	for (var _j = 0; _j < _amount; _j++)
 		{
@@ -519,7 +546,7 @@ function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
 	return _cleared;
 }
 
-// Ending sequence: the player loses control, the golden transformation anim plays once
+// Ending sequence: the player loses control and the golden transformation anim plays once
 global.gbj14_ending = false;
 
 function scr_gbj14_ending_start()
@@ -527,7 +554,6 @@ function scr_gbj14_ending_start()
 	global.gbj14_ending = true;
 	with (obj_gbj14_player)
 	{
-		// Drop anything being carried so the animation reads cleanly.
 		if (carry_id != id)
 		{
 			_scr_gbj14_player_Use_Item_Throw(r3_zero());
