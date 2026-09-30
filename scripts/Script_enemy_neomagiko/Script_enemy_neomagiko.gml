@@ -150,8 +150,13 @@ function scr_spawn_projectiles_random_spread(_projectile_count, _projectile_dist
 }
 
 // Spawns an evenly spaced fan of the specified object around the caller's position, each pointing outwards.
-function scr_spawn_projectiles_fan(_projectile_count, _projectile_distance, _projectile_direction,
-									_projectile_index, _projectile_fan_range, _depth = -5, _depth_absolute=false)
+function scr_spawn_projectiles_fan(
+	_projectile_count,
+	_projectile_distance,
+	_projectile_direction,
+	_projectile_index,
+	_projectile_fan_range,
+	_depth = -5, _depth_absolute=false, _sprite = noone)
 {
 	var temp_projectile_count = _projectile_count;
 	if (_projectile_fan_range < 360 && _projectile_count > 1)
@@ -175,7 +180,9 @@ function scr_spawn_projectiles_fan(_projectile_count, _projectile_distance, _pro
 		temp_ID.velocity[1] = temp_vely * temp_ID.total_max_speed;
 		temp_ID.damage_color = damage_color;
 		temp_ID.creator_ID = id;
-	}								
+		if (_sprite != noone)
+			temp_ID.sprite_index = _sprite;
+	}
 }
 
 // Spawns an evenly spaced ring of the specified object around the caller's position, each pointing outwards.

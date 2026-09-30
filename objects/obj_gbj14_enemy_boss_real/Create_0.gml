@@ -21,6 +21,7 @@ cycle_y_speed = 5;
 shot_time = -1;
 shot_timer = shot_time;
 shot_count = 0;
+shot_sprite = spr_gbj14_shot_1;
 
 is_boss = true;
 hp_max = 5;
