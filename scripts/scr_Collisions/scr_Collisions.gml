@@ -65,8 +65,8 @@ function scr_Place_Meeting_Tilemap(_position, _other, _precise_collision=true)
 				var _tile = tilemap_get(_other.tilemap, _x,_y);
 				if (_tile <= 0) continue;
 				_other.mask_index = spr_block_16;
-				     if (_tile == 231 || _tile == 599 || _tile == 645) _other.mask_index = spr_block_slope_135;
-				else if (_tile == 233 || _tile == 602 || _tile == 650) _other.mask_index = spr_block_slope_045;
+				     if (_tile == 231 || _tile == 551 || _tile == 597) _other.mask_index = spr_block_slope_135;
+				else if (_tile == 233 || _tile == 554 || _tile == 602) _other.mask_index = spr_block_slope_045;
 				_other.x = _x * TILE;
 				_other.y = _y * TILE;
 				if (place_meeting(_position[0], _position[1], _other))

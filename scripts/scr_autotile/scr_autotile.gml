@@ -320,8 +320,8 @@ function terrain_get_type(_tile)
 function terrain_is_slope(_tile)
 {
     return (_tile == 231 || _tile == 233 ||
-            _tile == 599 || _tile == 602 ||
-            _tile == 645 || _tile == 650);
+            _tile == 551 || _tile == 554 ||
+            _tile == 597 || _tile == 602);
 }
 
 
