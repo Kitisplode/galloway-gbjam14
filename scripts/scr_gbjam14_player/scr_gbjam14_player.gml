@@ -381,7 +381,7 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 	return false;
 }
 
-function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _autotile = true)
+function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _autotile = true, _crumbs = 4)
 {
 	if (_tilemap <= -1) return false;
 	var _tile = tilemap_get(_tilemap, _x,_y);
@@ -402,7 +402,7 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _au
 		        apply_gravity_force = true;
 		    }
 		}
-		_scr_gbj14_Spawn_Crumbs(_x,_y);
+		_scr_gbj14_Spawn_Crumbs(_x,_y, _crumbs);
 		// spawn gold depending on terrain
 		if (_layer_name == "tilemap_break")
 		{
@@ -445,7 +445,7 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 		{
 			for (var _y = _corners._t; _y < _corners._b; _y++)
 			{
-				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name, false))
+				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name, false, 1))
 				{
 					_total++;
 				}
@@ -472,9 +472,9 @@ function _scr_gbj14_spawn_gold(_count, _x,_y, _depth)
 	return _gold_spawner;
 }
 
-function _scr_gbj14_Spawn_Crumbs(_x,_y)
+function _scr_gbj14_Spawn_Crumbs(_x,_y, _amount)
 {
-	for (var _j = 0; _j < 4; _j++)
+	for (var _j = 0; _j < _amount; _j++)
 		{
 			var _angle = degtorad(45 + _j * 90);
 			var _pos = r2(_x * 16 + 8 + cos(_angle) * 8, _y * 16 + 8 -sin(_angle) * 8);
