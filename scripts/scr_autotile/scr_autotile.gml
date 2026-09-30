@@ -411,14 +411,21 @@ function terrain_update_tile(_tilemap, _x, _y)
         tilemap_set(_tilemap, _tile, _x, _y);
 }
 
+function terrain_update_area(_tilemap, _x1, _y1, _x2, _y2)
+{
+    for (var _iy = _y1; _iy <= _y2; _iy++)
+    for (var _ix = _x1; _ix <= _x2; _ix++)
+    {
+        terrain_update_tile(_tilemap, _ix, _iy);
+    }
+}
+
 function terrain_update_region(_tilemap, _x, _y)
 {
-    for (var yy = _y - 1; yy <= _y + 1; yy++)
+    for (var _iy = _y - 1; _iy <= _y + 1; _iy++)
+    for (var _ix = _x - 1; _ix <= _x + 1; _ix++)
     {
-        for (var xx = _x - 1; xx <= _x + 1; xx++)
-        {
-            terrain_update_tile(_tilemap, xx, yy);
-        }
+        terrain_update_tile(_tilemap, _ix, _iy);
     }
 }
 

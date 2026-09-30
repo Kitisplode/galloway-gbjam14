@@ -381,14 +381,15 @@ function _scr_gbj14_player_Use_Item_Dig(_x,_y, _layer_name)
 	return false;
 }
 
-function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
+function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "", _autotile = true)
 {
 	if (_tilemap <= -1) return false;
 	var _tile = tilemap_get(_tilemap, _x,_y);
 	if (_tile > 0)
 	{
 		tilemap_set(_tilemap, 0, _x,_y);
-		terrain_update_region(_tilemap, _x, _y);
+		if (_autotile)
+			terrain_update_region(_tilemap, _x, _y);
 		with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
 		var _cx = _x * 16 + 8;
 		var _cy = _y * 16 + 8;
@@ -430,36 +431,6 @@ function _scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name = "")
 	return false;
 }
 
-function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
-{
-	var _l = floor(_x1 / 16), _r = ceil(_x2 / 16);
-	var _t = floor(_y1 / 16), _b = ceil(_y2 / 16);
-	var _cleared = 0;
-	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
-	{
-		var _id = ds_list_find_value(global.list_solids, _i);
-		if (!instance_exists(_id)) continue;
-		if (_id.object_index != obj_block_tileset) continue;
-		var _tilemap = _id.tilemap;
-		if (_tilemap <= -1) continue;
-		for (var _x = _l; _x < _r; _x++)
-		{
-			for (var _y = _t; _y < _b; _y++)
-			{
-				if (tilemap_get(_tilemap, _x,_y) > 0)
-				{
-					tilemap_set(_tilemap, 0, _x,_y);
-					terrain_update_region(_tilemap, _x,_y);
-					if (irandom(3) == 0) _scr_gbj14_Spawn_Crumbs(_x,_y);
-					_cleared++;
-				}
-			}
-		}
-	}
-	with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
-	return _cleared;
-}
-
 function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 {
 	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
@@ -474,7 +445,7 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 		{
 			for (var _y = _corners._t; _y < _corners._b; _y++)
 			{
-				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name))
+				if (_scr_gbj14_Destroy_Tilemap_Block(_tilemap, _x,_y, _layer_name, false))
 				{
 					_total++;
 				}
@@ -485,6 +456,7 @@ function _scr_gbj14_Destroy_Tilemap_Area(_corners, _layer_name)
 			var _sound = asset_get_index("snd_gbj14_rock_break_0" + string(round(random_range(1,5))));
 			if (audio_exists(_sound))
 				play_sound(_sound, 1, 0, 1, 1, 0.5);
+			terrain_update_area(_tilemap, _corners._l, _corners._t, _corners._r, _corners._b);
 		}
 		break;
 	}
@@ -515,6 +487,37 @@ function _scr_gbj14_Spawn_Crumbs(_x,_y)
 		}
 }
 
+
+
+function _scr_gbj14_Open_Gate(_x1,_y1, _x2,_y2)
+{
+	var _l = floor(_x1 / 16), _r = ceil(_x2 / 16);
+	var _t = floor(_y1 / 16), _b = ceil(_y2 / 16);
+	var _cleared = 0;
+	for (var _i = 0; _i < ds_list_size(global.list_solids); _i++)
+	{
+		var _id = ds_list_find_value(global.list_solids, _i);
+		if (!instance_exists(_id)) continue;
+		if (_id.object_index != obj_block_tileset) continue;
+		var _tilemap = _id.tilemap;
+		if (_tilemap <= -1) continue;
+		for (var _x = _l; _x < _r; _x++)
+		{
+			for (var _y = _t; _y < _b; _y++)
+			{
+				if (tilemap_get(_tilemap, _x,_y) > 0)
+				{
+					tilemap_set(_tilemap, 0, _x,_y);
+					terrain_update_region(_tilemap, _x,_y);
+					if (irandom(3) == 0) _scr_gbj14_Spawn_Crumbs(_x,_y);
+					_cleared++;
+				}
+			}
+		}
+	}
+	with (obj_gbj14_player) { scr_Unstick_From_Solids(); }
+	return _cleared;
+}
 
 // Ending sequence: the player loses control, the golden transformation anim plays once
 global.gbj14_ending = false;
