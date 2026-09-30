@@ -413,8 +413,8 @@ function terrain_update_tile(_tilemap, _x, _y)
 
 function terrain_update_area(_tilemap, _x1, _y1, _x2, _y2)
 {
-    for (var _iy = _y1; _iy <= _y2; _iy++)
-    for (var _ix = _x1; _ix <= _x2; _ix++)
+    for (var _iy = _y1 - 1; _iy <= _y2 + 1; _iy++)
+    for (var _ix = _x1 - 1; _ix <= _x2 + 1; _ix++)
     {
         terrain_update_tile(_tilemap, _ix, _iy);
     }
