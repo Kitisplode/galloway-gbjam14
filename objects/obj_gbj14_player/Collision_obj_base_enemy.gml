@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // No damage during the ending sequence.
-if (action == 3) exit;
+if (action == Action.ENDING) exit;
 
 var _invuln_timer_previous = invuln_timer;
 

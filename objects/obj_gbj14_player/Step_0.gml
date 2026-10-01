@@ -43,12 +43,12 @@ if (!paused)
 		r2_clone(position, last_safe_position);
 	}
 	
-	if (action == -1)
+	if (action == Action.CLIMB)
 	{
 		if (!place_meeting(position[0],position[1], obj_block_ladder) &&
 			!place_meeting(position[0],position[1], obj_block_ladder_player))
 		{
-			action = 0;
+			action = Action.NONE;
 		}
 	}
 	
@@ -65,7 +65,7 @@ if (!paused)
 	else
 	{
 		// Standard state
-		if (action == 0)
+		if (action == Action.NONE)
 		{
 			can_act = true;
 			can_move = true;
@@ -74,31 +74,31 @@ if (!paused)
 			after_effect_active = false;
 		}
 		// On a ladder
-		if (action == -1)
+		if (action == Action.CLIMB)
 		{
 			can_act = false;
 			apply_gravity_force = false;
 		}
 		// Lifting an item
-		if (action == 1)
+		if (action == Action.LIFT)
 		{
 			can_move = false;
 			can_act = false;
 		}
 		// Throwing an item
-		if (action == 4)
+		if (action == Action.THROW)
 		{
 			can_move = true;
 			can_act = false;
 		}
 		// Attacking with the sword
-		if (action == 2)
+		if (action == Action.ATTACK)
 		{
 			can_move = false;
 			can_act = false;
 		}
 		// Playing the ending animation.
-		if (action == 3)
+		if (action == Action.ENDING)
 		{
 			can_move = false;
 			can_act = false;
@@ -116,7 +116,7 @@ if (!paused)
 	}
 	
 	// Clean up the sword hitbox once the swing ends or is interrupted (e.g. by getting hurt).
-	if (action != 2 && attack_hitbox_id != noone)
+	if (action != Action.ATTACK && attack_hitbox_id != noone)
 	{
 		if (instance_exists(attack_hitbox_id)) instance_destroy(attack_hitbox_id);
 		attack_hitbox_id = noone;
@@ -143,7 +143,7 @@ if (!paused)
 	// Use the input to move.
 	if (direction_input > -1 && can_move)
 	{
-		if (action > -1)
+		if (action != Action.CLIMB)
 		{
 			var _accel = accel_run;
 		
@@ -176,18 +176,18 @@ if (!paused)
 	if (is_on_ground && !_horizontal_input)
 	{
 		var _temp_friction = friction_ground;
-		if (action == 1) _temp_friction = 1;
+		if (action == Action.LIFT) _temp_friction = 1;
 		if (hurt_timer > 0) _temp_friction = friction_hurt;
 		velocity[0] *= _temp_friction;
 	}
-	if (action <= -1)
+	if (action == Action.CLIMB)
 	{
 		velocity[1] *= friction_ground;
 	}
 	
 	if (can_move)
 	{
-		if (action > -1)
+		if (action != Action.CLIMB)
 		{
 			// Fall through one way platforms when tapping down.
 			if (input_check_pressed("down") && is_on_ground)
@@ -216,14 +216,14 @@ if (!paused)
 			// Jump!
 			if (jump_buffer_timer > 0)
 			{
-				action = 0;
+				action = Action.NONE;
 				play_sound(snd_gbj14_player_jump, 1, 0, 1, 1, 0);
 				velocity[1] = -jump_force * 0.97;
 				jump_buffer_timer = 0;
 			}
 			else if (input_check_pressed("left") || input_check_pressed("right"))
 			{
-				action = 0;
+				action = Action.NONE;
 			}
 		}
 	}
@@ -254,7 +254,7 @@ if (!paused)
 		}
 		
 		// If the player is colliding with a ladder and they press up or down, grab onto the ladder.
-		if (action != -1 && carry_id == id)
+		if (action != Action.CLIMB && carry_id == id)
 		{
 			var _ladder;
 				_ladder = instance_place(position[0],position[1], obj_block_ladder_player);
@@ -266,7 +266,7 @@ if (!paused)
 				x = position[0];
 				velocity[0] = 0;
 				velocity[1] = 0;
-				action = -1;
+				action = Action.CLIMB;
 			}
 		}
 		

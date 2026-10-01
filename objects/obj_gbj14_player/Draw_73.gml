@@ -19,14 +19,14 @@ if (hurt_timer > 0)
 }
 else
 {
-	if (action == -1)
+	if (action == Action.CLIMB)
 	{
 		image_xscale = 1;
 		scr_change_sprite(spr_gbj14_player_climb);
 		if (abs(velocity[1]) > 10) anim_speed = 0.15;
 		else anim_speed = 0;
 	}
-	else if (action == 0)
+	else if (action == Action.NONE)
 	{
 		if (carry_id == id)
 		{
@@ -82,27 +82,27 @@ else
 			}
 		}
 	}
-	else if (action == 1)
+	else if (action == Action.LIFT)
 	{
 		scr_change_sprite(spr_gbj14_player_lift);
 		anim_speed = 0.25;
 		if (anim_looped != 0)
 		{
-			action = 0;
+			action = Action.NONE;
 			scr_change_sprite(spr_gbj14_player_lift_idle);
 		}
 	}
-	else if (action == 2)
+	else if (action == Action.ATTACK)
 	{
 		scr_change_sprite(spr_gbj14_player_sword);
 		anim_speed = 0.6;
 		if (anim_looped != 0)
 		{
-			action = 0;
+			action = Action.NONE;
 			scr_change_sprite(spr_gbj14_player_idle);
 		}
 	}
-	else if (action == 3)
+	else if (action == Action.ENDING)
 	{
 		scr_change_sprite(spr_gbj14_player_ending);
 		if (anim_looped != 0)
@@ -113,13 +113,13 @@ else
 			ending_anim_done = true;
 		}
 	}
-	else if (action == 4)
+	else if (action == Action.THROW)
 	{
 		scr_change_sprite(spr_gbj14_player_throw);
 		anim_speed = 0.1;
 		if (anim_looped != 0)
 		{
-			action = 0;
+			action = Action.NONE;
 			scr_change_sprite(spr_gbj14_player_idle);
 		}
 	}

@@ -25,7 +25,7 @@ direction_facing = 0;
 direction_aiming = 0;
 can_move = true;
 can_act = true;
-action = 0;
+action = Action.NONE;
 run_speed = 105;
 max_fall_speed = run_speed * 2;
 jump_force = 280;
@@ -79,7 +79,7 @@ scr_gbj14_player_Add_Item(self, {
 damage = 1;
 attack_hitbox_id = noone;
 
-// Ending sequence state (action == 3).
+// Ending sequence state (action == Action.ENDING).
 ending_wait_time = 2;
 ending_timer = ending_wait_time;
 ending_anim_done = false;

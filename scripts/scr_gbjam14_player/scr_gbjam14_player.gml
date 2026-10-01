@@ -1,9 +1,19 @@
 // Call these functions only from within obj_gbj14_player
 
+enum Action
+{
+	NONE = 0,
+	LIFT,
+	THROW,
+	CLIMB,
+	ATTACK,
+	ENDING,
+}
+
 function scr_gbj14_player_TakeDamage(_other)
 {
 	var _dir = point_direction(_other.position[0],_other.position[1], position[0],position[1]);
-	action = 0;
+	action = Action.NONE;
 	hurt_timer = hurt_time;
 	velocity[0] = cos(degtorad(_dir)) * run_speed;
 	velocity[1] = -abs(sin(degtorad(_dir)) * run_speed);
@@ -113,7 +123,7 @@ function scr_gbj14_player_Use_Item_Box()
 				_block.is_thrown = false;
 				_block.axis_max_speed[0] = 120;
 				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
-				action = 1;
+				action = Action.LIFT;
 				velocity[0] = 0;
 				velocity[1] = 0;
 				scr_change_sprite(spr_gbj14_player_lift);
@@ -208,7 +218,7 @@ function scr_gbj14_player_Use_Item_Lift()
 				_block.throw_stun_timer = 0;
 			}
 			play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
-			action = 1;
+			action = Action.LIFT;
 			velocity[0] = 0;
 			velocity[1] = 0;
 			scr_change_sprite(spr_gbj14_player_lift);
@@ -286,7 +296,7 @@ function scr_gbj14_player_Use_Item_Bomb()
 				_bomb.is_thrown = false;
 				_bomb.axis_max_speed[0] = 120;
 				play_sound(snd_gbj14_player_lift, 1, false, 1, 1, 0);
-				action = 1;
+				action = Action.LIFT;
 				velocity[0] = 0;
 				velocity[1] = 0;
 				scr_change_sprite(spr_gbj14_player_lift);
@@ -299,10 +309,10 @@ function scr_gbj14_player_Use_Item_Bomb()
 }
 function scr_gbj14_player_Use_Item_Sword()
 {
-	if (action != 0) return false;
+	if (action != Action.NONE) return false;
 	
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
-	action = 2;
+	action = Action.ATTACK;
 	scr_change_sprite(spr_gbj14_player_sword);
 	
 	var _dir = cos(degtorad(direction_facing));
@@ -570,7 +580,7 @@ function scr_gbj14_ending_start()
 		}
 		velocity[0] = 0;
 		direction_facing = 0;
-		action = 3;
+		action = Action.ENDING;
 		ending_anim_done = false;
 		ending_timer = ending_wait_time;
 		ending_fade_started = false;
