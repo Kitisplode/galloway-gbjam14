@@ -643,6 +643,7 @@
     {"id":{"name":"scr_Collisions","path":"scripts/scr_Collisions/scr_Collisions.yy",},},
     {"id":{"name":"scr_dialogue","path":"scripts/scr_dialogue/scr_dialogue.yy",},},
     {"id":{"name":"scr_draw_bitmap_font","path":"scripts/scr_draw_bitmap_font/scr_draw_bitmap_font.yy",},},
+    {"id":{"name":"scr_enemy","path":"scripts/scr_enemy/scr_enemy.yy",},},
     {"id":{"name":"scr_gbjam14_player","path":"scripts/scr_gbjam14_player/scr_gbjam14_player.yy",},},
     {"id":{"name":"scr_GMLinear_plus","path":"scripts/scr_GMLinear_plus/scr_GMLinear_plus.yy",},},
     {"id":{"name":"scr_Input","path":"scripts/scr_Input/scr_Input.yy",},},
