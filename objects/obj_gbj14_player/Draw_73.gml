@@ -92,10 +92,40 @@ else
 			scr_change_sprite(spr_gbj14_player_lift_idle);
 		}
 	}
+	else if (action == Action.THROW)
+	{
+		scr_change_sprite(spr_gbj14_player_throw);
+		anim_speed = 0.1;
+		if (anim_looped != 0)
+		{
+			action = Action.NONE;
+			scr_change_sprite(spr_gbj14_player_idle);
+		}
+	}
 	else if (action == Action.ATTACK)
 	{
 		scr_change_sprite(spr_gbj14_player_sword);
 		anim_speed = 0.6;
+		if (anim_looped != 0)
+		{
+			action = Action.NONE;
+			scr_change_sprite(spr_gbj14_player_idle);
+		}
+	}
+	else if (action == Action.SHOVEL)
+	{
+		scr_change_sprite(spr_gbj14_player_shovel);
+		anim_speed = 0.5;
+		if (anim_looped != 0)
+		{
+			action = Action.NONE;
+			scr_change_sprite(spr_gbj14_player_idle);
+		}
+	}
+	else if (action == Action.PICKAXE)
+	{
+		scr_change_sprite(spr_gbj14_player_pickaxe);
+		anim_speed = 0.5;
 		if (anim_looped != 0)
 		{
 			action = Action.NONE;
@@ -111,16 +141,6 @@ else
 			anim_speed = 0;
 			anim_frame = sprite_get_number(spr_gbj14_player_ending) - 1;
 			ending_anim_done = true;
-		}
-	}
-	else if (action == Action.THROW)
-	{
-		scr_change_sprite(spr_gbj14_player_throw);
-		anim_speed = 0.1;
-		if (anim_looped != 0)
-		{
-			action = Action.NONE;
-			scr_change_sprite(spr_gbj14_player_idle);
 		}
 	}
 }

@@ -118,7 +118,8 @@ if (!paused)
 	// Clean up the sword hitbox once the swing ends or is interrupted (e.g. by getting hurt).
 	if (action != Action.ATTACK && attack_hitbox_id != noone)
 	{
-		if (instance_exists(attack_hitbox_id)) instance_destroy(attack_hitbox_id);
+		if (instance_exists(attack_hitbox_id))
+			instance_destroy(attack_hitbox_id);
 		attack_hitbox_id = noone;
 	}
 

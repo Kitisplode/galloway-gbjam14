@@ -932,6 +932,8 @@
     {"id":{"name":"spr_gbj14_player_lift_walk","path":"sprites/spr_gbj14_player_lift_walk/spr_gbj14_player_lift_walk.yy",},},
     {"id":{"name":"spr_gbj14_player_lift","path":"sprites/spr_gbj14_player_lift/spr_gbj14_player_lift.yy",},},
     {"id":{"name":"spr_gbj14_player_live","path":"sprites/spr_gbj14_player_live/spr_gbj14_player_live.yy",},},
+    {"id":{"name":"spr_gbj14_player_pickaxe","path":"sprites/spr_gbj14_player_pickaxe/spr_gbj14_player_pickaxe.yy",},},
+    {"id":{"name":"spr_gbj14_player_shovel","path":"sprites/spr_gbj14_player_shovel/spr_gbj14_player_shovel.yy",},},
     {"id":{"name":"spr_gbj14_player_sword","path":"sprites/spr_gbj14_player_sword/spr_gbj14_player_sword.yy",},},
     {"id":{"name":"spr_gbj14_player_throw","path":"sprites/spr_gbj14_player_throw/spr_gbj14_player_throw.yy",},},
     {"id":{"name":"spr_gbj14_player_walk","path":"sprites/spr_gbj14_player_walk/spr_gbj14_player_walk.yy",},},

@@ -7,6 +7,8 @@ enum Action
 	THROW,
 	CLIMB,
 	ATTACK,
+	SHOVEL,
+	PICKAXE,
 	ENDING,
 }
 
@@ -311,8 +313,8 @@ function scr_gbj14_player_Use_Item_Sword()
 {
 	if (action != Action.NONE) return false;
 	
-	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	action = Action.ATTACK;
+	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
 	scr_change_sprite(spr_gbj14_player_sword);
 	
 	var _dir = cos(degtorad(direction_facing));
@@ -352,7 +354,10 @@ function scr_gbj14_player_Use_Item_Sword()
 }
 function scr_gbj14_player_Use_Item_Shovel()
 {
+	if (action != Action.NONE) return false;
+	action = Action.SHOVEL;
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
+	scr_change_sprite(spr_gbj14_player_shovel);
 	var _pos = scr_gbj14_player_Cursor_Tool();
 	var _x = floor(_pos[0] / TILE);
 	var _y = floor(_pos[1] / TILE);
@@ -363,7 +368,10 @@ function scr_gbj14_player_Use_Item_Shovel()
 }
 function scr_gbj14_player_Use_Item_Pick()
 {
+	if (action != Action.NONE) return false;
+	action = Action.PICKAXE;
 	play_sound(snd_gbj14_player_attack, 1, 0, 1,1,0.1);
+	scr_change_sprite(spr_gbj14_player_pickaxe);
 	var _pos = scr_gbj14_player_Cursor_Tool();
 	var _x = floor(_pos[0] / TILE);
 	var _y = floor(_pos[1] / TILE);
