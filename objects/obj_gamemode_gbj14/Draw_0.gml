@@ -63,7 +63,7 @@ if (instance_exists(obj_gbj14_player))
 		{
 			paused_alpha = lerp(paused_alpha, 0, 0.1);
 		}
-		scr_draw_rectangle_color_alpha(0,0, 160,144, c_white, paused_alpha / 4);
+		scr_draw_rectangle_color_alpha(0,0, SCREEN_W,SCREEN_H, c_white, paused_alpha / 4);
 		draw_sprite_ext(spr_gbj14_hud_paused, 0, 80 -16, 72, 1,1, 0, c_white, paused_alpha);
 	}
 	death_alpha = lerp(death_alpha, 0, 0.1);
@@ -72,6 +72,7 @@ else
 {
 	if (death_alpha < 1) death_alpha += 0.005;
 }
-if (death_alpha > 0)scr_draw_rectangle_color_alpha(0,0, 160,144, c_black, death_alpha);
+if (death_alpha > 0)
+	scr_draw_rectangle_color_alpha(0,0, SCREEN_W,SCREEN_H, c_black, death_alpha);
 	
 matrix_set(matrix_world, matrix_build_identity());

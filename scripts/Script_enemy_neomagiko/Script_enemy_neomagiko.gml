@@ -156,7 +156,7 @@ function scr_spawn_projectiles_fan(
 	_projectile_direction,
 	_projectile_index,
 	_projectile_fan_range,
-	_depth = -5, _depth_absolute=false, _sprite = noone)
+	_depth = -5, _depth_absolute=false, _sprite = noone, _animspeed = 0)
 {
 	var temp_projectile_count = _projectile_count;
 	if (_projectile_fan_range < 360 && _projectile_count > 1)
@@ -182,6 +182,7 @@ function scr_spawn_projectiles_fan(
 		temp_ID.creator_ID = id;
 		if (_sprite != noone)
 			temp_ID.sprite_index = _sprite;
+			temp_ID.anim_speed = _animspeed;
 	}
 }
 

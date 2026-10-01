@@ -12,8 +12,8 @@
     "path":"folders/Objects/Game Objects/gbjam14/enemy.yy",
   },
   "parentObjectId":{
-    "name":"obj_gbj14_enemy_boss_core_2",
-    "path":"objects/obj_gbj14_enemy_boss_core_2/obj_gbj14_enemy_boss_core_2.yy",
+    "name":"obj_gbj14_bosscore",
+    "path":"objects/obj_gbj14_bosscore/obj_gbj14_bosscore.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

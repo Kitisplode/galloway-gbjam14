@@ -1,8 +1,8 @@
 function scr_nm_map_setup()
 {
-	var _origin_x = 160;
+	var _origin_x = SCREEN_W;
 	var _origin_y = 0;
-	var _angle = point_direction(160,0, 0,144);
+	var _angle = point_direction(SCREEN_W,0, 0,SCREEN_H);
 	for (var _i = 0; _i < 8; _i += 1)
 	{
 		var _j = 8 - _i;

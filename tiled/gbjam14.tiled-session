@@ -2,8 +2,8 @@
     "activeFile": "gbjam14_map.tmx",
     "automapping.whileDrawing": false,
     "expandedProjectPaths": [
-        "tiled",
-        "."
+        ".",
+        "tiled"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -58,14 +58,14 @@
         },
         "gbjam14_map.tmx": {
             "expandedObjectLayers": [
-                3,
-                7
+                7,
+                3
             ],
-            "scale": 2.5134,
+            "scale": 0.7735,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": 3155.088724437018,
-                "y": 340.97238800031835
+                "x": 3268.261150614092,
+                "y": 672.2689075630253
             }
         },
         "gbjam14_rules.tmx": {

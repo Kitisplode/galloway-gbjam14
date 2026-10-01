@@ -10,8 +10,8 @@ if (instance_number(obj_main_graphics) > 1)
 
 shaders_on = true;
 
-view_width = 160;
-view_height = 144;
+view_width = SCREEN_W;
+view_height = SCREEN_H;
 view_ratio = 1;
 display_set_gui_size(view_width, view_height);
 

@@ -20,6 +20,6 @@ instance_activate_object(obj_text);
 // core has no collision mask so the region wake-up can't find it. Keep all
 // three awake; their own far-away pause keeps them cheap when offscreen.
 instance_activate_object(obj_gbj14_item_treasure);
-instance_activate_object(obj_gbj14_enemy_boss_core_2);
-instance_activate_object(obj_gbj14_enemy_boss_real);
+instance_activate_object(obj_gbj14_bosscore);
+instance_activate_object(obj_gbj14_boss);
 instance_activate_object(obj_gbj14_elevator);

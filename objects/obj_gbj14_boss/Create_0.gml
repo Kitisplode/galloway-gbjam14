@@ -8,8 +8,6 @@ obeys_room = false;
 
 movement_collision = false;
 
-// Set by the core when it links up, so the boss hovers around the spot
-// the designer placed it at relative to the core.
 dom_base_offset_x = 0;
 dom_base_offset_y = 0;
 
@@ -24,11 +22,13 @@ shot_count = 0;
 shot_sprite = spr_gbj14_shot_1;
 
 is_boss = true;
-hp_max = 5;
+hp_max = 7;
 hp = hp_max;
 raises_kill_signal = false;
 
-// Death poof and gold reward: bigger poof and a big payout for bosses.
 death_effect_index = spr_effect_ring_large;
 death_effect_size = 2;
-gold_drop = 25;
+gold_drop = 50;
+
+sleeping = true;
+image_alpha = 0.0;

@@ -116,6 +116,8 @@ global.font_lexou = font_add_sprite_ext(spr_font_lexou_2, "@# !\"~$%&'()*+,-./01
 //randomize();
 
 
-#macro TILE 16
+#macro TILE	16
+#macro SCREEN_W	160
+#macro SCREEN_H	144
 
 test_ds_list_reverse__odd();
